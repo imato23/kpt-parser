@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Imato.KptParser.KptCook\Imato.KptParser.KptCook.csproj" />
+      <ProjectReference Include="..\Imato.KptParser.Mealie\Imato.KptParser.Mealie.csproj" />
     </ItemGroup>
 
 </Project>
