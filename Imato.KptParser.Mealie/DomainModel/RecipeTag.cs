@@ -1,6 +1,6 @@
 namespace Imato.KptParser.Mealie.DomainModel;
 
-public class Tag
+public class RecipeTag
 {
     public required string Id { get; set; }
     public required string Name { get; set; }

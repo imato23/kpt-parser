@@ -15,7 +15,7 @@ public class Recipe
     public required string PerformTime { get; set; }
     public required string Description { get; set; }
     public IEnumerable<RecipeCategory>? RecipeCategories { get; set; }
-    public IEnumerable<Tag>? Tags { get; set; }
+    public IEnumerable<RecipeTag>? Tags { get; set; }
     public IEnumerable<string>? Tools { get; set; }
     public int? Rating { get; set; }
     public required string OrgUrl { get; set; }

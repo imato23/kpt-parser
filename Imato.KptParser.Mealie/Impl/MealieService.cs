@@ -88,7 +88,7 @@ internal class MealieService : IMealieService
         return slug;
     }
 
-    private async Task UpdateRecipeImage(string? slug, string imageUrl)
+    private async Task UpdateRecipeImage(string slug, string imageUrl)
     {
         string url = $"{appSettings.ApiUrl}/recipes/{slug}/image";
 
@@ -97,5 +97,10 @@ internal class MealieService : IMealieService
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
 
         response.EnsureSuccessStatusCode();
+    }
+
+    private async Task UpdateRecipe(string slug)
+    {
+        
     }
 }
