@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj"/>
+        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -7,9 +7,6 @@ namespace Imato.KptParser.KptCook.Impl;
 
 internal class KptCookService : IKptCookService
 {
-    // ReSharper disable once UnusedMember.Local
-    private const string AccessTokenBak = "a4b31348-824b-49a9-afec-8717e47076b1"; // Test Konto
-
     private readonly HttpClient httpClient;
     private readonly Common.Config.DomainModel.KptCook appSettings;
 

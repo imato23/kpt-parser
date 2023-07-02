@@ -6,4 +6,5 @@ public interface IMealieService
 {
     Task LoginAsync();
     Task<RecipesResponse?> GetAllRecipesAsync();
+    Task AddRecipe(RecipeRequest recipe);
 }

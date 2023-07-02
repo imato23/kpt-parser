@@ -63,4 +63,39 @@ internal class MealieService : IMealieService
             }
         }
     }
+
+    public async Task AddRecipe(RecipeRequest recipe)
+    {
+        string? slug = await CreateRecipeAsync(recipe.RecipeName).ConfigureAwait(false);
+
+        if (slug == null)
+        {
+            throw new InvalidOperationException("Couldn't create recipe");
+        }
+        
+        await UpdateRecipeImage(slug, recipe.RecipeImageUrl);
+    }
+    
+    private async Task<string?> CreateRecipeAsync(string name)
+    {
+        await LoginAsync().ConfigureAwait(false);
+        string url = $"{appSettings.ApiUrl}/recipes";
+
+        CreateRecipeRequest body = new CreateRecipeRequest { Name = name };
+        
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
+        string? slug = await response.Content.ReadFromJsonAsync<string>();
+        return slug;
+    }
+
+    private async Task UpdateRecipeImage(string? slug, string imageUrl)
+    {
+        string url = $"{appSettings.ApiUrl}/recipes/{slug}/image";
+
+        ImageRequest body = new ImageRequest { Url = imageUrl };
+        
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
+
+        response.EnsureSuccessStatusCode();
+    }
 }
