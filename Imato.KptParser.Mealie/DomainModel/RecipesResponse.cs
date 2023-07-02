@@ -12,9 +12,9 @@ public class RecipesResponse
 
     [JsonPropertyName("total_pages")] public int TotalPages { get; set; }
 
-    public IEnumerable<Recipe> Items { get; set; }
+    public required IEnumerable<Recipe> Items { get; set; }
 
-    public string Next { get; set; }
+    public string? Next { get; set; }
 
-    public string Previous { get; set; }
+    public string? Previous { get; set; }
 }

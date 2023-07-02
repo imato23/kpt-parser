@@ -1,26 +1,70 @@
-﻿using Imato.KptCookImporter.KptCook.Impl;
-using Imato.KptParser.Mealie;
-using Imato.KptParser.Mealie.Impl;
+﻿using System.Reflection;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Imato.KptParser.Console.DomainModel;
+using McMaster.Extensions.CommandLineUtils;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
-namespace Imato.KptCookImporter.Console;
+namespace Imato.KptParser.Console;
 
+[Command(
+    Name = "Imato.KptParser.Console.exe"
+    , Description = "Parses KptCook favorite recipes and imports it to the Mealie recipe database")]
+[HelpOption(
+    "-h"
+    , LongName = "help"
+    , Description = "Get program help")]
+[VersionOptionFromMember(
+    "-v"
+    , MemberName = nameof(GetVersion))]
 internal class Program
 {
-    private static void Main(string[] args)
+    public static Task<int> Main(string[] args)
     {
-        System.Console.WriteLine("Hello, World!");
-        MainAsync().Wait();
+        return CommandLineApplication.ExecuteAsync<Program>(args);
     }
 
-    private static async Task MainAsync()
+    public async Task<int> OnExecuteAsync(CancellationToken cancellationToken)
     {
-        // var kptCookService = new KptCookService();
-        // var ids = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
-        // var response = await kptCookService.GetRecipesAsync(ids).ConfigureAwait(false);
+        IHostBuilder hostBuilder = CreateHostBuilder();
 
-        IMealieService mealieService = new MealieService();
-        await mealieService.LoginAsync();
-        var recipes = await mealieService.GetAllRecipes();
+        hostBuilder.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+        hostBuilder.ConfigureContainer<ContainerBuilder>(
+            containerBuilder =>
+            {
+                containerBuilder.RegisterModule<Common.AutofacModule>();
+                containerBuilder.RegisterModule<KptCook.AutofacModule>();
+                containerBuilder.RegisterModule<Mealie.AutofacModule>();
+            });
 
+        await hostBuilder.RunConsoleAsync(cancellationToken).ConfigureAwait(false);
+        return Environment.ExitCode;
+    }
+
+    private IHostBuilder CreateHostBuilder()
+    {
+        IHostBuilder hostBuilder = Host.CreateDefaultBuilder()
+            .ConfigureLogging(logging => { logging.ClearProviders(); })
+            .UseSerilog((hostContext, loggerConfiguration) =>
+            {
+                loggerConfiguration.ReadFrom.Configuration(hostContext.Configuration);
+            })
+            .ConfigureServices(
+                services =>
+                {
+                    services.Configure<CommandlineOptions>(_ => { });
+                    services.AddHostedService<Worker>();
+                });
+
+        return hostBuilder;
+    }
+
+    private static string GetVersion()
+    {
+        return typeof(Program).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            ?.InformationalVersion ?? "Unknown";
     }
 }

@@ -4,6 +4,5 @@ namespace Imato.KptParser.Mealie.DomainModel;
 
 public class AccessTokenInfo
 {
-    [JsonPropertyName("access_token")]
-    public string AccessToken { get; set; } = null!;
+    [JsonPropertyName("access_token")] public string AccessToken { get; set; } = null!;
 }

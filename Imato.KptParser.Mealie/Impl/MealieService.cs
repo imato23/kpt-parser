@@ -1,50 +1,64 @@
 using System.Net.Http.Json;
+using Imato.KptParser.Common.Config;
+using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.DomainModel;
 
 namespace Imato.KptParser.Mealie.Impl;
 
-public class MealieService: IMealieService
+internal class MealieService : IMealieService
 {
-    private const string ApiUrl = "https://mealie.home.imato.de/api";
-    private const string Username = "thomas";
-    private const string Password = "fJGSFCHTQDknS8Bh7aw";
+    private readonly Common.Config.DomainModel.Mealie appSettings;
 
     private readonly HttpClient httpClient;
-    
-    public MealieService()
+
+    private bool isLoggedIn;
+
+    /// <summary>
+    ///     Initializes an instance of the MealieService
+    /// </summary>
+    public MealieService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
     {
-        httpClient = new HttpClient();
-    }
-    
-    public async Task LoginAsync()
-    {
-        string accessToken = await FetchAccessTokenAsync(Username, Password);
-        httpClient.DefaultRequestHeaders.Add("authorization", $"Bearer {accessToken}");
+        appSettings = appSettingsReader.GetAppSettings().Mealie;
+        httpClient = httpClientFactory.BuildHttpClient();
     }
 
-    public async Task<RecipesResponse?> GetAllRecipes()
+    public async Task LoginAsync()
     {
-        string url = $"{ApiUrl}/recipes";
-        RecipesResponse? recipesResponse = await httpClient.GetFromJsonAsync<RecipesResponse>(url).ConfigureAwait(false);
+        if (!isLoggedIn)
+        {
+            string accessToken = await FetchAccessTokenAsync();
+            httpClient.DefaultRequestHeaders.Add("authorization", $"Bearer {accessToken}");    
+        }
+
+        isLoggedIn = true;
+    }
+
+    public async Task<RecipesResponse?> GetAllRecipesAsync()
+    {
+        await LoginAsync().ConfigureAwait(false);
+        var url = $"{appSettings.ApiUrl}/recipes";
+        RecipesResponse? recipesResponse =
+            await httpClient.GetFromJsonAsync<RecipesResponse>(url).ConfigureAwait(false);
         return recipesResponse;
     }
 
-    private async Task<string> FetchAccessTokenAsync(string username, string password)
+    private async Task<string> FetchAccessTokenAsync()
     {
-        string url = $"{ApiUrl}/auth/token";
-        
-        IEnumerable<KeyValuePair<string,string>> formData = new List<KeyValuePair<string,string>>
+        var url = $"{appSettings.ApiUrl}/auth/token";
+
+        IEnumerable<KeyValuePair<string, string>> formData = new List<KeyValuePair<string, string>>
         {
-            new("username", Username), 
-            new("password", Password)
+            new("username", appSettings.Username),
+            new("password", appSettings.Password)
         };
-        
+
         using (HttpContent formContent = new FormUrlEncodedContent(formData))
         {
             using (HttpResponseMessage response = await httpClient.PostAsync(url, formContent).ConfigureAwait(false))
             {
                 response.EnsureSuccessStatusCode();
-                AccessTokenInfo? accessTokenInfo = await response.Content.ReadFromJsonAsync<AccessTokenInfo>().ConfigureAwait(false);
+                AccessTokenInfo? accessTokenInfo =
+                    await response.Content.ReadFromJsonAsync<AccessTokenInfo>().ConfigureAwait(false);
                 return accessTokenInfo!.AccessToken;
             }
         }

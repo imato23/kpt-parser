@@ -1,4 +1,4 @@
-namespace Imato.KptCookImporter.KptCook.DomainModel;
+namespace Imato.KptParser.KptCook.DomainModel;
 
 public class FavoritesResponse
 {
