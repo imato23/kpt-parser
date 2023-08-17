@@ -6,5 +6,8 @@ public interface IMealieService
 {
     Task LoginAsync();
     Task<RecipesResponse?> GetAllRecipesAsync();
-    Task AddRecipe(RecipeRequest recipe);
+
+    Task<UpdateRecipeRequest?> GetRecipeAsync(string slug);
+    Task<string> AddRecipeAsync(RecipeRequest recipe);
+    Task UpdateRecipeAsync(string slug, UpdateRecipeRequest recipe);
 }

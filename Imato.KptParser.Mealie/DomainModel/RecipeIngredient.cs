@@ -7,7 +7,7 @@ public class RecipeIngredient
     public IngredientUnit Unit { get; set; }
     public IngredientFood Food { get; set; }
     public bool DisableAmount { get; set; }
-    public int Quantity { get; set; }
+    public double Quantity { get; set; }
     public string OriginalText { get; set; }
     public string ReferenceId { get; set; }
 }

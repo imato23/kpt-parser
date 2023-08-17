@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Imato.KptParser.Common.Config.Exceptions;
 
 /// <summary>
-/// The config read exception
+///     The config read exception
 /// </summary>
 public class ConfigReadException : Exception
 {

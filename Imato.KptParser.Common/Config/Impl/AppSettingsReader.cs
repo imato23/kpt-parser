@@ -24,26 +24,19 @@ internal class AppSettingsReader : IAppSettingsReader
 
     public AppSettings GetAppSettings()
     {
-        if (appSettings != null)
-        {
-            return appSettings;
-        }
+        if (appSettings != null) return appSettings;
 
         IConfigurationSection appConfigSection = configuration.GetSection(SectionName);
 
         if (!appConfigSection.Exists())
-        {
             throw new ConfigReadException(
                 $"The configuration section '{SectionName}' does not exist or is empty");
-        }
-        
+
         appSettings = appConfigSection.Get<AppSettings>();
 
         if (appSettings == null)
-        {
             throw new InvalidOperationException("Could not read AppConfig type from configuration file");
-        }
-        
+
         return appSettings;
     }
 }

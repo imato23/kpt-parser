@@ -7,8 +7,8 @@ namespace Imato.KptParser.KptCook.Impl;
 
 internal class KptCookService : IKptCookService
 {
-    private readonly HttpClient httpClient;
     private readonly Common.Config.DomainModel.KptCook appSettings;
+    private readonly HttpClient httpClient;
 
     /// <summary>
     ///     Initializes an instance of the KptCookService
