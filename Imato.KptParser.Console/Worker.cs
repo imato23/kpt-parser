@@ -115,6 +115,9 @@ public class Worker : IHostedService
         updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.StepsDE, kptCookRecipe.ImageList);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
 
+        // Todo: Add step images to recipe steps
+
+        // Todo: Add the following data to mealie recipe
         //kptCookRecipe.Authors
         //kptCookRecipe.ImageList
         //kptCookRecipe.Country
