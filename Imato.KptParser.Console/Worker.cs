@@ -4,7 +4,11 @@ using Imato.KptParser.Console.DomainModel;
 using Imato.KptParser.KptCook;
 using Imato.KptParser.KptCook.DomainModel;
 using Imato.KptParser.Mealie;
-using Imato.KptParser.Mealie.DomainModel;
+using Imato.KptParser.Mealie.Authorization;
+using Imato.KptParser.Mealie.Foods;
+using Imato.KptParser.Mealie.Recipes;
+using Imato.KptParser.Mealie.Recipes.DomainModel;
+using Imato.KptParser.Mealie.Units;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -19,7 +23,10 @@ public class Worker : IHostedService
     private readonly IKptCookService kptCookService;
 
     private readonly ILogger<Worker> logger;
-    private readonly IMealieService mealieService;
+    private readonly IRecipeService recipeService;
+    private readonly IFoodService foodService;
+    private readonly IUnitService unitService;
+    private readonly IAuthorizationService authorizationService;
 
     // ReSharper disable once NotAccessedField.Local
     private readonly IOptions<CommandlineOptions> options;
@@ -32,14 +39,20 @@ public class Worker : IHostedService
         IOptions<CommandlineOptions> options,
         IAppSettingsReader appSettingsReader,
         IKptCookService kptCookService,
-        IMealieService mealieService)
+        IRecipeService recipeService,
+        IFoodService foodService,
+        IUnitService unitService,
+        IAuthorizationService authorizationService)
     {
         this.logger = logger;
         this.hostApplicationLifetime = hostApplicationLifetime;
         this.options = options;
         appSettings = appSettingsReader.GetAppSettings();
         this.kptCookService = kptCookService;
-        this.mealieService = mealieService;
+        this.recipeService = recipeService;
+        this.foodService = foodService;
+        this.unitService = unitService;
+        this.authorizationService = authorizationService;
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
@@ -48,6 +61,13 @@ public class Worker : IHostedService
 
         try
         {
+            await authorizationService.LoginAsync().ConfigureAwait(false);
+
+            await unitService.GetOrAddUnitAsync("Liter", "l");
+            await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
+
+            return;
+            
             var favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
             var kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds);
 
@@ -101,7 +121,7 @@ public class Worker : IHostedService
 
         //string slug1 = await mealieService.AddRecipeAsync(mealieRecipe).ConfigureAwait(false);
 
-        UpdateRecipeRequest? updateRecipe = await mealieService.GetRecipeAsync(slug).ConfigureAwait(false);
+        UpdateRecipeRequest? updateRecipe = await recipeService.GetRecipeAsync(slug).ConfigureAwait(false);
 
         if (updateRecipe == null)
         {
@@ -114,6 +134,7 @@ public class Worker : IHostedService
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
         updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.StepsDE, kptCookRecipe.ImageList);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
+        updateRecipe.RecipeIngredient = MapIngredients(kptCookRecipe.Ingredients);
 
         // Todo: Add step images to recipe steps
 
@@ -125,12 +146,44 @@ public class Worker : IHostedService
 
         try
         {
-            await mealieService.UpdateRecipeAsync(slug, updateRecipe).ConfigureAwait(false);
+            await recipeService.UpdateRecipeAsync(slug, updateRecipe).ConfigureAwait(false);
         }
         catch (Exception e)
         {
             logger.LogCritical(e, "Couldn't update recipe for slug '{Slug}'", slug);
         }
+    }
+
+    private IEnumerable<RecipeIngredient>? MapIngredients(IEnumerable<IngredientInfo> ingredients)
+    {
+        IList<RecipeIngredient> result = new List<RecipeIngredient>();
+
+        foreach (IngredientInfo kptCookIngredient in ingredients)
+        {
+            RecipeIngredient mealieIngredient = new RecipeIngredient
+            {
+                // Food = new IngredientFood
+                // {
+                //     Id = Guid.NewGuid().ToString(),
+                //     Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
+                // },
+                Quantity = kptCookIngredient.Quantity
+            };
+
+            // if (kptCookIngredient.Measure != null)
+            // {
+            //     mealieIngredient.Unit = new IngredientUnit
+            //     {
+            //         Id = Guid.NewGuid().ToString(),
+            //         Name = kptCookIngredient.Measure,
+            //         Abbreviation = kptCookIngredient.Measure
+            //     };
+            // }
+
+            result.Add(mealieIngredient);
+        }
+
+        return result;
     }
 
     private IEnumerable<RecipeStep> MapInstructions(string[] steps, IEnumerable<Image> imageList)
