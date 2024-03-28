@@ -1,0 +1,2790 @@
+[
+    {
+        "_id": {
+            "$oid": "5eb2c94f960000a2cd6adccc"
+        },
+        "localizedTitle": {
+            "en": "Mediterranean Burger with Antipasti Veggies & Arugula Pesto",
+            "de": "Mediterraner Burger mit Antipastigemüse & Rucolapesto",
+            "es": "Hamburguesa mediterránea con verduras & pesto de rúcula",
+            "fr": "Burger méditerranéen, antipasti de légumes et pesto de roquette",
+            "pt": "Hambúrguer mediterrâneo com legumes antipasti e pesto de rúcula"
+        },
+        "rtype": "Vegan",
+        "authorComment": {
+            "en": "Time for a vegan vacation!",
+            "de": "Veganer Flair trifft auf Mittelmeer",
+            "es": "¡Hora de vacaciones veganas!",
+            "fr": "Direction le soleil et la Méditerranée !",
+            "pt": "Que tal umas férias veganas?"
+        },
+        "country": "ww",
+        "preparationTime": 30,
+        "cookingTime": 0,
+        "recipeNutrition": {
+            "calories": 748,
+            "protein": 30,
+            "fat": 47,
+            "carbohydrate": 51
+        },
+        "stepsEN": [
+            "All set?",
+            "Wash zucchini, halve, and cut into thick slices.",
+            "Wash bell pepper, remove seeds, and cut into slices.",
+            "Wash eggplant, halve, and slice.",
+            "Heat olive oil in a pan, add veggies, and fry for <timer>.",
+            "Meanwhile, peel and chop garlic.",
+            "Wash rosemary, shake dry, and pluck needles. Chop finely.",
+            "Wash thyme, shake dry, pick leaves, and chop roughly.",
+            "Add garlic and herbs to the pan. Add balsamic, and season with salt and pepper. Mix well and fry for another <timer>.",
+            "Wash and dry arugula.",
+            "Add 2/3 of the arugula to a blender. Add olive oil and pine nuts, and mix. Season with salt and pepper.",
+            "Heat sunflower oil in a pan and fry patties on medium heat for <timer>, turning every <timer>.",
+            "When patties are cooked, top with a slice of cheese. Put a lid on the pan, and fry until the cheese is melted.",
+            "In the meantime, halve bun. Heat a dry pan and toast the bun, cut side down.",
+            "Spread pesto on the toasted sides of the buns.",
+            "Top buns with arugula, antipasti veggies, and patty and enjoy!"
+        ],
+        "stepsDE": [
+            "Alles parat?",
+            "Zucchini waschen, halbieren und in dicke Scheiben schneiden.",
+            "Paprika waschen, entkernen und in Streifen schneiden.",
+            "Aubergine waschen und halbieren, dann in Scheiben schneiden.",
+            "Olivenöl in einer Pfanne erhitzen und Gemüse <timer> braten.",
+            "Währenddessen Knoblauch schälen und hacken.",
+            "Rosmarin waschen, trocken schütteln, Nadeln abzupfen und fein hacken.",
+            "Thymian waschen, trocken schütteln und die Blätter grob hacken.",
+            "Knoblauch und Kräuter zum Gemüse geben. Balsamico hinzufügen, mit Salz und Pfeffer würzen und gut vermischen. Weitere <timer> braten.",
+            "Rucola waschen und abtropfen lassen.",
+            "2/3 des Rucola mit Olivenöl und Pinienkernen mixen. Mit Salz und Pfeffer würzen.",
+            "Sonnenblumenöl in einer Pfanne auf mittlerer Stufe erhitzen und veganen Burger-Patty <timer> braten, zwischendurch alle <timer> wenden.",
+            "Nach abgelaufener Zeit Käse auf die Patties geben und mit geschlossenem Deckel braten, bis der Käse schmilzt.",
+            "In der Zwischenzeit Brötchen aufschneiden und in einer Pfanne ohne Öl rösten.",
+            "Geröstetes Brötchen mit Pesto bestreichen.",
+            "Brötchen mit Rucola, Antipastigemüse und Patty belegen und genießen."
+        ],
+        "authors": [
+            {
+                "_id": {
+                    "$oid": "5eb3d54f0403001cb1b5f13c"
+                },
+                "name": "Garden Gourmet",
+                "link": "https: //www.gardengourmet.de/",
+                "title": "www.gardengourmet.de",
+                "localizedDesc": {
+                    "en": "Enjoying meat-free has never been so easy.rnGarden Gourmet focuses since over 30 years on variety and enjoyment.",
+                    "de": "Fleischfrei genießen war noch nie so einfach.rnGarden Gourmet setzt auf Vielfalt und Genuss – und das seit über 30 Jahren.",
+                    "es": "Disfrutar comer sin carne nunca ha sido tan fácil. nGarden Gourmet se centra desde hace más de 30 años en la variedad y el deleite.",
+                    "fr": "Manger sans viande n'a jamais été aussi facile.nGarden Gourmet se concentre depuis plus de 30 ans sur la variété et le plaisir.",
+                    "pt": "Desfrutar de refeições sem carne nunca foi tão fácil.nGarden Gourmet prioriza a variedade e o prazer há mais de 30 anos."
+                },
+                "sponsor": "yes",
+                "authorImage": {
+                    "name": "Author_Garden-Gourmet.png",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/974c8cb3-1754-4943-9449-2eb9f62e6096"
+                },
+                "creationDate": {
+                    "$date": 1588843855795
+                },
+                "updateDate": {
+                    "$date": 1641942985295
+                }
+            }
+        ],
+        "retailers": [
+            {
+                "_id": {
+                    "$oid": "532f5ddcf8b4222e28731609"
+                },
+                "rkey": "edekaecenter",
+                "key": "edeka-center",
+                "name": "Edeka",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Die Preise verstehen sich als Richtpreise. Dabei sind alle Angaben ohne Gewähr.",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1395613148182
+                },
+                "updateDate": {
+                    "$date": 1597401219551
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "52b80d660f5e989d00f9d2a7"
+                },
+                "rkey": "rewe",
+                "key": "rewe",
+                "name": "Rewe",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gewähr. Ladenpreise REWE Berlin, vom 28.09.2019",
+                "mapStatus": "active",
+                "onlineOrderingState": true,
+                "creationDate": {
+                    "$date": 1387793766440
+                },
+                "updateDate": {
+                    "$date": 1590307954128
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "59dcb17a9e0000b006e253da"
+                },
+                "key": "kaufland",
+                "name": "Kaufland",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gewähr. Ladenpreise Kaufland Berlin Neukölln Arcaden, vom 20.01.2020",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1507635578226
+                },
+                "updateDate": {
+                    "$date": 1590570847125
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "538dab8697169d59149ddf66"
+                },
+                "rkey": "tegut",
+                "key": "tegut...",
+                "name": "tegut...",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gewähr. Ladenpreise tegut... Jena, vom 04.06.2016",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1401793414244
+                },
+                "updateDate": {
+                    "$date": 1680691105443
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "5303670c51638db208100cf4"
+                },
+                "rkey": "wholefoods",
+                "key": "wholefoods",
+                "name": "Whole Foods",
+                "status": "active",
+                "typ": "store",
+                "country": "us",
+                "priceUpdate": "Prices and products are subject to change without notice.",
+                "mapStatus": "active",
+                "creationDate": {
+                    "$date": 1392731916381
+                },
+                "updateDate": {
+                    "$date": 1438088117458
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": 4.0,
+                "measure": "Zweig(e)",
+                "quantityUS": 4.0,
+                "measureUS": "sprig(s)",
+                "quantityUSProd": 0.2,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52c5e88f1d4633fb01572525"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "thyme, fresh ",
+                        "de": "Thymian, frisch",
+                        "es": "tomillo, fresco",
+                        "fr": "thym, frais",
+                        "pt": "tomilho, fresco"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "thyme, fresh ",
+                            "de": "Thymian, frisch",
+                            "es": "tomillo, fresco",
+                            "fr": "thym, frais",
+                            "pt": "tomilho, fresco"
+                        },
+                        "plural": {
+                            "en": "thyme, fresh ",
+                            "de": "Thymian, frisch",
+                            "es": "tomillo, fresco",
+                            "fr": "thym, frais",
+                            "pt": "tomilhos, frescos"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "thyme, fresh ",
+                        "de": "Thymian, frisch",
+                        "es": "tomillo, fresco",
+                        "fr": "thym, frais",
+                        "pt": "tomilho, fresco"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "thyme,freshthymian,frischthyme,freshthymian,frisch",
+                    "desc": "thyme,freshthymian,frischthyme,freshthymian,frisch",
+                    "image": {
+                        "name": "herbs_thyme_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bbb0d7e280000fb13a3e202"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c6e26343d2f35901cf87e4"
+                            },
+                            "title": "Thymian frisch, Bund",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.49,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1388765795895
+                            },
+                            "updateDate": {
+                                "$date": 1462200606641
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c5e8be1d4633f101572526"
+                            },
+                            "title": "Thymian frisch, Schale",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.99,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1388701886052
+                            },
+                            "updateDate": {
+                                "$date": 1462200622232
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53826263ff5374391ff20fbb"
+                            },
+                            "title": "Thymian frisch, Schale",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.49,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1401053795385
+                            },
+                            "updateDate": {
+                                "$date": 1500040348261
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e326697169def2b9ddfa3"
+                            },
+                            "title": "Thymian frisch, Schale",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.29,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1401827942917
+                            },
+                            "updateDate": {
+                                "$date": 1462200638140
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4cbb4900008802a420f7"
+                            },
+                            "title": "Thyme, fresh organic",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.99,
+                            "newQuantity": 0.66,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408060603706
+                            },
+                            "updateDate": {
+                                "$date": 1409808167333
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fa22374600001d02d2f8de"
+                            },
+                            "title": "Organic Thyme, bunch",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 0.5,
+                            "newQuantity": 4.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408901687536
+                            },
+                            "updateDate": {
+                                "$date": 1462199399080
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592b2a63000005f0521154e"
+                            },
+                            "title": "Fresh Thyme",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.79,
+                            "newQuantity": 0.75,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435677350600
+                            },
+                            "updateDate": {
+                                "$date": 1435920748689
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "569e546a1500002109704e79"
+                            },
+                            "title": "Thymian frisch",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.99,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1453216874747
+                            },
+                            "updateDate": {
+                                "$date": 1541415271261
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735cf5a800000aa0c70a8d7"
+                            },
+                            "title": "Küstengold Thymian frisch, Topf",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.99,
+                            "quantity": 12,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1463144282776
+                            },
+                            "updateDate": {
+                                "$date": 1463144282776
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57977f3b3300007313ecc78b"
+                            },
+                            "title": "Edeka Thymian, Schale",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.19,
+                            "quantity": 15,
+                            "newQuantity": 15.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1469546299981
+                            },
+                            "updateDate": {
+                                "$date": 1662462400742
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df77c"
+                            },
+                            "title": "Thymian frisch, Schale",
+                            "ingredient": "52c5e88f1d4633fb01572525",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.79,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1579171279190
+                            },
+                            "updateDate": {
+                                "$date": 1579171279190
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "en": "thyme,fresh thyme",
+                        "de": "Thymian,frischer Thymian"
+                    },
+                    "creationDate": {
+                        "$date": 1388701839336
+                    },
+                    "updateDate": {
+                        "$date": 1686317216157
+                    }
+                }
+            },
+            {
+                "quantity": 1.0,
+                "measure": "Zweig(e)",
+                "quantityUS": 1.0,
+                "measureUS": "sprig(s)",
+                "quantityUSProd": 0.1,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2e4e91217a0203a8ad9e"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "rosemary, fresh ",
+                        "de": "Rosmarin, frisch",
+                        "es": "romero, fresco",
+                        "fr": "romarin, frais",
+                        "pt": "alecrim, fresco"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "rosemary, fresh ",
+                            "de": "Rosmarin, frisch",
+                            "es": "romero, fresco",
+                            "fr": "romarin, frais",
+                            "pt": "alecrim, fresco"
+                        },
+                        "plural": {
+                            "en": "rosemary, fresh ",
+                            "de": "Rosmarin, frisch",
+                            "es": "romero, fresco",
+                            "fr": "romarin, frais",
+                            "pt": "alecrim, fresco"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "rosemary, fresh ",
+                        "de": "Rosmarin, frisch",
+                        "es": "romero, fresco",
+                        "fr": "romarin, frais",
+                        "pt": "alecrim, fresco"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "rosemary,freshrosmarin,frischrosemary,freshrosmarin,frisch",
+                    "desc": "rosemary,freshrosmarin,frischrosemary,freshrosmarin,frisch",
+                    "image": {
+                        "name": "veg_rosemary_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bbb2b0b280000341aa3e248"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c408555456c47e00f8c4b0"
+                            },
+                            "title": "Bio Rosmarin frisch, Schale",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.49,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1388578901868
+                            },
+                            "updateDate": {
+                                "$date": 1462201255200
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52ea720ba0b4715302fb967a"
+                            },
+                            "title": "Rosmarin frisch (Schale)",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.99,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1391096331639
+                            },
+                            "updateDate": {
+                                "$date": 1494196267073
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e4bd197169d95309ddfb2"
+                            },
+                            "title": "Rosmarin frisch",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.29,
+                            "newQuantity": 10.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1401834449466
+                            },
+                            "updateDate": {
+                                "$date": 1462201712051
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53826226ff5374301ff20fb9"
+                            },
+                            "title": "Rosmarin frisch",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.49,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1401053734368
+                            },
+                            "updateDate": {
+                                "$date": 1500040121927
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4d0b4900009102a420f8"
+                            },
+                            "title": "Rosemary, fresh organic",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.99,
+                            "newQuantity": 0.66,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408060683094
+                            },
+                            "updateDate": {
+                                "$date": 1409807680189
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fa2178460000df01d2f8db"
+                            },
+                            "title": "Organic Rosemary, bunch",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 1.99,
+                            "newQuantity": 1.5,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408901496387
+                            },
+                            "updateDate": {
+                                "$date": 1462196494319
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cd1c30e20800e40e198f06"
+                            },
+                            "title": "Rosmarin frisch",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.19,
+                            "newQuantity": 20.0,
+                            "measure": "Zweig(e)",
+                            "cbid": "rosmarin",
+                            "creationDate": {
+                                "$date": 1422728240677
+                            },
+                            "updateDate": {
+                                "$date": 1462201687163
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592b159300000ef0421154a"
+                            },
+                            "title": "Fresh Rosemary",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.79,
+                            "newQuantity": 0.75,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435677017174
+                            },
+                            "updateDate": {
+                                "$date": 1435920806435
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "569e55461500004209704e7a"
+                            },
+                            "title": "Rosmarin frisch, Bund",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.99,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1453217094082
+                            },
+                            "updateDate": {
+                                "$date": 1541415158313
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735d007800000aa0c70a8da"
+                            },
+                            "title": "Küstengold Rosmarin frisch, Topf",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.99,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1463144455275
+                            },
+                            "updateDate": {
+                                "$date": 1463144760919
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57987e10190400b1083d497b"
+                            },
+                            "title": "Edeka Rosmarin",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.19,
+                            "quantity": 12,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1469611536100
+                            },
+                            "updateDate": {
+                                "$date": 1662464604163
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df772"
+                            },
+                            "title": "Rosmarin frisch, Schale",
+                            "ingredient": "52bc2e4e91217a0203a8ad9e",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.79,
+                            "newQuantity": 12.0,
+                            "measure": "Zweig(e)",
+                            "creationDate": {
+                                "$date": 1579171279189
+                            },
+                            "updateDate": {
+                                "$date": 1579171279189
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "de": "frischer Rosmarin,Rosmarin"
+                    },
+                    "creationDate": {
+                        "$date": 1388064334630
+                    },
+                    "updateDate": {
+                        "$date": 1686836545171
+                    }
+                }
+            },
+            {
+                "quantity": 0.25,
+                "quantityUS": 0.25,
+                "quantityUSProd": 0.25,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc300591217a7503a8adb9"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "zucchini",
+                        "de": "Zucchini",
+                        "es": "calabacín",
+                        "fr": "courgette",
+                        "pt": "abobrinha"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "zucchini",
+                            "de": "Zucchini",
+                            "es": "calabacín",
+                            "fr": "courgette",
+                            "pt": "abobrinha"
+                        },
+                        "plural": {
+                            "en": "zucchini",
+                            "de": "Zucchini",
+                            "es": "calabacines",
+                            "fr": "courgettes",
+                            "pt": "abobrinhas"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "zucchini",
+                        "de": "Zucchini",
+                        "es": "calabacín",
+                        "fr": "courgettes",
+                        "pt": "abobrinha"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "zucchinizucchinizucchinizucchini",
+                    "desc": "zucchinizucchinizucchinizucchini",
+                    "image": {
+                        "name": "veg_zucchini_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bbb213f280000a618a3e23d"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c4100e5456c41d01f8c4c2"
+                            },
+                            "title": "Bio Zucchini, lose ca. 200g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388580878033
+                            },
+                            "updateDate": {
+                                "$date": 1492777038588
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53827182ff5374b921f20fc3"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.54,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401057666250
+                            },
+                            "updateDate": {
+                                "$date": 1462200980727
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e552097169d24329ddfcd"
+                            },
+                            "title": "Bio Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 0.66,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401836832761
+                            },
+                            "updateDate": {
+                                "$date": 1461860862647
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4b004900004002a420ef"
+                            },
+                            "title": "Green Zucchini Squash, app. 0.4 lb",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 0.56,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408060160373
+                            },
+                            "updateDate": {
+                                "$date": 1462192181977
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fa245e4600004802d2f8e2"
+                            },
+                            "title": "Organic Zucchini, app. 0.4 lb",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 0.8,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408902238826
+                            },
+                            "updateDate": {
+                                "$date": 1462197026185
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c47e24bd0c4cbf00e88522"
+                            },
+                            "title": "Bio Zucchini, Packung ca. 500g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.99,
+                            "newQuantity": 3.0,
+                            "creationDate": {
+                                "$date": 1388609060290
+                            },
+                            "updateDate": {
+                                "$date": 1522163654522
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cb6d3b6b07004909d09cfb"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 0.99,
+                            "newQuantity": 1.0,
+                            "cbid": "zucchini",
+                            "creationDate": {
+                                "$date": 1422617915519
+                            },
+                            "updateDate": {
+                                "$date": 1462200990701
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5596620a7800001d0ab7d12a"
+                            },
+                            "title": "Zucchini",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 2.29,
+                            "newQuantity": 5.0,
+                            "creationDate": {
+                                "$date": 1435918858912
+                            },
+                            "updateDate": {
+                                "$date": 1462200959236
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5697bbba150000bf0d5b3184"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.39,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452784570178
+                            },
+                            "updateDate": {
+                                "$date": 1545303358009
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "573064d5150000ac01e60150"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.5,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1462789333549
+                            },
+                            "updateDate": {
+                                "$date": 1665382184742
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "579883ab19040079093d4989"
+                            },
+                            "title": "Zucchini, lose ca. 200g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.4,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469612971974
+                            },
+                            "updateDate": {
+                                "$date": 1522768459424
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "60f6db34400000fe0f92a7f4"
+                            },
+                            "title": "Demeter Zucchini 500g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.99,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1626790708434
+                            },
+                            "updateDate": {
+                                "$date": 1626790708434
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "de": "Zucchini"
+                    },
+                    "creationDate": {
+                        "$date": 1388064773453
+                    },
+                    "updateDate": {
+                        "$date": 1686571382407
+                    }
+                }
+            },
+            {
+                "quantity": 0.25,
+                "quantityUS": 0.25,
+                "quantityUSProd": 0.25,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2d8e91217ad502a8ad8f"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "eggplant",
+                        "de": "Aubergine",
+                        "es": "berenjena",
+                        "fr": "aubergine",
+                        "pt": "berinjela"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "eggplant",
+                            "de": "Aubergine",
+                            "es": "berenjena",
+                            "fr": "aubergine",
+                            "pt": "berinjela"
+                        },
+                        "plural": {
+                            "en": "eggplants",
+                            "de": "Auberginen",
+                            "es": "berenjenas",
+                            "fr": "aubergines",
+                            "pt": "berinjelas"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "eggplant",
+                        "de": "Aubergine",
+                        "es": "berenjena",
+                        "fr": "aubergine",
+                        "pt": "berinjela"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "eggplantaubergineeggplantsauberginen",
+                    "desc": "eggplantaubergineeggplantsauberginen",
+                    "image": {
+                        "name": "veg_aubergine_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb6380a280000631cc51d78"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c406515456c43d00f8c4a9"
+                            },
+                            "title": "Bio Aubergine, lose",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.33,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388578385977
+                            },
+                            "updateDate": {
+                                "$date": 1642002001508
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5382429fab508af318ba11c2"
+                            },
+                            "title": "Aubergine lose",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.69,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401045663615
+                            },
+                            "updateDate": {
+                                "$date": 1642001974570
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e476edbf6133330146455"
+                            },
+                            "title": "Aubergine lose",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 0.99,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401833326718
+                            },
+                            "updateDate": {
+                                "$date": 1642001981110
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fb7dc31e0000eb006664e2"
+                            },
+                            "title": "Eggplant",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 2.09,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408990659322
+                            },
+                            "updateDate": {
+                                "$date": 1642002061775
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4db5490000bc02a420ff"
+                            },
+                            "title": "Eggplant",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.99,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408060853024
+                            },
+                            "updateDate": {
+                                "$date": 1409807402184
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cce1a3e208001d0a198ef0"
+                            },
+                            "title": "Aubergine",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 0.79,
+                            "newQuantity": 1.0,
+                            "cbid": "aubergine",
+                            "creationDate": {
+                                "$date": 1422713251361
+                            },
+                            "updateDate": {
+                                "$date": 1440163549025
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c47d99bd0c4cb900e88521"
+                            },
+                            "title": "Aubergine",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.7,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388608921150
+                            },
+                            "updateDate": {
+                                "$date": 1522248893324
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5596783d780000ba0db7d12b"
+                            },
+                            "title": "Eggplant",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.39,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1435924541860
+                            },
+                            "updateDate": {
+                                "$date": 1435924541860
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5697b54f150000cb0c5b317f"
+                            },
+                            "title": "Aubergine, lose",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.69,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452782927106
+                            },
+                            "updateDate": {
+                                "$date": 1642001987744
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735d503800000d50d70a8e8"
+                            },
+                            "title": "Aubergine, lose",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.05,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1463145731457
+                            },
+                            "updateDate": {
+                                "$date": 1642001994428
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "579774853300007611ecc768"
+                            },
+                            "title": "EDEKA Bio Auberginen",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.49,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469543557358
+                            },
+                            "updateDate": {
+                                "$date": 1642002009418
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df831"
+                            },
+                            "title": "Demeter Auberginen",
+                            "ingredient": "52bc2d8e91217ad502a8ad8f",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.49,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1579171279207
+                            },
+                            "updateDate": {
+                                "$date": 1661772418741
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "en": "aubergine",
+                        "de": "Aubergine,Auberginen-"
+                    },
+                    "creationDate": {
+                        "$date": 1388064142829
+                    },
+                    "updateDate": {
+                        "$date": 1686753398063
+                    }
+                }
+            },
+            {
+                "quantity": 1.0,
+                "quantityUS": 1.0,
+                "quantityUSProd": 1.0,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "538ed737d89ddfad0da9e2be"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "bread roll",
+                        "de": "Brötchen, lose",
+                        "es": "panecillo",
+                        "fr": "petit pain",
+                        "pt": "pão francês"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "bread roll",
+                            "de": "Brötchen, lose",
+                            "es": "panecillo",
+                            "fr": "petit pain",
+                            "pt": "pão francês"
+                        },
+                        "plural": {
+                            "en": "bread rolls",
+                            "de": "Brötchen, lose",
+                            "es": "panecillos",
+                            "fr": "petits pains",
+                            "pt": "pães franceses"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "bread rolls",
+                        "de": "Brötchen, lose",
+                        "es": "panecillos",
+                        "fr": "petits pains",
+                        "pt": "pão francês"
+                    },
+                    "category": "Bakery",
+                    "key": "bread_rollbrötchen,losebread_rollsbrötchen,lose",
+                    "desc": "bread_rollbrötchen,losebread_rollsbrötchen,lose",
+                    "image": {
+                        "name": "bread_roll_kaiser_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/62022f85510000b70243c9a9"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "538ed76bd89ddfbe0da9e2bf"
+                            },
+                            "title": "Herzberger Rhönweck, Brottheke",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 0.35,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401870187772
+                            },
+                            "updateDate": {
+                                "$date": 1462287651867
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53c14fdbe209e8d712b22197"
+                            },
+                            "title": "Schedel Kaiserbrötchen",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 0.4,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1405177819565
+                            },
+                            "updateDate": {
+                                "$date": 1453387093839
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ead3dd5103005b092a09bf"
+                            },
+                            "title": "Bulk Roll",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 0.69,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1407898589687
+                            },
+                            "updateDate": {
+                                "$date": 1408901019259
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ff9d981d0000a901835988"
+                            },
+                            "title": "Plain Bagel",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 1.5,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1409260952040
+                            },
+                            "updateDate": {
+                                "$date": 1409260952040
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ce9cdd7f0700d510e7f215"
+                            },
+                            "title": "Sinnack Weizenbrötchen, zum Aufbacken",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.19,
+                            "quantity": 6,
+                            "newQuantity": 6.0,
+                            "cbid": "broetchen",
+                            "creationDate": {
+                                "$date": 1422826717699
+                            },
+                            "updateDate": {
+                                "$date": 1422826717699
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "552d4d19820100660f5d6267"
+                            },
+                            "title": "Bauernbrötchen, lose",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1429032217795
+                            },
+                            "updateDate": {
+                                "$date": 1440078723224
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "552d4187820100280e5d6265"
+                            },
+                            "title": "Harry Toskanisches Brötchen (ca. 100g)",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.35,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1429029255440
+                            },
+                            "updateDate": {
+                                "$date": 1440081665877
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55a78eb11600003d0561d0ba"
+                            },
+                            "title": "Trader Joe's buns, package",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 2.49,
+                            "newQuantity": 4.0,
+                            "creationDate": {
+                                "$date": 1437044401395
+                            },
+                            "updateDate": {
+                                "$date": 1462187308939
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5696564c180000fe092a2a75"
+                            },
+                            "title": "Schedel Kaiserbrötchen",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 0.45,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452693068216
+                            },
+                            "updateDate": {
+                                "$date": 1452693068216
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5734a5c4170000c5086c929e"
+                            },
+                            "title": "Sinnack Kaiserbrötchen",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 0.99,
+                            "quantity": 4,
+                            "newQuantity": 4.0,
+                            "creationDate": {
+                                "$date": 1463068100355
+                            },
+                            "updateDate": {
+                                "$date": 1665401538840
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5797976d330000be16ecc7b3"
+                            },
+                            "title": "Harry Sonntagsbrötchen",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.36,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469552493189
+                            },
+                            "updateDate": {
+                                "$date": 1662975407953
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df932"
+                            },
+                            "title": "Brötchen",
+                            "ingredient": "538ed737d89ddfad0da9e2be",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.29,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1579171279252
+                            },
+                            "updateDate": {
+                                "$date": 1662456356358
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "6x"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "6x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1401870135286
+                    },
+                    "updateDate": {
+                        "$date": 1667830863424
+                    }
+                }
+            },
+            {
+                "quantity": 0.25,
+                "quantityUS": 0.25,
+                "quantityUSProd": 0.25,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2efb91217a3903a8ada9"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "red bell pepper",
+                        "de": "rote Paprika",
+                        "es": "pimiento morrón rojo",
+                        "fr": "poivron rouge",
+                        "pt": "pimentão vermelho"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "red bell pepper",
+                            "de": "rote Paprika",
+                            "es": "pimiento morrón rojo",
+                            "fr": "poivron rouge",
+                            "pt": "pimentão vermelho"
+                        },
+                        "plural": {
+                            "en": "red bell peppers",
+                            "de": "rote Paprikas",
+                            "es": "pimientos morrones rojos",
+                            "fr": "poivrons rouges",
+                            "pt": "pimentões vermelhos"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "red bell pepper",
+                        "de": "rote Paprika",
+                        "es": "pimiento morrón rojo",
+                        "fr": "poivrons rouges",
+                        "pt": "pimentão vermelho"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "red_bell_pepperrotepaprikared_bell_peppersrotepaprikas",
+                    "desc": "red_bell_pepperrotepaprikared_bell_peppersrotepaprikas",
+                    "image": {
+                        "name": "veg_bell-pepper_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb6165c280000c716c51cf7"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c40b035456c4bd00f8c4b9"
+                            },
+                            "title": "Bio Paprika rot, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388579587124
+                            },
+                            "updateDate": {
+                                "$date": 1492704078979
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5382565cff5374061df20faf"
+                            },
+                            "title": "Paprika, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.99,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401050716255
+                            },
+                            "updateDate": {
+                                "$date": 1460997446594
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e502bdbf613c831146466"
+                            },
+                            "title": "Bio Paprika, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.5,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401835563698
+                            },
+                            "updateDate": {
+                                "$date": 1460997360464
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee9449540000d804098070"
+                            },
+                            "title": "California Grown Red Bell Pepper",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 1.29,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408144457343
+                            },
+                            "updateDate": {
+                                "$date": 1408901154158
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed49064900000002a420e9"
+                            },
+                            "title": "Bell Pepper",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.2,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408059654484
+                            },
+                            "updateDate": {
+                                "$date": 1410727449504
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cb5c726b0700d107d09ced"
+                            },
+                            "title": "Paprika",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 0.69,
+                            "newQuantity": 1.0,
+                            "cbid": "paprikaschote",
+                            "creationDate": {
+                                "$date": 1422613618909
+                            },
+                            "updateDate": {
+                                "$date": 1440163087173
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c84114827be8920022752b"
+                            },
+                            "title": "Paprika, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.87,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388855572733
+                            },
+                            "updateDate": {
+                                "$date": 1522246031805
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592a0753000008301211500"
+                            },
+                            "title": "Bell Pepper",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.19,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1435672693882
+                            },
+                            "updateDate": {
+                                "$date": 1436172418975
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5698d54117000012071f5434"
+                            },
+                            "title": "Paprika rot, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452856641490
+                            },
+                            "updateDate": {
+                                "$date": 1545303850835
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735f794800000fb1270a919"
+                            },
+                            "title": "Paprika Mix",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 2.49,
+                            "quantity": 3,
+                            "newQuantity": 3.0,
+                            "creationDate": {
+                                "$date": 1463154580710
+                            },
+                            "updateDate": {
+                                "$date": 1662983522666
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "579772803300000f11ecc764"
+                            },
+                            "title": "Paprika, lose ca. 250g",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.04,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469543040998
+                            },
+                            "updateDate": {
+                                "$date": 1662462269105
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df7d8"
+                            },
+                            "title": "K-Bio Paprika",
+                            "ingredient": "52bc2efb91217a3903a8ada9",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 2.99,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1579171279198
+                            },
+                            "updateDate": {
+                                "$date": 1661764484882
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "en": "bell pepper,pepper",
+                        "de": "Paprika,Paprikas,rote Paprika,Paprikaschoten,rote Paprikaschoten,Paprikastücke,Paprikastreifen,Paprikaspalten"
+                    },
+                    "creationDate": {
+                        "$date": 1388064507353
+                    },
+                    "updateDate": {
+                        "$date": 1686317231610
+                    }
+                }
+            },
+            {
+                "quantity": 15.0,
+                "measure": "g",
+                "quantityUS": 1.0,
+                "measureUS": "tbsp",
+                "quantityUSProd": 0.5,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc33dd91217ae703a8adcc"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "pine nut",
+                        "de": "Pinienkern",
+                        "es": "piñón",
+                        "fr": "pignon de pin",
+                        "pt": "pinhão"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "pine nut",
+                            "de": "Pinienkern",
+                            "es": "piñón",
+                            "fr": "pignon de pin",
+                            "pt": "pinhão"
+                        },
+                        "plural": {
+                            "en": "pine nuts",
+                            "de": "Pinienkerne",
+                            "es": "piñones",
+                            "fr": "pignons de pin",
+                            "pt": "pinhões"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "pine nuts",
+                        "de": "Pinienkerne",
+                        "es": "piñón",
+                        "fr": "pignons de pin",
+                        "pt": "pinhões"
+                    },
+                    "category": "NutsSeedsDriedFruit",
+                    "key": "pine_nutpinienkernpine_nutspinienkerne",
+                    "desc": "pine_nutpinienkernpine_nutspinienkerne",
+                    "image": {
+                        "name": "nuts_nuts-pine_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb7701c270000d5008a8f2d"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "53806431d26b9caa00b4e7fd"
+                            },
+                            "title": "Alnatura Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 6.99,
+                            "quantity": 60,
+                            "newQuantity": 60.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1400923185362
+                            },
+                            "updateDate": {
+                                "$date": 1667287854045
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538de3af97169da81e9ddf88"
+                            },
+                            "title": "Tegut Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 3.29,
+                            "newQuantity": 60.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401807791442
+                            },
+                            "updateDate": {
+                                "$date": 1523891960103
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed542d490000b103a4211f"
+                            },
+                            "title": "Diamond Baking Pine Nuts Whole Shelled",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 5.99,
+                            "quantity": 2,
+                            "newQuantity": 2.25,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408062509840
+                            },
+                            "updateDate": {
+                                "$date": 1408062509840
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ce8ba07f0700860fe7f205"
+                            },
+                            "title": "Seeberger Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 3.29,
+                            "quantity": 50,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "cbid": "pinienkerne",
+                            "creationDate": {
+                                "$date": 1422822304030
+                            },
+                            "updateDate": {
+                                "$date": 1422822304030
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52e760588dedb4b408b80e36"
+                            },
+                            "title": "Rapunzel Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 7.97,
+                            "newQuantity": 75.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1390895192116
+                            },
+                            "updateDate": {
+                                "$date": 1453808216971
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52bc367a91217aed03a8adcd"
+                            },
+                            "title": "Farmer's Snack Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 3.49,
+                            "newQuantity": 75.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388066426574
+                            },
+                            "updateDate": {
+                                "$date": 1527205263789
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee8f215400002104098061"
+                            },
+                            "title": "Pine nuts",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 4.0,
+                            "newQuantity": 4.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408143137235
+                            },
+                            "updateDate": {
+                                "$date": 1431300959216
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5596475f780000ac05b7d0d4"
+                            },
+                            "title": "Trader Joe's Pine Nuts",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 7.99,
+                            "newQuantity": 8.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435912031929
+                            },
+                            "updateDate": {
+                                "$date": 1435923593057
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "569782f81500009f075b315a"
+                            },
+                            "title": "Dennree Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 5.99,
+                            "quantity": 70,
+                            "newQuantity": 70.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1452770040026
+                            },
+                            "updateDate": {
+                                "$date": 1452770040026
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57348d6b170000d7056c926a"
+                            },
+                            "title": "Seeberger Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 4.19,
+                            "quantity": 50,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463061867953
+                            },
+                            "updateDate": {
+                                "$date": 1665386587338
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5797888a330000f914ecc7a5"
+                            },
+                            "title": "Verival Bio Pinienkerne",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 4.49,
+                            "newQuantity": 70.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1469548682595
+                            },
+                            "updateDate": {
+                                "$date": 1527206069408
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df8a5"
+                            },
+                            "title": "K-Classic Pinienkerne naturbelassen",
+                            "ingredient": "52bc33dd91217ae703a8adcc",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 2.29,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279230
+                            },
+                            "updateDate": {
+                                "$date": 1579171279230
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "en": "nuts,pine seeds",
+                        "de": "Pinienkernen,geröstete Pinienkerne,gehackte Pinienkerne"
+                    },
+                    "creationDate": {
+                        "$date": 1388065757086
+                    },
+                    "updateDate": {
+                        "$date": 1686234168718
+                    }
+                }
+            },
+            {
+                "quantity": 25.0,
+                "measure": "g",
+                "quantityUS": 1.25,
+                "measureUS": "cup(s)",
+                "quantityUSProd": 1.0,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2f8991217a5903a8adb1"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "arugula",
+                        "de": "Rucola",
+                        "es": "rúcula",
+                        "fr": "roquette",
+                        "pt": "rúcula"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "arugula",
+                            "de": "Rucola",
+                            "es": "rúcula",
+                            "fr": "roquette",
+                            "pt": "rúcula"
+                        },
+                        "plural": {
+                            "en": "arugula",
+                            "de": "Rucola",
+                            "es": "rúcula",
+                            "fr": "roquette",
+                            "pt": "rúcula"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "arugula",
+                        "de": "Rucola",
+                        "es": "rúcula",
+                        "fr": "roquette",
+                        "pt": "rúcula"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "arugularucolaarugularucola",
+                    "desc": "arugularucolaarugularucola",
+                    "image": {
+                        "name": "veg_arugula_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb610a42800007915c51cdb"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52eef394c719bf6c00b9866e"
+                            },
+                            "title": "Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.99,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1391391636779
+                            },
+                            "updateDate": {
+                                "$date": 1660571951874
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5382581aff53745d1df20fb2"
+                            },
+                            "title": "Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.79,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401051162980
+                            },
+                            "updateDate": {
+                                "$date": 1661789815844
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e525a97169dbe319ddfc6"
+                            },
+                            "title": "Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.99,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401836122427
+                            },
+                            "updateDate": {
+                                "$date": 1661789822304
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee5ff6540000bd01098028"
+                            },
+                            "title": "O Organics Baby Arugula",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 3.99,
+                            "quantity": 5,
+                            "newQuantity": 5.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408131062501
+                            },
+                            "updateDate": {
+                                "$date": 1661789829022
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee8913540000df0309805c"
+                            },
+                            "title": "Organic Girl Organic Arugula Blend Clamshell",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 3.99,
+                            "quantity": 5,
+                            "newQuantity": 5.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408141587988
+                            },
+                            "updateDate": {
+                                "$date": 1661789835293
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ca7426720900220fdaf683"
+                            },
+                            "title": "Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.59,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "cbid": "rucola",
+                            "creationDate": {
+                                "$date": 1422554150635
+                            },
+                            "updateDate": {
+                                "$date": 1661789840917
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c47d27bd0c4ca800e8851f"
+                            },
+                            "title": "Bio Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.79,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388608807634
+                            },
+                            "updateDate": {
+                                "$date": 1661789846268
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55929caf300000a9002114f0"
+                            },
+                            "title": "Arugula",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.99,
+                            "quantity": 7,
+                            "newQuantity": 7.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435671727307
+                            },
+                            "updateDate": {
+                                "$date": 1661789877308
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5697d1e01500008f105b319e"
+                            },
+                            "title": "Rucola, Schale",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.99,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1452790240303
+                            },
+                            "updateDate": {
+                                "$date": 1661789882895
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57349c671700005a076c927b"
+                            },
+                            "title": "Rucola-Salat",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.79,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463065703058
+                            },
+                            "updateDate": {
+                                "$date": 1665385152837
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "579715d0330000e707ecc72a"
+                            },
+                            "title": "Rucola, Schale",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.59,
+                            "quantity": 100,
+                            "newQuantity": 100.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1469519312784
+                            },
+                            "updateDate": {
+                                "$date": 1662464783994
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df745"
+                            },
+                            "title": "Rucola",
+                            "ingredient": "52bc2f8991217a5903a8adb1",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.99,
+                            "quantity": 125,
+                            "newQuantity": 125.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279185
+                            },
+                            "updateDate": {
+                                "$date": 1662630872501
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "de": "Rucola,Rucolasalat"
+                    },
+                    "creationDate": {
+                        "$date": 1388064649534
+                    },
+                    "updateDate": {
+                        "$date": 1686316447737
+                    }
+                }
+            },
+            {
+                "quantity": 113.0,
+                "measure": "g",
+                "quantityUS": 1.0,
+                "quantityUSProd": 4.0,
+                "measureUSProd": "oz",
+                "brandIngredientId": "623dd92e550000a603a9cf9a",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "623b16f84b00006108244d2d"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "vegan burger patty",
+                        "de": "veganes Burger Patty",
+                        "es": "carne para hamburguesa vegana",
+                        "fr": "steak haché végan",
+                        "pt": "hambúrguer vegano"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "vegan burger patty",
+                            "de": "veganes Burger Patty",
+                            "es": "carne para hamburguesa vegana",
+                            "fr": "steak haché végan",
+                            "pt": "hambúrguer vegano"
+                        },
+                        "plural": {
+                            "en": "vegan burger patties",
+                            "de": "vegane Burger Patties",
+                            "es": "hamburguesas veganas",
+                            "fr": "steaks hachés végans",
+                            "pt": "hambúrgueres veganos"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "vegan burger patties",
+                        "de": "veganes Burger Patty",
+                        "es": "carne para hamburguesa vegana",
+                        "fr": "steaks hachés végans",
+                        "pt": "hambúrgueres veganos"
+                    },
+                    "category": "SoyLactose-Free",
+                    "key": "vegan_burger_pattyveganesburger_pattyvegan_burger_pattiesveganeburger_patties",
+                    "desc": "vegan_burger_pattyveganesburger_pattyvegan_burger_pattiesveganeburger_patties",
+                    "image": {
+                        "name": "soy_vegan-burger-patties_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/623b17ab520000a90c76d3c5"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "62581b217900007100061fbf"
+                            },
+                            "title": "Morning Star Farms Veggie Patties Original",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 5.19,
+                            "quantity": 10,
+                            "newQuantity": 10.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1649941281465
+                            },
+                            "updateDate": {
+                                "$date": 1649941281465
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "62581b217900007100061fc0"
+                            },
+                            "title": "365 plant based burger",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 3.97,
+                            "quantity": 10,
+                            "newQuantity": 10.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1649941281465
+                            },
+                            "updateDate": {
+                                "$date": 1649941281465
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "62581b34790000710006200d"
+                            },
+                            "title": "Trader Joe's Protein Patties Plant Based Burgers",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 4.49,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1649941300281
+                            },
+                            "updateDate": {
+                                "$date": 1649941300281
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "62825f7f5200003600df8c7a"
+                            },
+                            "title": "followfood FREI!BURGER",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 3.99,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1652711295624
+                            },
+                            "updateDate": {
+                                "$date": 1652711295624
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "62825f944c000071038e335c"
+                            },
+                            "title": "followfood FREI!BURGER ",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 3.99,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1652711316073
+                            },
+                            "updateDate": {
+                                "$date": 1652711316073
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "62825fc8510000c10005779a"
+                            },
+                            "title": "Rügenwalder Mühle Vegane Mühlen Burger Typ Rind",
+                            "ingredient": "623b16f84b00006108244d2d",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 4.01,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1652711368620
+                            },
+                            "updateDate": {
+                                "$date": 1652711368620
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "creationDate": {
+                        "$date": 1648039672703
+                    },
+                    "updateDate": {
+                        "$date": 1663764034066
+                    }
+                }
+            },
+            {
+                "quantity": 18.0,
+                "measure": "g",
+                "quantityUS": 1.0,
+                "measureUS": "slice(s)",
+                "quantityUSProd": 0.6,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "5eb3d75d0403001cb1b5f13d"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "vegan cheese",
+                        "de": "veganer Käse",
+                        "es": "queso vegano",
+                        "fr": "fromage végan",
+                        "pt": "queijo vegano"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "vegan cheese",
+                            "de": "veganer Käse",
+                            "es": "queso vegano",
+                            "fr": "fromage végan",
+                            "pt": "queijo vegano"
+                        },
+                        "plural": {
+                            "en": "vegan cheese",
+                            "de": "veganer Käse",
+                            "es": "quesos veganos",
+                            "fr": "fromage végan",
+                            "pt": "queijo vegano"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "vegan cheese",
+                        "de": "veganer Käse",
+                        "es": "queso vegano",
+                        "fr": "fromage végan",
+                        "pt": "queijo vegano"
+                    },
+                    "category": "SoyLactose-Free",
+                    "key": "vegan_cheeseveganerkäsevegan_cheeseveganerkäse",
+                    "desc": "vegan_cheeseveganerkäsevegan_cheeseveganerkäse",
+                    "image": {
+                        "name": "dairy_cheese_cave-aged_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5ca988b6-b7ce-476c-8529-6356819f682b"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "5eb3d7d70403001cb1b5f13e"
+                            },
+                            "title": "Simply V vegane Genießerscheiben",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 2.99,
+                            "quantity": 150,
+                            "newQuantity": 150.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1588844503855
+                            },
+                            "updateDate": {
+                                "$date": 1588844503855
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5eb3d92b0403001cb1b5f13f"
+                            },
+                            "title": "Simply V vegane Genießerscheiben",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 2.99,
+                            "quantity": 150,
+                            "newQuantity": 150.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1588844843107
+                            },
+                            "updateDate": {
+                                "$date": 1588844843107
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5eb3d9990403001cb1b5f140"
+                            },
+                            "title": "SIMPLY V Vegane Genießerscheiben natur",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 2.99,
+                            "quantity": 150,
+                            "newQuantity": 150.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1588844953888
+                            },
+                            "updateDate": {
+                                "$date": 1668614371037
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5eb3dcce0403001cb1b5f142"
+                            },
+                            "title": "Bedda Scheiben Classic",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 2.99,
+                            "quantity": 150,
+                            "newQuantity": 150.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1588845774457
+                            },
+                            "updateDate": {
+                                "$date": 1588845774457
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5eb3df4a0403001cb1b5f143"
+                            },
+                            "title": "Creamy Original Vegan Chao Slices",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 6.29,
+                            "quantity": 7,
+                            "newQuantity": 7.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1588846410573
+                            },
+                            "updateDate": {
+                                "$date": 1588846410573
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "61696fce4c0000300c36e205"
+                            },
+                            "title": "Follow Your Heart Cheese Smked Gouda Sliced",
+                            "ingredient": "5eb3d75d0403001cb1b5f13d",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 4.99,
+                            "quantity": 7,
+                            "newQuantity": 7.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1634299854249
+                            },
+                            "updateDate": {
+                                "$date": 1634299854249
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "creationDate": {
+                        "$date": 1588844381164
+                    },
+                    "updateDate": {
+                        "$date": 1672935018513
+                    }
+                }
+            }
+        ],
+        "imageList": [
+            {
+                "name": "REZ_1901_Cover.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/3f0a7b8a-de85-405a-9a43-97a12e52d008",
+                "type": "cover"
+            },
+            {
+                "name": "REZ_1901_Fav.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/8ace9c90-0a70-4044-9082-63ed7d7e37c8",
+                "type": "favorite"
+            },
+            {
+                "name": "REZ_1901_01.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/739e63f1-0e7a-48b2-80e0-56bb43a1cd0c",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_02.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/61a0e0544500000302145eb0"
+            },
+            {
+                "name": "REZ_1901_03.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/61b0c9274c000035001937c1"
+            },
+            {
+                "name": "REZ_1901_04.jpeg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/6183eac34e0000ee0a357d90"
+            },
+            {
+                "name": "REZ_1901_05.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/bd88bda4-4866-4aa2-992d-7c3c7add0cf2",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_06.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/61b0c9ad4c000035001937d4"
+            },
+            {
+                "name": "REZ_1901_07.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/619bb7d6470000f702607ada"
+            },
+            {
+                "name": "REZ_1901_08.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/61b31ded4b00000904621708"
+            },
+            {
+                "name": "REZ_1901_09.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/6e44fcd6-939b-441c-b996-e30b6c9ca9a4",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_10.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/60768f7f6c00008d00f17e45"
+            },
+            {
+                "name": "REZ_1901_11.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/08929cf6-694e-4bb6-bd88-544038c49a0f",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_12.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/405ede77-a3b8-4a45-95e0-ceeefac917ad",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_13.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/d78aa50e-4df9-40f8-8dfb-0fbc168b7923",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_14.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/67d04276-3a11-459f-9ee4-e808a27c7db1",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_15.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/6e369829-590b-4267-983e-764fedb282bf",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_16.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/8003b3a8-5d34-422c-b115-87c8d59bbed8",
+                "type": "step"
+            },
+            {
+                "name": "REZ_1901_17.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/b6f7d2af-3b8d-4f56-a744-4484f839e52a",
+                "type": "blurred"
+            }
+        ],
+        "localizedPublishDate": {
+            "en": {
+                "$date": 1589414400000
+            },
+            "de": {
+                "$date": 1589414400000
+            }
+        },
+        "creationDate": {
+            "$date": 1588775247512
+        },
+        "updateDate": {
+            "$date": 1687624248083
+        }
+    }
+]

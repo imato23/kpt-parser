@@ -1,0 +1,3948 @@
+{
+    "date": "2023-06-01",
+    "data": {
+        "_id": {
+            "$oid": "52f2887cef8106f40aac95e1"
+        },
+        "localizedTitle": {
+            "en": "Curried Coconut Rice & Chicken",
+            "de": "H\u00fchnchenbrust mit Kokos-Zucchini-Sauce auf Wild-Basmatireis",
+            "es": "Pollo con salsa de calabac\u00edn y coco sobre arroz basmati salvaje",
+            "fr": "Poulet \u00e0 la sauce coco-courgette sur riz basmati sauvage",
+            "pt": "Frango com molho de coco e abobrinha no arroz basmati selvagem"
+        },
+        "rtype": "Poultry",
+        "gdocs": "0034",
+        "authorComment": {
+            "en": "Wild & Nice",
+            "de": "Eine Sch\u00fcssel voll Gl\u00fcck",
+            "es": "Salvaje y saludable",
+            "fr": "Un riz plein de vie\u00a0!",
+            "pt": "Felicidade \u00e9 viver na sua abobrinha"
+        },
+        "uid": "51a14aca",
+        "country": "us",
+        "localizedOtherIngred": {
+            "en": "each: 1 tbsp olive oil, curry powder, salt and pepper",
+            "de": "p.P.: 1 EL Oliven\u00f6l, Currypulver, Salz und Pfeffer"
+        },
+        "preparationTime": 30,
+        "cookingTime": 0,
+        "recipeNutrition": {
+            "calories": 652,
+            "protein": 31,
+            "fat": 31,
+            "carbohydrate": 65
+        },
+        "activeTags": [
+            "budget_under_10_de",
+            "main_ingredient_rice",
+            "asian_fusion",
+            "batch_cooking",
+            "main_dish",
+            "dinner_lunch",
+            "comfort_foot",
+            "diet_lactose_free",
+            "diet_dairy_free",
+            "main_ingredient_meat",
+            "budget_above_15_us"
+        ],
+        "steps": [
+            {
+                "title": {
+                    "en": "All set?",
+                    "de": "Alles parat?",
+                    "es": "\u00bfTodo listo?",
+                    "fr": "Vous avez tout\u00a0?",
+                    "pt": "Tudo pronto?"
+                },
+                "image": {
+                    "name": "REZ_034_01.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/74cfe80a-7d35-4aca-bbf3-3d6a3b31d045",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Cook rice according to package instructions.",
+                    "de": "Reis nach Packungsanleitung kochen.",
+                    "es": "Cocer el arroz seg\u00fan las instrucciones del paquete.",
+                    "fr": "Faire cuire le riz selon les instructions figurant sur l'emballage.",
+                    "pt": "Cozinhar arroz de acordo com as instru\u00e7\u00f5es da embalagem."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 80.0,
+                                "measure": "g"
+                            },
+                            "en": {
+                                "quantity": 0.5,
+                                "measure": "cup(s)"
+                            }
+                        },
+                        "ingredientId": "52bc0b1291217a8000a8ad21",
+                        "title": {
+                            "en": "basmati & wild rice",
+                            "de": "Basmati- & Wildreis",
+                            "es": "arroz basmati y salvaje",
+                            "fr": "riz basmati et riz sauvage",
+                            "pt": "arroz basmati e arroz selvagem"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_0034_02.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/60768fdd6c00008d00f17ede"
+                }
+            },
+            {
+                "title": {
+                    "en": "Meanwhile, wash zucchini and dice into small pieces.",
+                    "de": "W\u00e4hrenddessen Zucchini waschen und in kleine W\u00fcrfel schneiden.",
+                    "es": "Mientras tanto, lavar los calabacines y cortarlos en trozos peque\u00f1os.",
+                    "fr": "Pendant ce temps, laver les courgettes et les couper en petits morceaux.",
+                    "pt": "Enquanto isso, lavar a abobrinha e cortar em cubos pequenos."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 1.0
+                            },
+                            "en": {
+                                "quantity": 1.0
+                            }
+                        },
+                        "ingredientId": "52bc300591217a7503a8adb9",
+                        "title": {
+                            "en": "zucchini",
+                            "de": "Zucchini",
+                            "es": "calabac\u00edn",
+                            "fr": "courgette",
+                            "pt": "abobrinha"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_0034_03.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/61b732dd3b00006e05070010"
+                }
+            },
+            {
+                "title": {
+                    "en": "Wash chili pepper, deseed, and dice finely.",
+                    "de": "Chili waschen, entkernen und fein w\u00fcrfeln.",
+                    "es": "Lavar el chile, quitarle las semillas y cortarlo en cubos finos.",
+                    "fr": "Laver le piment, l'\u00e9p\u00e9piner et le couper en petits d\u00e9s.",
+                    "pt": "Lavar pimenta, retirar sementes e cortar em cubos pequenos."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 0.25
+                            },
+                            "en": {
+                                "quantity": 0.25
+                            }
+                        },
+                        "ingredientId": "52bc2e1591217afb02a8ad99",
+                        "title": {
+                            "en": "chili pepper",
+                            "de": "Chilischote",
+                            "es": "chile",
+                            "fr": "piment",
+                            "pt": "pimenta-malagueta"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_0034_04.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/619bc6ca4900006903261b5e"
+                }
+            },
+            {
+                "title": {
+                    "en": "Thoroughly wash lime, halve, and juice.",
+                    "de": "Limette halbieren und Saft auspressen.",
+                    "es": "Partir el lim\u00f3n por la mitad y exprimir el jugo.",
+                    "fr": "Couper le citron vert en deux et extraire le jus.",
+                    "pt": "Cortar lim\u00e3o ao meio e espremer."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 0.25
+                            },
+                            "en": {
+                                "quantity": 0.25
+                            }
+                        },
+                        "ingredientId": "52bc2eec91217a2a03a8ada7",
+                        "title": {
+                            "en": "lime",
+                            "de": "Limette",
+                            "es": "lim\u00f3n",
+                            "fr": "citron vert",
+                            "pt": "lim\u00e3o-taiti"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_0034_05.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/607692e96c00008c00f18356"
+                }
+            },
+            {
+                "title": {
+                    "en": "Wash basil, shake dry, and chop finely.",
+                    "de": "Basilikum waschen, trocken sch\u00fctteln und sehr fein hacken.",
+                    "es": "Lavar la albahaca, sacudirla para secarla y picarla finamente.",
+                    "fr": "Laver le basilic, le secouer pour le s\u00e9cher et le hacher finement.",
+                    "pt": "Lavar manjeric\u00e3o, sacudir para secar e cortar em peda\u00e7os pequenos."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 5.0,
+                                "measure": "g"
+                            },
+                            "en": {
+                                "quantity": 0.25,
+                                "measure": "cup(s)"
+                            }
+                        },
+                        "ingredientId": "52bc2daa91217ade02a8ad91",
+                        "title": {
+                            "en": "basil, fresh ",
+                            "de": "Basilikum, frisch",
+                            "es": "albahaca, fresca",
+                            "fr": "basilic, frais",
+                            "pt": "manjeric\u00e3o, fresco"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_0034_06.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/61adf6fd4300003500780232"
+                }
+            },
+            {
+                "title": {
+                    "en": "For the sauce, stir curry powder, coconut milk, vegetable broth, and lime juice until combined.",
+                    "de": "F\u00fcr die Sauce Currypulver, Kokosmilch, Gem\u00fcsebr\u00fche und Limettensaft verr\u00fchren.",
+                    "es": "En un taz\u00f3n, revolver el polvo de curry, la leche de coco, el caldo vegetal y el jugo de lim\u00f3n hasta que se combinen.",
+                    "fr": "Dans un bol, m\u00e9langer la poudre de curry, le lait de coco, le bouillon de l\u00e9gumes et le jus de citron vert.",
+                    "pt": "Em uma tigela, mexer curry em p\u00f3, leite de coco, caldo de legumes e suco de lim\u00e3o at\u00e9 misturar."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 0.5,
+                                "measure": "TL"
+                            },
+                            "en": {
+                                "quantity": 0.5,
+                                "measure": "tsp"
+                            }
+                        },
+                        "ingredientId": "52bc0e2b91217aec00a8ad41",
+                        "title": {
+                            "en": "curry powder",
+                            "de": "Currypulver",
+                            "es": "curry en polvo",
+                            "fr": "curry en poudre",
+                            "pt": "curry em p\u00f3"
+                        }
+                    },
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 80.0,
+                                "measure": "ml"
+                            },
+                            "en": {
+                                "quantity": 0.0
+                            }
+                        },
+                        "ingredientId": "624586e55200005302944656",
+                        "title": {
+                            "en": "coconut milk",
+                            "de": "Kokosmilch",
+                            "es": "leche de coco",
+                            "fr": "lait de coco",
+                            "pt": "leite de coco"
+                        }
+                    },
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 125.0,
+                                "measure": "ml"
+                            },
+                            "en": {
+                                "quantity": 0.5,
+                                "measure": "cup(s)"
+                            }
+                        },
+                        "ingredientId": "52bc4d48f96fcbcc00eed28d",
+                        "title": {
+                            "en": "vegetable broth",
+                            "de": "Gem\u00fcsebr\u00fche",
+                            "es": "caldo de verduras",
+                            "fr": "bouillon de l\u00e9gumes",
+                            "pt": "caldo de legumes"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_034_07.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/808dcf55-db81-451a-95a2-e630b2831bd2",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Heat oil in a pan. Season chicken with salt and pepper and fry for about 7 min. on each side until cooked evenly in the middle. May take longer depending on thickness of the meat.",
+                    "de": "Oliven\u00f6l in einer Pfanne erhitzen. H\u00fchnchen mit Salz und Pfeffer w\u00fcrzen und ca. 7 min. auf jeder Seite braten, bis es auch in der Mitte gar ist. Dauer kann je nach Dicke des Fleisches variieren.",
+                    "es": "Calentar el aceite en una sart\u00e9n. Salpimentar el pollo y fre\u00edrlo m\u00e1s o menos 7 min. por cada lado. Esto puede llevar m\u00e1s o menos tiempo dependiendo del grosor del pollo, pero hay que asegurarse de que ya no est\u00e9 rosa en el centro.",
+                    "fr": "Faire chauffer l'huile dans une po\u00eale. Assaisonner le poulet de sel et de poivre et faire frire environ 7 min. de chaque c\u00f4t\u00e9, jusqu'\u00e0 ce qu'elle ne soit plus rose au milieu. Cela peut prendre plus ou moins de temps selon l'\u00e9paisseur de la viande.",
+                    "pt": "Esquentar \u00f3leo em uma frigideira. Temperar frango com sal e pimenta e saltear por mais ou menos 7 min. de cada lado. Isso poder\u00e1 levar mais ou menos tempo dependendo da espessura da carne, mas voc\u00ea precisa garantir que ela n\u00e3o esteja mais rosada no meio."
+                },
+                "ingredients": [
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 1.0,
+                                "measure": "EL"
+                            },
+                            "en": {
+                                "quantity": 1.0,
+                                "measure": "tbsp"
+                            }
+                        },
+                        "ingredientId": "52bc0dfc91217aec00a8ad3f",
+                        "title": {
+                            "en": "olive oil",
+                            "de": "Oliven\u00f6l",
+                            "es": "aceite de oliva",
+                            "fr": "huile d'olive",
+                            "pt": "azeite de oliva"
+                        }
+                    },
+                    {
+                        "unit": {
+                            "de": {
+                                "quantity": 100.0,
+                                "measure": "g"
+                            },
+                            "en": {
+                                "quantity": 0.25,
+                                "measure": "lb"
+                            }
+                        },
+                        "ingredientId": "52bc0ee191217a0b01a8ad48",
+                        "title": {
+                            "en": "chicken breast (boneless, skinless)",
+                            "de": "H\u00fchnerbrustfilet",
+                            "es": "pechuga de pollo (deshuesada, sin piel)",
+                            "fr": "blanc de poulet",
+                            "pt": "peito de frango (sem ossos, sem pele)"
+                        }
+                    },
+                    {
+                        "unit": null,
+                        "ingredientId": "553652364900001b1550a3ea",
+                        "title": {
+                            "en": "salt",
+                            "de": "Salz",
+                            "es": "sal",
+                            "fr": "sel",
+                            "pt": "sal"
+                        }
+                    },
+                    {
+                        "unit": null,
+                        "ingredientId": "55365112490000f41450a3e6",
+                        "title": {
+                            "en": "pepper",
+                            "de": "Pfeffer",
+                            "es": "pimienta",
+                            "fr": "poivre",
+                            "pt": "pimenta"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_034_08.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/46c7c8ec-c99a-4420-9ee2-ea1eb7bd547f",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Meanwhile, add the coconut sauce, zucchini, and chili to a large pot. Bring to a boil and simmer for 4-5 min. until zucchini is tender. Season with salt and pepper.",
+                    "de": "In der Zwischenzeit Kokossauce, Zucchini und Chili in einen Topf geben. Zum Kochen bringen und 4-5 min. k\u00f6cheln lassen, bis die Zucchini zart ist. Mit Salz und Pfeffer w\u00fcrzen.",
+                    "es": "Mientras tanto, a\u00f1adir la salsa de coco, las calabacitas y el chile a una olla. Llevar a ebullici\u00f3n y cocinar a fuego lento 4-5 min., hasta que las calabacitas est\u00e9n tiernas. Sazonar con sal y pimienta.",
+                    "fr": "Pendant ce temps, ajouter la sauce \u00e0 la noix de coco, les courgettes et le chili dans une casserole. Porter \u00e0 \u00e9bullition et laisser mijoter 4-5 min. jusqu'\u00e0 ce que les courgettes soient tendres. Assaisonner avec du sel et du poivre.",
+                    "pt": "Enquanto isso, adicionar molho de coco, abobrinha e pimenta a uma panela. Deixar ferver e cozinhar em fogo baixo por 4-5 min. at\u00e9 a abobrinha ficar macia. Temperar com sal e pimenta."
+                },
+                "ingredients": [
+                    {
+                        "unit": null,
+                        "ingredientId": "553652364900001b1550a3ea",
+                        "title": {
+                            "en": "salt",
+                            "de": "Salz",
+                            "es": "sal",
+                            "fr": "sel",
+                            "pt": "sal"
+                        }
+                    },
+                    {
+                        "unit": null,
+                        "ingredientId": "55365112490000f41450a3e6",
+                        "title": {
+                            "en": "pepper",
+                            "de": "Pfeffer",
+                            "es": "pimienta",
+                            "fr": "poivre",
+                            "pt": "pimenta"
+                        }
+                    }
+                ],
+                "image": {
+                    "name": "REZ_034_09.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/1f984e94-7360-4435-b307-56918063dc8f",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Add cooked rice and basil, stir to combine, and season to your liking.",
+                    "de": "Gekochten Reis und Basilikum dazugeben, umr\u00fchren und abschmecken.",
+                    "es": "A\u00f1adir el arroz cocido y la albahaca, remover para combinar y comprobar la saz\u00f3n.",
+                    "fr": "Ajouter le riz cuit et le basilic, remuer pour combiner et v\u00e9rifier l'assaisonnement.",
+                    "pt": "Adicionar arroz cozido e manjeric\u00e3o, mexer para incorporar e experimentar o tempero."
+                },
+                "ingredients": [],
+                "image": {
+                    "name": "REZ_034_10.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/7ad621ac-ca7e-4cd0-92e3-2bc66b66d7ee",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Remove chicken from pan and slice into pieces.",
+                    "de": "H\u00fchnchen aus der Pfanne nehmen und in Scheiben schneiden.",
+                    "es": "Sacar el pollo de la sart\u00e9n y cortarlo en trozos.",
+                    "fr": "Retirer le poulet de la po\u00eale et le couper en morceaux.",
+                    "pt": "Retirar o frango da frigideira e cortar em peda\u00e7os."
+                },
+                "image": {
+                    "name": "REZ_034_11.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/0291c07e-a7e3-4a06-bc67-c6d12282896e",
+                    "type": "step"
+                }
+            },
+            {
+                "title": {
+                    "en": "Serve the curried coconut rice topped with chicken. Enjoy!",
+                    "de": "Kokosreis mit H\u00fchnchen servieren.",
+                    "es": "Servir el arroz con coco cubierto con el pollo.",
+                    "fr": "Servir le riz \u00e0 la noix de coco accompagn\u00e9 de poulet.",
+                    "pt": "Servir o arroz de coco coberto com frango."
+                },
+                "image": {
+                    "name": "REZ_034_12.jpg",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/e09d876e-fc0e-4b8f-a27a-c1a81177c1d8",
+                    "type": "step"
+                }
+            }
+        ],
+        "authors": [
+            {
+                "_id": {
+                    "$oid": "59eefb8fea08004509f3f2ad"
+                },
+                "name": "Jodie",
+                "link": "https://blog.kptncook.com/2020/11/05/durfen-wir-vorstellen-unsere-koch-kptns/",
+                "title": "KptnCook",
+                "localizedDesc": {
+                    "en": "English girl in London - cooking dishes from around the world.",
+                    "de": "Engl\u00e4nderin in Berlin, die vegetarische und vegane Rezepte aus aller Welt kocht.",
+                    "es": "Chica inglesa en Londres: cocinando platos de todo el mundo.",
+                    "fr": "Jeune Anglaise domicili\u00e9e \u00e0 Berlin, qui cuisine des plats du monde entier\u00a0!",
+                    "pt": "Inglesa em Berlim. Cozinha pratos veganos e vegetarianos do mundo todo."
+                },
+                "sponsor": "no",
+                "authorImage": {
+                    "name": "Author_Jodie_KptnCook.png",
+                    "url": "https://d2am1qai33sroc.cloudfront.net/image/59ef520eea08007110f3f2cb"
+                },
+                "creationDate": {
+                    "$date": 1508834191118
+                },
+                "updateDate": {
+                    "$date": 1643809182812
+                }
+            }
+        ],
+        "retailers": [
+            {
+                "_id": {
+                    "$oid": "532f5ddcf8b4222e28731609"
+                },
+                "rkey": "edekaecenter",
+                "key": "edeka-center",
+                "name": "Edeka",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Die Preise verstehen sich als Richtpreise. Dabei sind alle Angaben ohne Gew\u00e4hr.",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1395613148182
+                },
+                "updateDate": {
+                    "$date": 1597401219551
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "52b80d660f5e989d00f9d2a7"
+                },
+                "rkey": "rewe",
+                "key": "rewe",
+                "name": "Rewe",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Ladenpreise REWE Berlin, vom 28.09.2019",
+                "mapStatus": "active",
+                "onlineOrderingState": true,
+                "creationDate": {
+                    "$date": 1387793766440
+                },
+                "updateDate": {
+                    "$date": 1590307954128
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "59dcb17a9e0000b006e253da"
+                },
+                "key": "kaufland",
+                "name": "Kaufland",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Ladenpreise Kaufland Berlin Neuk\u00f6lln Arcaden, vom 20.01.2020",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1507635578226
+                },
+                "updateDate": {
+                    "$date": 1590570847125
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "56953519190000bf0d27346e"
+                },
+                "key": "denns",
+                "name": "denn's Biomarkt",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Preise vom 19.06.2017",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1452619033288
+                },
+                "updateDate": {
+                    "$date": 1590570909304
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "52b80d9b0f5e98a800f9d2a9"
+                },
+                "rkey": "biocompany",
+                "key": "biocompany",
+                "name": "Bio Company",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Ladenpreise Bio Company Berlin, vom 25.04.2017",
+                "mapStatus": "active",
+                "discount": 0.0,
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1387793819526
+                },
+                "updateDate": {
+                    "$date": 1590571002450
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "5707c9a61700009411f175cf"
+                },
+                "key": "combi",
+                "name": "Combi",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Ladenpreise Combi, vom 08.04.2016",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1460128166132
+                },
+                "updateDate": {
+                    "$date": 1590571060518
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "538dab8697169d59149ddf66"
+                },
+                "rkey": "tegut",
+                "key": "tegut...",
+                "name": "tegut...",
+                "status": "active",
+                "typ": "store",
+                "country": "de",
+                "priceUpdate": "Alle Angaben ohne Gew\u00e4hr. Ladenpreise tegut... Jena, vom 04.06.2016",
+                "mapStatus": "active",
+                "onlineOrderingState": false,
+                "creationDate": {
+                    "$date": 1401793414244
+                },
+                "updateDate": {
+                    "$date": 1680691105443
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "5303670c51638db208100cf4"
+                },
+                "rkey": "wholefoods",
+                "key": "wholefoods",
+                "name": "Whole Foods",
+                "status": "active",
+                "typ": "store",
+                "country": "us",
+                "priceUpdate": "Prices and products are subject to change without notice.",
+                "mapStatus": "active",
+                "creationDate": {
+                    "$date": 1392731916381
+                },
+                "updateDate": {
+                    "$date": 1438088117458
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "5592887e310000d11c5237e1"
+                },
+                "key": "traderjoe's",
+                "name": "Trader Joe's",
+                "status": "active",
+                "typ": "store",
+                "country": "us",
+                "priceUpdate": "Prices and products are subject to change without notice.",
+                "mapStatus": "active",
+                "creationDate": {
+                    "$date": 1435666558238
+                },
+                "updateDate": {
+                    "$date": 1438258805794
+                }
+            },
+            {
+                "_id": {
+                    "$oid": "530366d751638da708100cf3"
+                },
+                "rkey": "safeway",
+                "key": "safeway",
+                "name": "Safeway",
+                "status": "active",
+                "typ": "store",
+                "country": "us",
+                "priceUpdate": "Prices and products are subject to change without notice.",
+                "mapStatus": "active",
+                "creationDate": {
+                    "$date": 1392731863318
+                },
+                "updateDate": {
+                    "$date": 1440069510689
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": 0.25,
+                "quantityUS": 0.25,
+                "quantityUSProd": 0.25,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2e1591217afb02a8ad99"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "chili pepper",
+                        "de": "Chilischote",
+                        "es": "chile",
+                        "fr": "piment",
+                        "pt": "pimenta-malagueta"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "chili pepper",
+                            "de": "Chilischote",
+                            "es": "chile",
+                            "fr": "piment",
+                            "pt": "pimenta-malagueta"
+                        },
+                        "plural": {
+                            "en": "chili peppers",
+                            "de": "Chilischoten",
+                            "es": "chiles",
+                            "fr": "piments",
+                            "pt": "pimentas-malaguetas"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "chili peppers",
+                        "de": "Chilischoten",
+                        "es": "chile",
+                        "fr": "piment",
+                        "pt": "pimenta-malagueta"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "chili_pepperchilischotechili_pepperschilischoten",
+                    "desc": "chili_pepperchilischotechili_pepperschilischoten",
+                    "image": {
+                        "name": "veg_chili_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb625c92800004019c51d36"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c408235456c47e00f8c4af"
+                            },
+                            "title": "Bio Pepperoni, lose",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 0.1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388578851935
+                            },
+                            "updateDate": {
+                                "$date": 1453468377777
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52bd58c700025d47009013d8"
+                            },
+                            "title": "Chili Mix (Packung, ca. 60g)",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.99,
+                            "newQuantity": 4.0,
+                            "creationDate": {
+                                "$date": 1388140743473
+                            },
+                            "updateDate": {
+                                "$date": 1494186161715
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53824663ab508abd19ba11c6"
+                            },
+                            "title": "Pepperoni, lose ca. 10g",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401046627825
+                            },
+                            "updateDate": {
+                                "$date": 1461850599254
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e4af897169d60309ddfae"
+                            },
+                            "title": "Chillischoten, Packung ca. 50g",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.99,
+                            "newQuantity": 4.0,
+                            "creationDate": {
+                                "$date": 1401834232304
+                            },
+                            "updateDate": {
+                                "$date": 1461850665086
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee99965400003d05098079"
+                            },
+                            "title": "Serrano Chiles, app. 0.04 lb",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 0.12,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408145814140
+                            },
+                            "updateDate": {
+                                "$date": 1462186508909
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4a1d4900002402a420ec"
+                            },
+                            "title": "Peppers Serrano, app. 1 oz",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 0.12,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408059933167
+                            },
+                            "updateDate": {
+                                "$date": 1462186540602
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cb804e6b07005c0bd09d1b"
+                            },
+                            "title": "Chili",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.09,
+                            "newQuantity": 5.0,
+                            "cbid": "chili",
+                            "creationDate": {
+                                "$date": 1422622798913
+                            },
+                            "updateDate": {
+                                "$date": 1440163447491
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55a79a5c160000a40761d0be"
+                            },
+                            "title": "Jalape\u00f1os, package",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.29,
+                            "newQuantity": 3.0,
+                            "creationDate": {
+                                "$date": 1437047388522
+                            },
+                            "updateDate": {
+                                "$date": 1462186557204
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "569d157f170000440bb4efb5"
+                            },
+                            "title": "Chilischote (Peperoni), lose ca. 10g",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 0.19,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1453135231091
+                            },
+                            "updateDate": {
+                                "$date": 1545303923080
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57485c549b03007313752084"
+                            },
+                            "title": "Peperoni rot",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.69,
+                            "newQuantity": 4.0,
+                            "creationDate": {
+                                "$date": 1464360020076
+                            },
+                            "updateDate": {
+                                "$date": 1467128861907
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57a2fa6db80100610422991c"
+                            },
+                            "title": "Peperoni rot, lose ca. 10g",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.09,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1470298733910
+                            },
+                            "updateDate": {
+                                "$date": 1470298733910
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df752"
+                            },
+                            "title": "Chili Mix  (Packung, ca. 60g)",
+                            "ingredient": "52bc2e1591217afb02a8ad99",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.99,
+                            "quantity": 5,
+                            "newQuantity": 5.0,
+                            "creationDate": {
+                                "$date": 1579171279186
+                            },
+                            "updateDate": {
+                                "$date": 1579536744259
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "15g",
+                            "50g"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "synonym": {
+                        "de": "Chilis,Chili"
+                    },
+                    "creationDate": {
+                        "$date": 1388064277534
+                    },
+                    "updateDate": {
+                        "$date": 1684753633354
+                    }
+                }
+            },
+            {
+                "ingredient": {
+                    "_id": {
+                        "$oid": "55365112490000f41450a3e6"
+                    },
+                    "typ": "basic",
+                    "localizedTitle": {
+                        "en": "pepper",
+                        "de": "Pfeffer",
+                        "es": "pimienta",
+                        "fr": "poivre",
+                        "pt": "pimenta"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "pepper",
+                            "de": "Pfeffer",
+                            "es": "pimienta",
+                            "fr": "poivre",
+                            "pt": "pimenta"
+                        },
+                        "plural": {
+                            "en": "pepper",
+                            "de": "Pfeffer",
+                            "es": "pimienta",
+                            "fr": "poivre",
+                            "pt": "pimenta"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "pepper",
+                        "de": "Pfeffer",
+                        "es": "pimienta",
+                        "fr": "poivre",
+                        "pt": "pimenta"
+                    },
+                    "category": "SpicesSeasoning",
+                    "key": "pepperpfefferpepperpfeffer",
+                    "desc": "pepperpfefferpepperpfeffer",
+                    "image": {
+                        "name": "spices_pepper_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bbb78e82800009a00888456"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "5734a0a617000002086c9287"
+                            },
+                            "title": "Ostmann Pfeffer schwarz, gemahlen",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 2.39,
+                            "quantity": 40,
+                            "newQuantity": 40.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463066790048
+                            },
+                            "updateDate": {
+                                "$date": 1662982247004
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5bd8346e4f00004305dace81"
+                            },
+                            "title": "REWE Bio Pfeffer schwarz ganz",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 3.99,
+                            "quantity": 45,
+                            "newQuantity": 45.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1540895854024
+                            },
+                            "updateDate": {
+                                "$date": 1540895854024
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df7a7"
+                            },
+                            "title": "BioWagner Bio-Pfeffer schwarz, ganz",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 3.69,
+                            "quantity": 80,
+                            "newQuantity": 80.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279194
+                            },
+                            "updateDate": {
+                                "$date": 1661760128483
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ed6630ecf0000bd12b75cb3"
+                            },
+                            "title": "Lebensbaum Pfeffer schwarz, ganz",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 2.99,
+                            "quantity": 50,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591108366005
+                            },
+                            "updateDate": {
+                                "$date": 1591108366005
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ed74b1d6500007992c7e630"
+                            },
+                            "title": "Fuchs Pfeffer",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 3.59,
+                            "quantity": 60,
+                            "newQuantity": 60.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591167773052
+                            },
+                            "updateDate": {
+                                "$date": 1591167773052
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ede43115f010043946c0efc"
+                            },
+                            "title": "Alnatura schwarzer Pfeffer",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 2.79,
+                            "quantity": 70,
+                            "newQuantity": 70.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591624465830
+                            },
+                            "updateDate": {
+                                "$date": 1591624465830
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ede6e0e450000590b618f7f"
+                            },
+                            "title": "Lebensbaum Pfeffer schwarz, ganz",
+                            "ingredient": "55365112490000f41450a3e6",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 2.99,
+                            "quantity": 50,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591635470112
+                            },
+                            "updateDate": {
+                                "$date": 1591635470112
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "50g"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1429623058725
+                    },
+                    "updateDate": {
+                        "$date": 1656066513880
+                    }
+                }
+            },
+            {
+                "ingredient": {
+                    "_id": {
+                        "$oid": "553652364900001b1550a3ea"
+                    },
+                    "typ": "basic",
+                    "localizedTitle": {
+                        "en": "salt",
+                        "de": "Salz",
+                        "es": "sal",
+                        "fr": "sel",
+                        "pt": "sal"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "salt",
+                            "de": "Salz",
+                            "es": "sal",
+                            "fr": "sel",
+                            "pt": "sal"
+                        },
+                        "plural": {
+                            "en": "salt",
+                            "de": "Salz",
+                            "es": "sal",
+                            "fr": "sel",
+                            "pt": "sal"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "salt",
+                        "de": "Salz",
+                        "es": "sal",
+                        "fr": "sel",
+                        "pt": "sal"
+                    },
+                    "category": "SpicesSeasoning",
+                    "key": "saltsalzsaltsalz",
+                    "desc": "saltsalzsaltsalz",
+                    "image": {
+                        "name": "spices_salt_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb7819a27000039048a8f79"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "55964f1c7800000707b7d0f7"
+                            },
+                            "title": "Salt",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.99,
+                            "quantity": 1,
+                            "newQuantity": 1.59,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435914012792
+                            },
+                            "updateDate": {
+                                "$date": 1435914012792
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "573dc44f5500003c063ed78c"
+                            },
+                            "title": "Bad Reichenhaller Jodsalz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 0.99,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463665743284
+                            },
+                            "updateDate": {
+                                "$date": 1662982197380
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5bdacd6549000006035f7837"
+                            },
+                            "title": "Bad Reichenhaller Marken-Jodsalz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.85,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1541066085321
+                            },
+                            "updateDate": {
+                                "$date": 1541066085321
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5be318ce380000e9028945de"
+                            },
+                            "title": "Bad Reichenhaller Marken Jodsalz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.69,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1541609678654
+                            },
+                            "updateDate": {
+                                "$date": 1662461353169
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df8d1"
+                            },
+                            "title": "Bad Reichenhaller Marken Jod Salz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.14,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279234
+                            },
+                            "updateDate": {
+                                "$date": 1661759263032
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ed6603acf0000bd12b75caa"
+                            },
+                            "title": "Natur Hurtig Salz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.99,
+                            "quantity": 1000,
+                            "newQuantity": 1000.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591107642971
+                            },
+                            "updateDate": {
+                                "$date": 1591107642971
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ede4a08450000590b618f48"
+                            },
+                            "title": "Rapunzel Salz",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.79,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591626248302
+                            },
+                            "updateDate": {
+                                "$date": 1591626248302
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5fca5e92430000b60a30c99c"
+                            },
+                            "title": "salt",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.99,
+                            "quantity": 1,
+                            "newQuantity": 1.59,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1607098002866
+                            },
+                            "updateDate": {
+                                "$date": 1607098002866
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "627b6ed84e0000170110284e"
+                            },
+                            "title": "Bioenergie Ur-Salz fein gemahlen",
+                            "ingredient": "553652364900001b1550a3ea",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 2.99,
+                            "quantity": 1000,
+                            "newQuantity": 1000.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1652256472628
+                            },
+                            "updateDate": {
+                                "$date": 1652256472628
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1429623350034
+                    },
+                    "updateDate": {
+                        "$date": 1657656117102
+                    }
+                }
+            },
+            {
+                "quantity": 80.0,
+                "measure": "ml",
+                "quantityUS": 0.33,
+                "measureUS": "cup(s)",
+                "quantityUSProd": 2.7,
+                "measureUSProd": "fl oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "624586e55200005302944656"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "coconut milk",
+                        "de": "Kokosmilch",
+                        "es": "leche de coco",
+                        "fr": "lait de coco",
+                        "pt": "leite de coco"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "coconut milk",
+                            "de": "Kokosmilch",
+                            "es": "leche de coco",
+                            "fr": "lait de coco",
+                            "pt": "leite de coco"
+                        },
+                        "plural": {
+                            "en": "coconut milk",
+                            "de": "Kokosmilch",
+                            "es": "leches de coco",
+                            "fr": "lait de coco",
+                            "pt": "leite de coco"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "coconut milk",
+                        "de": "Kokosmilch",
+                        "es": "leche de coco",
+                        "fr": "lait de coco",
+                        "pt": "leite de coco"
+                    },
+                    "category": "CannedGoods",
+                    "key": "coconut_milkkokosmilchcoconut_milkkokosmilch",
+                    "desc": "coconut_milkkokosmilchcoconut_milkkokosmilch",
+                    "image": {
+                        "name": "canned_coconut-milk_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/62458708500000570ce40a5b"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9089"
+                            },
+                            "title": "BioCompany Kokosmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.99,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c908b"
+                            },
+                            "title": "Alnatura Kokosmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.49,
+                            "quantity": 200,
+                            "newQuantity": 200.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1666685376043
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c908c"
+                            },
+                            "title": "Alnatura Bio Kokosmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.95,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c908d"
+                            },
+                            "title": "Safeway Kitchens Coconut Milk",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 1.99,
+                            "newQuantity": 13.5,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c908e"
+                            },
+                            "title": "365 Organic Coconut Milk",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 2.29,
+                            "newQuantity": 13.5,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c908f"
+                            },
+                            "title": "Aroy D Kokosmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 2.19,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "cbid": "kokosmilch",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9090"
+                            },
+                            "title": "Rewe Beste Wahl Kokosmilch cremig",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.29,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9091"
+                            },
+                            "title": "Trader Joe's Coconut Milk",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.49,
+                            "newQuantity": 14.0,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9092"
+                            },
+                            "title": "Dennree Kokosmilch, 60%",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.99,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1650442280841
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9094"
+                            },
+                            "title": "Naturwert Kokosnussmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 2.49,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1665386344677
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9095"
+                            },
+                            "title": "EDEKA Kokosnussmilch",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.99,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1662465037696
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "625fc028910000ba002c9096"
+                            },
+                            "title": "K-Bio Kokosmilch 60%",
+                            "ingredient": "624586e55200005302944656",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.85,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1650442280841
+                            },
+                            "updateDate": {
+                                "$date": 1661769003173
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "de": "Kokosnussmilch"
+                    },
+                    "creationDate": {
+                        "$date": 1648723685366
+                    },
+                    "updateDate": {
+                        "$date": 1684753633353
+                    }
+                }
+            },
+            {
+                "quantity": 1.0,
+                "measure": "EL",
+                "quantityUS": 1.0,
+                "measureUS": "tbsp",
+                "quantityUSProd": 1.0,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc0dfc91217aec00a8ad3f"
+                    },
+                    "typ": "basic",
+                    "localizedTitle": {
+                        "en": "olive oil",
+                        "de": "Oliven\u00f6l",
+                        "es": "aceite de oliva",
+                        "fr": "huile d'olive",
+                        "pt": "azeite de oliva"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "olive oil",
+                            "de": "Oliven\u00f6l",
+                            "es": "aceite de oliva",
+                            "fr": "huile d'olive",
+                            "pt": "azeite de oliva"
+                        },
+                        "plural": {
+                            "en": "olive oil",
+                            "de": "Oliven\u00f6l",
+                            "es": "aceite de oliva",
+                            "fr": "huile d'olive",
+                            "pt": "azeite de oliva"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "olive oil",
+                        "de": "Oliven\u00f6l",
+                        "es": "aceite de oliva",
+                        "fr": "huile d'olive",
+                        "pt": "azeite de oliva"
+                    },
+                    "category": "OilsVinegars",
+                    "key": "olive_oiloliven\u00f6lolive_oiloliven\u00f6l",
+                    "desc": "olive_oiloliven\u00f6lolive_oiloliven\u00f6l",
+                    "image": {
+                        "name": "oils_olive-oil_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb763df2900008e166fb232"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52bc22e691217aef01a8ad72"
+                            },
+                            "title": "Kunella Natives Oliven\u00f6l extra kaltgepresst",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 2.99,
+                            "newQuantity": 250.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1388061414488
+                            },
+                            "updateDate": {
+                                "$date": 1439891655192
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c45a72622730d200bec7ad"
+                            },
+                            "title": "Rapunzel Oliven\u00f6l, nativ extra",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 3.99,
+                            "newQuantity": 250.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1388599922028
+                            },
+                            "updateDate": {
+                                "$date": 1462292029943
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5381215ad26b9c7a21b4e844"
+                            },
+                            "title": "Alnatura ital. Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 8.49,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1400971610422
+                            },
+                            "updateDate": {
+                                "$date": 1666679648344
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538dd6b6dbf613db1c146426"
+                            },
+                            "title": "Alnatura Bio Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 7.95,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1401804470409
+                            },
+                            "updateDate": {
+                                "$date": 1452562272332
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed54b5490000d803a42123"
+                            },
+                            "title": "O Organics Extra Virgin Olive Oil",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 8.99,
+                            "quantity": 15,
+                            "newQuantity": 15.6,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1408062645308
+                            },
+                            "updateDate": {
+                                "$date": 1657284954624
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee86485400008d03098054"
+                            },
+                            "title": "365 Everyday Value 100% Italian Extra Virgin Olive Oil",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 5.99,
+                            "newQuantity": 16.9,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1408140872023
+                            },
+                            "updateDate": {
+                                "$date": 1408929579480
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ce7e597f0700050ee7f1eb"
+                            },
+                            "title": "Basic Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 7.99,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "cbid": "olivenoel",
+                            "creationDate": {
+                                "$date": 1422818905181
+                            },
+                            "updateDate": {
+                                "$date": 1422818905181
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "559644377800000205b7d0c3"
+                            },
+                            "title": "Olive Oil",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 5.99,
+                            "newQuantity": 16.9,
+                            "measure": "fl oz",
+                            "creationDate": {
+                                "$date": 1435911223920
+                            },
+                            "updateDate": {
+                                "$date": 1435920491168
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5734af2d1700007a0a6c92cc"
+                            },
+                            "title": "Naturwert Bio Natives Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 4.69,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1463070509177
+                            },
+                            "updateDate": {
+                                "$date": 1662982302673
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5be2f41f5a0000ba17d36aa1"
+                            },
+                            "title": "Alnatura Bio Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 4.49,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1541600287909
+                            },
+                            "updateDate": {
+                                "$date": 1662461429960
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df885"
+                            },
+                            "title": "K-Bio Natives Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 4.59,
+                            "quantity": 750,
+                            "newQuantity": 750.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1579171279228
+                            },
+                            "updateDate": {
+                                "$date": 1579535732582
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ede695c450000590b618f67"
+                            },
+                            "title": "dennree Oliven\u00f6l",
+                            "ingredient": "52bc0dfc91217aec00a8ad3f",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 2.49,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1591634268211
+                            },
+                            "updateDate": {
+                                "$date": 1591634268211
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "250ml",
+                            "500ml",
+                            "1l"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "16 fl oz",
+                            "24 fl oz"
+                        ]
+                    },
+                    "synonym": {
+                        "de": "\u00d6l"
+                    },
+                    "creationDate": {
+                        "$date": 1388056060934
+                    },
+                    "updateDate": {
+                        "$date": 1684753633353
+                    }
+                }
+            },
+            {
+                "quantity": 0.5,
+                "measure": "TL",
+                "quantityUS": 0.5,
+                "measureUS": "tsp",
+                "quantityUSProd": 0.5,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc0e2b91217aec00a8ad41"
+                    },
+                    "typ": "basic",
+                    "localizedTitle": {
+                        "en": "curry powder",
+                        "de": "Currypulver",
+                        "es": "curry en polvo",
+                        "fr": "curry en poudre",
+                        "pt": "curry em p\u00f3"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "curry powder",
+                            "de": "Currypulver",
+                            "es": "curry en polvo",
+                            "fr": "curry en poudre",
+                            "pt": "curry em p\u00f3"
+                        },
+                        "plural": {
+                            "en": "curry powder",
+                            "de": "Currypulver",
+                            "es": "curry en polvo",
+                            "fr": "curry en poudre",
+                            "pt": "curry em p\u00f3"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "curry powder",
+                        "de": "Currypulver",
+                        "es": "curry en polvo",
+                        "fr": "curry en poudre",
+                        "pt": "curry em p\u00f3"
+                    },
+                    "category": "SpicesSeasoning",
+                    "key": "curry_powdercurrypulvercurry_powdercurrypulver",
+                    "desc": "curry_powdercurrypulvercurry_powdercurrypulver",
+                    "image": {
+                        "name": "spices_powder-curry_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb633b9280000b21bc51d6c"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52bc233f91217a1b02a8ad74"
+                            },
+                            "title": "Ostmann Curry Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.99,
+                            "newQuantity": 40.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388061503730
+                            },
+                            "updateDate": {
+                                "$date": 1439891969068
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5303b30751638d1610100d13"
+                            },
+                            "title": "BioCompany Curry, gemahlen",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.89,
+                            "newQuantity": 40.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1392751367534
+                            },
+                            "updateDate": {
+                                "$date": 1439298420693
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53812459d26b9cee21b4e847"
+                            },
+                            "title": "Lebensbaum Curry Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 2.79,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1400972377025
+                            },
+                            "updateDate": {
+                                "$date": 1439802466004
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538dd71ddbf613ef1c146427"
+                            },
+                            "title": "Alnatura Bio Curry Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 2.75,
+                            "newQuantity": 60.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401804573295
+                            },
+                            "updateDate": {
+                                "$date": 1445943631550
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed5d254900005905a42153"
+                            },
+                            "title": "O Organics Ground Curry Powder",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 5.79,
+                            "quantity": 1,
+                            "newQuantity": 1.8,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408064805964
+                            },
+                            "updateDate": {
+                                "$date": 1408064805964
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53f8dcb434000080007d2e4f"
+                            },
+                            "title": "Spicely Organic Curry Powder",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 3.29,
+                            "quantity": 0,
+                            "newQuantity": 0.45,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408818356088
+                            },
+                            "updateDate": {
+                                "$date": 1408818356088
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ccdfbbe20800c509198ee5"
+                            },
+                            "title": "Lien Ying Currypulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.79,
+                            "quantity": 20,
+                            "newQuantity": 20.0,
+                            "measure": "g",
+                            "cbid": "currypulver",
+                            "creationDate": {
+                                "$date": 1422712763278
+                            },
+                            "updateDate": {
+                                "$date": 1422712763278
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592adbd3000005a04211537"
+                            },
+                            "title": "Curry Powder",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.99,
+                            "newQuantity": 1.8,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435676093677
+                            },
+                            "updateDate": {
+                                "$date": 1435920989212
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735dd01800000120f70a8fe"
+                            },
+                            "title": "Ostmann Curry Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 2.29,
+                            "quantity": 40,
+                            "newQuantity": 40.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463147777245
+                            },
+                            "updateDate": {
+                                "$date": 1665387115814
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57976de53300005810ecc755"
+                            },
+                            "title": "Ostmann Curry Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 3.75,
+                            "quantity": 80,
+                            "newQuantity": 80.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1469541861874
+                            },
+                            "updateDate": {
+                                "$date": 1662465979382
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df79c"
+                            },
+                            "title": "Ostmann Curry-Pulver",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.89,
+                            "newQuantity": 30.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279193
+                            },
+                            "updateDate": {
+                                "$date": 1579171279193
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5ede6984450000590b618f68"
+                            },
+                            "title": "dennree Curry Pulver mild",
+                            "ingredient": "52bc0e2b91217aec00a8ad41",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 2.69,
+                            "quantity": 55,
+                            "newQuantity": 55.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1591634308041
+                            },
+                            "updateDate": {
+                                "$date": 1591634308041
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1388056107620
+                    },
+                    "updateDate": {
+                        "$date": 1652995506414
+                    }
+                }
+            },
+            {
+                "quantity": 1.0,
+                "quantityUS": 1.0,
+                "quantityUSProd": 1.0,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc300591217a7503a8adb9"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "zucchini",
+                        "de": "Zucchini",
+                        "es": "calabac\u00edn",
+                        "fr": "courgette",
+                        "pt": "abobrinha"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "zucchini",
+                            "de": "Zucchini",
+                            "es": "calabac\u00edn",
+                            "fr": "courgette",
+                            "pt": "abobrinha"
+                        },
+                        "plural": {
+                            "en": "zucchini",
+                            "de": "Zucchini",
+                            "es": "calabacines",
+                            "fr": "courgettes",
+                            "pt": "abobrinhas"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "zucchini",
+                        "de": "Zucchini",
+                        "es": "calabac\u00edn",
+                        "fr": "courgettes",
+                        "pt": "abobrinha"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "zucchinizucchinizucchinizucchini",
+                    "desc": "zucchinizucchinizucchinizucchini",
+                    "image": {
+                        "name": "veg_zucchini_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bbb213f280000a618a3e23d"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c4100e5456c41d01f8c4c2"
+                            },
+                            "title": "Bio Zucchini, lose ca. 200g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388580878033
+                            },
+                            "updateDate": {
+                                "$date": 1492777038588
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53827182ff5374b921f20fc3"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.54,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401057666250
+                            },
+                            "updateDate": {
+                                "$date": 1462200980727
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e552097169d24329ddfcd"
+                            },
+                            "title": "Bio Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 0.66,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401836832761
+                            },
+                            "updateDate": {
+                                "$date": 1461860862647
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed4b004900004002a420ef"
+                            },
+                            "title": "Green Zucchini Squash, app. 0.4 lb",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 0.56,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408060160373
+                            },
+                            "updateDate": {
+                                "$date": 1462192181977
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fa245e4600004802d2f8e2"
+                            },
+                            "title": "Organic Zucchini, app. 0.4 lb",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 0.8,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408902238826
+                            },
+                            "updateDate": {
+                                "$date": 1462197026185
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c47e24bd0c4cbf00e88522"
+                            },
+                            "title": "Bio Zucchini, Packung ca. 500g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.99,
+                            "newQuantity": 3.0,
+                            "creationDate": {
+                                "$date": 1388609060290
+                            },
+                            "updateDate": {
+                                "$date": 1522163654522
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cb6d3b6b07004909d09cfb"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 0.99,
+                            "newQuantity": 1.0,
+                            "cbid": "zucchini",
+                            "creationDate": {
+                                "$date": 1422617915519
+                            },
+                            "updateDate": {
+                                "$date": 1462200990701
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5596620a7800001d0ab7d12a"
+                            },
+                            "title": "Zucchini",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 2.29,
+                            "newQuantity": 5.0,
+                            "creationDate": {
+                                "$date": 1435918858912
+                            },
+                            "updateDate": {
+                                "$date": 1462200959236
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5697bbba150000bf0d5b3184"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.39,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452784570178
+                            },
+                            "updateDate": {
+                                "$date": 1545303358009
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "573064d5150000ac01e60150"
+                            },
+                            "title": "Zucchini, lose ca. 220g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.5,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1462789333549
+                            },
+                            "updateDate": {
+                                "$date": 1665382184742
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "579883ab19040079093d4989"
+                            },
+                            "title": "Zucchini, lose ca. 200g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.4,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469612971974
+                            },
+                            "updateDate": {
+                                "$date": 1522768459424
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "60f6db34400000fe0f92a7f4"
+                            },
+                            "title": "Demeter Zucchini 500g",
+                            "ingredient": "52bc300591217a7503a8adb9",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.99,
+                            "quantity": 2,
+                            "newQuantity": 2.0,
+                            "creationDate": {
+                                "$date": 1626790708434
+                            },
+                            "updateDate": {
+                                "$date": 1626790708434
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1388064773453
+                    },
+                    "updateDate": {
+                        "$date": 1661504083910
+                    }
+                }
+            },
+            {
+                "quantity": 5.0,
+                "measure": "g",
+                "quantityUS": 0.25,
+                "measureUS": "cup(s)",
+                "quantityUSProd": 0.2,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2daa91217ade02a8ad91"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "basil, fresh ",
+                        "de": "Basilikum, frisch",
+                        "es": "albahaca, fresca",
+                        "fr": "basilic, frais",
+                        "pt": "manjeric\u00e3o, fresco"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "basil, fresh ",
+                            "de": "Basilikum, frisch",
+                            "es": "albahaca, fresca",
+                            "fr": "basilic, frais",
+                            "pt": "manjeric\u00e3o, fresco"
+                        },
+                        "plural": {
+                            "en": "basil, fresh ",
+                            "de": "Basilikum, frisch",
+                            "es": "albahaca, fresca",
+                            "fr": "basilic, frais",
+                            "pt": "manjeric\u00e3o, fresco"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "basil, fresh ",
+                        "de": "Basilikum, frisch",
+                        "es": "albahaca, fresca",
+                        "fr": "basilic, frais",
+                        "pt": "manjeric\u00e3o, fresco"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "basil,freshbasilikum,frischbasil,freshbasilikum,frisch",
+                    "desc": "basil,freshbasilikum,frischbasil,freshbasilikum,frisch",
+                    "image": {
+                        "name": "herbs_basil_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb613172800000616c51ce8"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c83ff3827be88800227529"
+                            },
+                            "title": "Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 1.49,
+                            "quantity": 35,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388855283713
+                            },
+                            "updateDate": {
+                                "$date": 1615378778141
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c88b1ef771b7a60085cba4"
+                            },
+                            "title": "Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 1.99,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388874526324
+                            },
+                            "updateDate": {
+                                "$date": 1462201342482
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5382617aab508a681eba11d0"
+                            },
+                            "title": "Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 1.79,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401053562175
+                            },
+                            "updateDate": {
+                                "$date": 1500036612743
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e483e97169dd22f9ddfa9"
+                            },
+                            "title": "Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.99,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401833534547
+                            },
+                            "updateDate": {
+                                "$date": 1462201286552
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed46064900008501a420d9"
+                            },
+                            "title": "Basil, fresh organic",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 2.29,
+                            "quantity": 4,
+                            "newQuantity": 4.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408058886273
+                            },
+                            "updateDate": {
+                                "$date": 1615378919299
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53fa24f64600006102d2f8e5"
+                            },
+                            "title": "Organic Basil, bunch",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 2.99,
+                            "newQuantity": 2.5,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408902390642
+                            },
+                            "updateDate": {
+                                "$date": 1460996142616
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cd0500e20800100d198f00"
+                            },
+                            "title": "K\u00fcstengold Basilikum, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.89,
+                            "newQuantity": 50.0,
+                            "measure": "g",
+                            "cbid": "basilikum",
+                            "creationDate": {
+                                "$date": 1422722304208
+                            },
+                            "updateDate": {
+                                "$date": 1460996195480
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592af61300000cc04211544"
+                            },
+                            "title": "Fresh Basil",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 2.49,
+                            "newQuantity": 4.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435676513947
+                            },
+                            "updateDate": {
+                                "$date": 1435920895701
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "569e53bf1500000509704e78"
+                            },
+                            "title": "Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.79,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1453216703139
+                            },
+                            "updateDate": {
+                                "$date": 1541414973079
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735d36f800000860d70a8e3"
+                            },
+                            "title": "K\u00fcstengold Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.99,
+                            "quantity": 35,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463145327562
+                            },
+                            "updateDate": {
+                                "$date": 1463145327562
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57975dac330000ef0decc737"
+                            },
+                            "title": "Bio Basilikum frisch, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 1.79,
+                            "quantity": 35,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1469537708111
+                            },
+                            "updateDate": {
+                                "$date": 1662462334425
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df7d2"
+                            },
+                            "title": "K-Bio Basilikum, Topf",
+                            "ingredient": "52bc2daa91217ade02a8ad91",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.49,
+                            "quantity": 35,
+                            "newQuantity": 35.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279197
+                            },
+                            "updateDate": {
+                                "$date": 1579274715644
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "15g",
+                            "30g",
+                            "50g",
+                            "100g"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "4 oz",
+                            "8 oz"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1388064170080
+                    },
+                    "updateDate": {
+                        "$date": 1652996763810
+                    }
+                }
+            },
+            {
+                "quantity": 0.25,
+                "quantityUS": 0.25,
+                "quantityUSProd": 0.25,
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc2eec91217a2a03a8ada7"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "lime",
+                        "de": "Limette",
+                        "es": "lim\u00f3n",
+                        "fr": "citron vert",
+                        "pt": "lim\u00e3o-taiti"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "lime",
+                            "de": "Limette",
+                            "es": "lim\u00f3n",
+                            "fr": "citron vert",
+                            "pt": "lim\u00e3o-taiti"
+                        },
+                        "plural": {
+                            "en": "limes",
+                            "de": "Limetten",
+                            "es": "limones",
+                            "fr": "citrons verts",
+                            "pt": "lim\u00f5es-taiti"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "limes",
+                        "de": "Limetten",
+                        "es": "lim\u00f3n",
+                        "fr": "citrons verts",
+                        "pt": "lim\u00e3o-taiti"
+                    },
+                    "category": "FruitVegetables",
+                    "key": "limelimettelimeslimetten",
+                    "desc": "limelimettelimeslimetten",
+                    "image": {
+                        "name": "fruits_lime_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb75a7c290000c8136fb20b"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c40a5d5456c4bd00f8c4b7"
+                            },
+                            "title": "Bio Limette, lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 0.35,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388579421472
+                            },
+                            "updateDate": {
+                                "$date": 1453477464865
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538e4f9f97169d37319ddfbc"
+                            },
+                            "title": "Limette lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1401835423340
+                            },
+                            "updateDate": {
+                                "$date": 1440083345011
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53a8b6114c77bd51012b9857"
+                            },
+                            "title": "Limette, lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.96,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1403565585363
+                            },
+                            "updateDate": {
+                                "$date": 1440078150853
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee91005400006104098065"
+                            },
+                            "title": "Mexico Limes",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 0.33,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408143616589
+                            },
+                            "updateDate": {
+                                "$date": 1408901071569
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed3d8e4900004900a420b9"
+                            },
+                            "title": "Lime",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 0.25,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1408056718407
+                            },
+                            "updateDate": {
+                                "$date": 1462195014577
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54ce302f7f0700b908e7f1d4"
+                            },
+                            "title": "Limette",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 0.59,
+                            "newQuantity": 1.0,
+                            "cbid": "limette",
+                            "creationDate": {
+                                "$date": 1422798895962
+                            },
+                            "updateDate": {
+                                "$date": 1440163209639
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52c83ee8827be85400227521"
+                            },
+                            "title": "Limette, lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1388855016483
+                            },
+                            "updateDate": {
+                                "$date": 1522244499998
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55963daf780000d503b7d0b2"
+                            },
+                            "title": "Lime",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 1.99,
+                            "newQuantity": 8.0,
+                            "creationDate": {
+                                "$date": 1435909551961
+                            },
+                            "updateDate": {
+                                "$date": 1531122357094
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5698da2f170000cc071f543b"
+                            },
+                            "title": "Limette, lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 0.59,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1452857903337
+                            },
+                            "updateDate": {
+                                "$date": 1540212149291
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5735a38c800000560670a898"
+                            },
+                            "title": "Limette",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 0.59,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1463133068128
+                            },
+                            "updateDate": {
+                                "$date": 1463133068128
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5798897f1904006b0a3d49a0"
+                            },
+                            "title": "Limette, lose",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 0.49,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1469614463801
+                            },
+                            "updateDate": {
+                                "$date": 1662461928844
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df760"
+                            },
+                            "title": "Limetten",
+                            "ingredient": "52bc2eec91217a2a03a8ada7",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.49,
+                            "newQuantity": 1.0,
+                            "creationDate": {
+                                "$date": 1579171279187
+                            },
+                            "updateDate": {
+                                "$date": 1579171279187
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "note": {
+                        "en": "If you want to use lime zest in a recipe, we recommend using organic limes.",
+                        "de": "Wenn du Limettenschale in einem Rezept nutzen m\u00f6chtest, empfehlen wir Bio-Limetten zu verwenden.",
+                        "es": "Si deseas utilizar ralladura de lim\u00f3n en una receta, te recomendamos que utilices lim\u00f3n org\u00e1nico.",
+                        "fr": "Si vous utilisez du zeste de citron vert dans une recette, nous vous recommandons de choisir des citrons verts bio.",
+                        "pt": "Se voc\u00ea pretende usar a casca em uma receita, recomendamos optar por lim\u00f5es-taiti org\u00e2nicos."
+                    },
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "6x",
+                            "250g",
+                            "500g"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x",
+                            "6x"
+                        ]
+                    },
+                    "creationDate": {
+                        "$date": 1388064492933
+                    },
+                    "updateDate": {
+                        "$date": 1656066890657
+                    }
+                }
+            },
+            {
+                "quantity": 0.125,
+                "measure": "l",
+                "quantityUS": 0.5,
+                "measureUS": "cup(s)",
+                "quantityUSProd": 3.4,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc4d48f96fcbcc00eed28d"
+                    },
+                    "typ": "basic",
+                    "localizedTitle": {
+                        "en": "vegetable broth",
+                        "de": "Gem\u00fcsebr\u00fche",
+                        "es": "caldo de verduras",
+                        "fr": "bouillon de l\u00e9gumes",
+                        "pt": "caldo de legumes"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "vegetable broth",
+                            "de": "Gem\u00fcsebr\u00fche",
+                            "es": "caldo de verduras",
+                            "fr": "bouillon de l\u00e9gumes",
+                            "pt": "caldo de legumes"
+                        },
+                        "plural": {
+                            "en": "vegetable broth",
+                            "de": "Gem\u00fcsebr\u00fche",
+                            "es": "caldo de verduras",
+                            "fr": "bouillon de l\u00e9gumes",
+                            "pt": "caldo de legumes"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "vegetable broth",
+                        "de": "Gem\u00fcsebr\u00fche",
+                        "es": "caldo de verduras",
+                        "fr": "bouillon de l\u00e9gumes",
+                        "pt": "caldo de legumes"
+                    },
+                    "category": "SpicesSeasoning",
+                    "key": "vegetable_brothgem\u00fcsebr\u00fchevegetable_brothgem\u00fcsebr\u00fche",
+                    "desc": "vegetable_brothgem\u00fcsebr\u00fchevegetable_brothgem\u00fcsebr\u00fche",
+                    "image": {
+                        "name": "pantry_broth_vegetable_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/630ccf1f5300009307646aa2"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "53812374d65643bb21af4778"
+                            },
+                            "title": "Gem\u00fcsebr\u00fchw\u00fcrfel",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 0.95,
+                            "quantity": 3000,
+                            "newQuantity": 3000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1400972148769
+                            },
+                            "updateDate": {
+                                "$date": 1614092556458
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538de8c197169d831f9ddf8e"
+                            },
+                            "title": "Knorr Gem\u00fcsebr\u00fche, Glas",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.59,
+                            "quantity": 6000,
+                            "newQuantity": 6000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1401809089826
+                            },
+                            "updateDate": {
+                                "$date": 1614092575112
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ead35c51030044092a09bd"
+                            },
+                            "title": "O Organics Organic Broth Vegetable",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 2.5,
+                            "quantity": 32,
+                            "newQuantity": 32.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1407898460590
+                            },
+                            "updateDate": {
+                                "$date": 1407898460590
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ee82255400001903098049"
+                            },
+                            "title": "365 Organic Vegetable Broth",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 1.99,
+                            "newQuantity": 32.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408139813757
+                            },
+                            "updateDate": {
+                                "$date": 1408140043385
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52bd639000025d1b019013fd"
+                            },
+                            "title": "Cenovis Bio Klare Gem\u00fcsebr\u00fche ohne Hefe, glutenfrei",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 3.08,
+                            "quantity": 7000,
+                            "newQuantity": 7000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1388143504719
+                            },
+                            "updateDate": {
+                                "$date": 1614092550248
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cb82b36b0700bc0bd09d27"
+                            },
+                            "title": "Knorr Gem\u00fcsebr\u00fche",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 1.89,
+                            "quantity": 6000,
+                            "newQuantity": 6000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1422623411652
+                            },
+                            "updateDate": {
+                                "$date": 1614092568716
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55965ef87800008d09b7d11e"
+                            },
+                            "title": "Trader Joe's Vegetable Broth",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 2.29,
+                            "newQuantity": 32.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435918072166
+                            },
+                            "updateDate": {
+                                "$date": 1435918220617
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5731e4431500003707a53860"
+                            },
+                            "title": "Maggi Klare Gem\u00fcsebr\u00fche",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 1.69,
+                            "quantity": 4000,
+                            "newQuantity": 4000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1462887491762
+                            },
+                            "updateDate": {
+                                "$date": 1662982659123
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57988dbe1904003a0b3d49bc"
+                            },
+                            "title": "Bio Erntesegen Gem\u00fcsebr\u00fche hefefrei, glutenfrei",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 4.09,
+                            "quantity": 11000,
+                            "newQuantity": 11000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1469615550875
+                            },
+                            "updateDate": {
+                                "$date": 1614092521227
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e25cc85580000479af8af3c"
+                            },
+                            "title": "K-Bio Gem\u00fcsebr\u00fche",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 0.99,
+                            "quantity": 7000,
+                            "newQuantity": 7000.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1579535493568
+                            },
+                            "updateDate": {
+                                "$date": 1614092562607
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "603519ba3b00009c11a3bfb8"
+                            },
+                            "title": "dennree Gem\u00fcsebr\u00fche",
+                            "ingredient": "52bc4d48f96fcbcc00eed28d",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 1.59,
+                            "quantity": 6500,
+                            "newQuantity": 6500.0,
+                            "measure": "ml",
+                            "creationDate": {
+                                "$date": 1614092730887
+                            },
+                            "updateDate": {
+                                "$date": 1614092730887
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "3x"
+                        ]
+                    },
+                    "synonym": {
+                        "de": "Br\u00fche"
+                    },
+                    "creationDate": {
+                        "$date": 1388072264337
+                    },
+                    "updateDate": {
+                        "$date": 1684753633353
+                    }
+                }
+            },
+            {
+                "quantity": 80.0,
+                "measure": "g",
+                "quantityUS": 0.5,
+                "measureUS": "cup(s)",
+                "quantityUSProd": 3.0,
+                "measureUSProd": "oz",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc0b1291217a8000a8ad21"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "basmati & wild rice",
+                        "de": "Basmati- & Wildreis",
+                        "es": "arroz basmati y salvaje",
+                        "fr": "riz basmati et riz sauvage",
+                        "pt": "arroz basmati e arroz selvagem"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "basmati & wild rice",
+                            "de": "Basmati- & Wildreis",
+                            "es": "arroz basmati y salvaje",
+                            "fr": "riz basmati et riz sauvage",
+                            "pt": "arroz basmati e arroz selvagem"
+                        },
+                        "plural": {
+                            "en": "basmati & wild rice",
+                            "de": "Basmati- & Wildreis",
+                            "es": "arroz basmati y salvaje",
+                            "fr": "riz basmati et riz sauvage",
+                            "pt": "arroz basmati e arroz selvagem"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "basmati & wild rice",
+                        "de": "Basmati- & Wildreis",
+                        "es": "arroz basmati y salvaje",
+                        "fr": "riz basmati et riz sauvage",
+                        "pt": "arroz basmati e arroz selvagem"
+                    },
+                    "category": "DryGoods",
+                    "key": "basmati_&_wild_ricebasmati-_&_wildreisbasmati_&_wild_ricebasmati-_&_wildreis",
+                    "desc": "basmati_&_wild_ricebasmati-_&_wildreisbasmati_&_wild_ricebasmati-_&_wildreis",
+                    "image": {
+                        "name": "drygoods_rice-wild-basmati_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb61341280000ff15c51ce9"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "52c412105456c46901f8c4cd"
+                            },
+                            "title": "Rapunzel Reismischung mit Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 3.49,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388581392068
+                            },
+                            "updateDate": {
+                                "$date": 1453388137190
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52bc119491217a4901a8ad54"
+                            },
+                            "title": "Oryza Basmati & Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 2.89,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388056980896
+                            },
+                            "updateDate": {
+                                "$date": 1494192500044
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53811507d656431b1faf476d"
+                            },
+                            "title": "Alnatura Naturreis mit Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 3.65,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1400968455727
+                            },
+                            "updateDate": {
+                                "$date": 1439805395792
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed5461490000b103a42121"
+                            },
+                            "title": "Lundberg rice wild blend",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 3.99,
+                            "quantity": 16,
+                            "newQuantity": 16.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408062561938
+                            },
+                            "updateDate": {
+                                "$date": 1408062561938
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538dc27797169d85189ddf68"
+                            },
+                            "title": "tegut... Basmati & Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 1.69,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401799287228
+                            },
+                            "updateDate": {
+                                "$date": 1452560755201
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53f14a804500003d03f4a963"
+                            },
+                            "title": "365 Organic Wild Rice Mix",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 4.29,
+                            "newQuantity": 16.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1408322176746
+                            },
+                            "updateDate": {
+                                "$date": 1409868879777
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "54cacbc3fc0200fc02803a44"
+                            },
+                            "title": "Oryza Basmati Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 2.69,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "cbid": "basmati-wildreis",
+                            "creationDate": {
+                                "$date": 1422576579568
+                            },
+                            "updateDate": {
+                                "$date": 1422576579568
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "55929eca30000017012114f8"
+                            },
+                            "title": "Trader Joe's Basmati & Wild rice",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 4.99,
+                            "newQuantity": 16.0,
+                            "measure": "oz",
+                            "creationDate": {
+                                "$date": 1435672266456
+                            },
+                            "updateDate": {
+                                "$date": 1435919255646
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "56967e92180000990f2a2acd"
+                            },
+                            "title": "Rapunzel Reismischung mit Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 3.79,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1452703378381
+                            },
+                            "updateDate": {
+                                "$date": 1527255355095
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57349e11170000a9076c9283"
+                            },
+                            "title": "Reis-Fit Basmati & Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 2.59,
+                            "quantity": 500,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1463066129219
+                            },
+                            "updateDate": {
+                                "$date": 1463066129219
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57976ac7330000b90fecc74a"
+                            },
+                            "title": "Oryza Basmati und Wildreis",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 3.49,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1469541063570
+                            },
+                            "updateDate": {
+                                "$date": 1522765791910
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e203dcf5400007fdd9df739"
+                            },
+                            "title": "K-Classic Langkorn-Wildreis-Mischung",
+                            "ingredient": "52bc0b1291217a8000a8ad21",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 1.99,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1579171279184
+                            },
+                            "updateDate": {
+                                "$date": 1579171279184
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [],
+                        "us": []
+                    },
+                    "synonym": {
+                        "en": "rice,wild rice,wild rice mix",
+                        "de": "Reis,Gekochten Reis,gekochter Reis"
+                    },
+                    "creationDate": {
+                        "$date": 1388055314144
+                    },
+                    "updateDate": {
+                        "$date": 1685629476493
+                    }
+                }
+            },
+            {
+                "quantity": 100.0,
+                "measure": "g",
+                "quantityUS": 0.25,
+                "measureUS": "lb",
+                "quantityUSProd": 0.25,
+                "measureUSProd": "lb",
+                "ingredient": {
+                    "_id": {
+                        "$oid": "52bc0ee191217a0b01a8ad48"
+                    },
+                    "typ": "regular",
+                    "localizedTitle": {
+                        "en": "chicken breast (boneless, skinless)",
+                        "de": "H\u00fchnerbrustfilet",
+                        "es": "pechuga de pollo (deshuesada, sin piel)",
+                        "fr": "blanc de poulet",
+                        "pt": "peito de frango (sem ossos, sem pele)"
+                    },
+                    "numberTitle": {
+                        "singular": {
+                            "en": "chicken breast (boneless, skinless)",
+                            "de": "H\u00fchnerbrustfilet",
+                            "es": "pechuga de pollo (deshuesada, sin piel)",
+                            "fr": "blanc de poulet",
+                            "pt": "peito de frango (sem ossos, sem pele)"
+                        },
+                        "plural": {
+                            "en": "chicken breasts (boneless, skinless)",
+                            "de": "H\u00fchnerbrustfilets",
+                            "es": "pechuga de pollo (deshuesada, sin piel)",
+                            "fr": "blancs de poulet",
+                            "pt": "peito de frango (sem ossos, sem pele)"
+                        }
+                    },
+                    "uncountableTitle": {
+                        "en": "chicken breast (boneless, skinless)",
+                        "de": "H\u00fchnerbrustfilet",
+                        "es": "pechuga de pollo (deshuesada, sin piel)",
+                        "fr": "blanc de poulet",
+                        "pt": "peito de frango (sem ossos, sem pele)"
+                    },
+                    "category": "Meat",
+                    "key": "chicken_breast_(boneless,skinless)h\u00fchnerbrustfiletchicken_breasts_(boneless,skinless)h\u00fchnerbrustfilets",
+                    "desc": "chicken_breast_(boneless,skinless)h\u00fchnerbrustfiletchicken_breasts_(boneless,skinless)h\u00fchnerbrustfilets",
+                    "image": {
+                        "name": "meat_chicken_breast_s.jpg",
+                        "url": "https://d2am1qai33sroc.cloudfront.net/image/5bb623e32800002719c51d2f"
+                    },
+                    "products": [
+                        {
+                            "_id": {
+                                "$oid": "5381361ad656432924af4784"
+                            },
+                            "title": "H\u00fchnerbrustfilet 2Stk",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "53805d62a8a4f14a1dc15aee",
+                            "price": 13.16,
+                            "quantity": 400,
+                            "newQuantity": 400.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1400976922278
+                            },
+                            "updateDate": {
+                                "$date": 1407828170402
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "538dd91cdbf613481d14642a"
+                            },
+                            "title": "Pura Natura Bio H\u00fchnerbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "538dab8697169d59149ddf66",
+                            "price": 7.97,
+                            "newQuantity": 320.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1401805084208
+                            },
+                            "updateDate": {
+                                "$date": 1462289331342
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53ed52594900007003a42115"
+                            },
+                            "title": "Foster Farms Chicken Breast Boneless Skinless Fresh",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "530366d751638da708100cf3",
+                            "price": 5.49,
+                            "quantity": 1,
+                            "newQuantity": 1.0,
+                            "measure": "lb",
+                            "creationDate": {
+                                "$date": 1408062041505
+                            },
+                            "updateDate": {
+                                "$date": 1408062041505
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "53f244ee630000c201a30d32"
+                            },
+                            "title": "Thin Sliced Boneless Skinless Chicken Breast",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "5303670c51638db208100cf4",
+                            "price": 9.28,
+                            "quantity": 1,
+                            "newQuantity": 1.43,
+                            "measure": "lb",
+                            "creationDate": {
+                                "$date": 1408386286455
+                            },
+                            "updateDate": {
+                                "$date": 1408386286455
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52caddccfb40f0eb01dc42b9"
+                            },
+                            "title": "Schr\u00f6der's Fleisch und Wurst H\u00e4hnchenbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "52b80d9b0f5e98a800f9d2a9",
+                            "price": 2.49,
+                            "newQuantity": 100.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1389026764758
+                            },
+                            "updateDate": {
+                                "$date": 1453818495954
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "52bc24cb91217a3d02a8ad7b"
+                            },
+                            "title": "REWE Bio H\u00fchnerbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "52b80d660f5e989d00f9d2a7",
+                            "price": 9.57,
+                            "newQuantity": 320.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1388061899969
+                            },
+                            "updateDate": {
+                                "$date": 1522247138340
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "554736ac8000007b01a9cb47"
+                            },
+                            "title": "Jeden Tag H\u00e4hnchenbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "54c65feff70700f7078405dc",
+                            "price": 2.89,
+                            "newQuantity": 500.0,
+                            "measure": "g",
+                            "cbid": "haehnchenbrustfilet",
+                            "creationDate": {
+                                "$date": 1430730412628
+                            },
+                            "updateDate": {
+                                "$date": 1433939947141
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5592a88d300000270321151e"
+                            },
+                            "title": "Trader Joe's Chicken Breast (boneless, skinless)",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "5592887e310000d11c5237e1",
+                            "price": 6.99,
+                            "newQuantity": 1.0,
+                            "measure": "lb",
+                            "creationDate": {
+                                "$date": 1435674765948
+                            },
+                            "updateDate": {
+                                "$date": 1435919576030
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "56968bd8180000f5112a2af9"
+                            },
+                            "title": "Stauss Bio-H\u00e4hnchenbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "56953519190000bf0d27346e",
+                            "price": 2.99,
+                            "newQuantity": 300.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1452706776077
+                            },
+                            "updateDate": {
+                                "$date": 1509024364476
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5745787f390000940f0e7181"
+                            },
+                            "title": "H\u00e4hnchenbrustfilet, Fleischtheke",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "5707c9a61700009411f175cf",
+                            "price": 0.99,
+                            "newQuantity": 100.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1464170623334
+                            },
+                            "updateDate": {
+                                "$date": 1465474514570
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "57a30ff6b801000106229923"
+                            },
+                            "title": "Biofino H\u00e4hnchenbrustfilet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "532f5ddcf8b4222e28731609",
+                            "price": 9.07,
+                            "newQuantity": 350.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1470304246235
+                            },
+                            "updateDate": {
+                                "$date": 1496754764224
+                            }
+                        },
+                        {
+                            "_id": {
+                                "$oid": "5e30093e540000195974c657"
+                            },
+                            "title": "K-Purland QS H\u00e4hnchen-Innenbrust- Filet",
+                            "ingredient": "52bc0ee191217a0b01a8ad48",
+                            "retailer": "59dcb17a9e0000b006e253da",
+                            "price": 5.99,
+                            "quantity": 600,
+                            "newQuantity": 600.0,
+                            "measure": "g",
+                            "creationDate": {
+                                "$date": 1580206398478
+                            },
+                            "updateDate": {
+                                "$date": 1661767011413
+                            }
+                        }
+                    ],
+                    "isSponsored": false,
+                    "measures": {
+                        "de": [
+                            "1x",
+                            "2x",
+                            "100g",
+                            "400g",
+                            "500g"
+                        ],
+                        "us": [
+                            "1x",
+                            "2x",
+                            "1 lb",
+                            "1.5 lbs"
+                        ]
+                    },
+                    "synonym": {
+                        "de": "H\u00fchnerfleisch,H\u00fchnerbrust,H\u00fchnerbruststreifen,H\u00fchnchenbrust,H\u00fchnchen,H\u00fchnerbrustfiletst\u00fccke"
+                    },
+                    "creationDate": {
+                        "$date": 1388056289226
+                    },
+                    "updateDate": {
+                        "$date": 1684753633354
+                    }
+                }
+            }
+        ],
+        "imageList": [
+            {
+                "name": "REZ_034_Cover.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/f59c172e-f8b5-4de4-a819-1ea262c71e32",
+                "type": "cover"
+            },
+            {
+                "name": "REZ_034_Fav.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/291b18da-4cb9-4e76-8ac6-1a5aa842a819",
+                "type": "favorite"
+            },
+            {
+                "name": "REZ_034_13.jpg",
+                "url": "https://d2am1qai33sroc.cloudfront.net/image/4dd3fd2a-9012-4365-aca1-dc695ab09424",
+                "type": "blurred"
+            }
+        ],
+        "localizedPublishDate": {
+            "en": {
+                "$date": 1684540800000
+            },
+            "de": {
+                "$date": 1684540800000
+            }
+        },
+        "trackingMode": "no",
+        "feature": "none",
+        "publishDuration": {
+            "en": 1,
+            "de": 1
+        },
+        "ingredientTags": "Gem\u00fcsebr\u00fche,vegetable broth,Chilischote(n),chili pepper(s),Pfeffer,pepper,Salz,salt,Basmati & Wildreis,basmati & wild rice,Kokosmilch,coconut milk,Oliven\u00f6l,olive oil,Basilikum, frisch,basil, fresh ,Currypulver,curry powder,Zucchini,zucchini,H\u00fchnerbrustfilet,chicken breast (boneless, skinless),Limette(n),lime(s)",
+        "favoriteCount": 106425,
+        "publishDates": {
+            "en": [
+                {
+                    "$date": 1684548000000
+                }
+            ],
+            "de": [
+                {
+                    "$date": 1684548000000
+                }
+            ]
+        },
+        "creationDate": {
+            "$date": 1391626364781
+        },
+        "updateDate": {
+            "$date": 1685629476496
+        }
+    }
+}
