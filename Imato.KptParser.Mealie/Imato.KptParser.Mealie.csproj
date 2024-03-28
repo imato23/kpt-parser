@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj"/>
+        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>

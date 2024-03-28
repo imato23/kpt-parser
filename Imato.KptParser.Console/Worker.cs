@@ -3,16 +3,19 @@ using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Console.DomainModel;
 using Imato.KptParser.KptCook;
 using Imato.KptParser.KptCook.DomainModel;
-using Imato.KptParser.Mealie;
 using Imato.KptParser.Mealie.Authorization;
 using Imato.KptParser.Mealie.Foods;
+using Imato.KptParser.Mealie.Foods.DomainModel;
 using Imato.KptParser.Mealie.Recipes;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Imato.KptParser.Mealie.Units;
+using Imato.KptParser.Mealie.Units.DomainModel;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Recipe = Imato.KptParser.KptCook.DomainModel.Recipe;
+using RecipeIngredient = Imato.KptParser.KptCook.DomainModel.RecipeIngredient;
+using Unit = Imato.KptParser.Mealie.Units.DomainModel.Unit;
 
 namespace Imato.KptParser.Console;
 
@@ -63,13 +66,11 @@ public class Worker : IHostedService
         {
             await authorizationService.LoginAsync().ConfigureAwait(false);
 
-            await unitService.GetOrAddUnitAsync("Liter", "l");
-            await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
-
-            return;
+            Unit unit = await unitService.GetOrAddUnitAsync("Liter", "l").ConfigureAwait(false);
+            Food food = await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
             
-            var favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
-            var kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds);
+            IEnumerable<string> favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
+            IEnumerable<Recipe>? kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds).ConfigureAwait(false);
 
             if (kptCookRecipes == null)
             {
@@ -132,7 +133,7 @@ public class Worker : IHostedService
         updateRecipe.CookTime = kptCookRecipe.CookingTime?.ToString() ?? string.Empty;
         updateRecipe.PerformTime = kptCookRecipe.PreparationTime.ToString();
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
-        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.StepsDE, kptCookRecipe.ImageList);
+        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
         updateRecipe.RecipeIngredient = MapIngredients(kptCookRecipe.Ingredients);
 
@@ -154,20 +155,20 @@ public class Worker : IHostedService
         }
     }
 
-    private IEnumerable<RecipeIngredient>? MapIngredients(IEnumerable<IngredientInfo> ingredients)
+    private IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? MapIngredients(IEnumerable<RecipeIngredient>? ingredients)
     {
-        IList<RecipeIngredient> result = new List<RecipeIngredient>();
+        IList<Mealie.Recipes.DomainModel.RecipeIngredient> result = new List<Mealie.Recipes.DomainModel.RecipeIngredient>();
 
-        foreach (IngredientInfo kptCookIngredient in ingredients)
+        foreach (RecipeIngredient kptCookIngredient in ingredients)
         {
-            RecipeIngredient mealieIngredient = new RecipeIngredient
+            Mealie.Recipes.DomainModel.RecipeIngredient mealieIngredient = new Mealie.Recipes.DomainModel.RecipeIngredient
             {
                 // Food = new IngredientFood
                 // {
                 //     Id = Guid.NewGuid().ToString(),
                 //     Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
                 // },
-                Quantity = kptCookIngredient.Quantity
+                Quantity = (double) kptCookIngredient.Quantity!
             };
 
             // if (kptCookIngredient.Measure != null)
@@ -186,16 +187,16 @@ public class Worker : IHostedService
         return result;
     }
 
-    private IEnumerable<RecipeStep> MapInstructions(string[] steps, IEnumerable<Image> imageList)
+    private IEnumerable<RecipeStep> MapInstructions(List<Step>? steps, IEnumerable<Image> imageList)
     {
         IList<RecipeStep> result = new List<RecipeStep>();
 
-        foreach (string step in steps)
+        foreach (Step step in steps)
             result.Add(new RecipeStep
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = string.Empty,
-                Text = step,
+                Text = step.Title?.De,
                 IngredientReferences = new List<IngredientReference>()
             });
 

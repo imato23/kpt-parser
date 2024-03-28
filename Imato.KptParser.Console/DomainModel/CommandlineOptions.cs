@@ -1,5 +1,3 @@
 namespace Imato.KptParser.Console.DomainModel;
 
-public class CommandlineOptions
-{
-}
+public class CommandlineOptions;

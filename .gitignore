@@ -1,3 +1,5 @@
 **/bin/
 **/obj/
 
+/.vs/
+/KptParser.v3.ncrunchsolution.user

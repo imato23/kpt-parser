@@ -39,7 +39,8 @@ internal class KptCookService : IKptCookService
         var url = $"{appSettings.ApiUrl}/recipes/search?kptnkey={appSettings.ApiKey}";
         var idObjects = recipeIds.Select(recipeId => new IdObject { Identifier = recipeId });
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, idObjects).ConfigureAwait(false);
-        var recipes = await response.Content.ReadFromJsonAsync<IEnumerable<Recipe>>();
+        string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+        var recipes = await response.Content.ReadFromJsonAsync<IEnumerable<Recipe>>().ConfigureAwait(false);
 
         return recipes;
     }

@@ -1,7 +1,7 @@
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Http;
 
-namespace Imato.KptParser.Mealie.Impl
+namespace Imato.KptParser.Mealie.Ingredients.Impl
 {
     internal class IngredientsService : IIngredientsService
     {
@@ -17,7 +17,8 @@ namespace Imato.KptParser.Mealie.Impl
 
         public Task GetOrAddFoodAsync(string name)
         {
-            httpClient.PostAsync();
+            //httpClient.PostAsync();
+            return Task.CompletedTask;
         }
     }
 }

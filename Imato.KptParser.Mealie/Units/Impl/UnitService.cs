@@ -21,9 +21,9 @@ internal class UnitService : IUnitService
     
     public async Task<Unit> GetOrAddUnitAsync(string name, string abbreviation)
     {
-        ItemResponse<Unit>? unitResponse = await GetAllUnitsAsync(name);
+        ItemResponse<Unit>? unitResponse = await GetAllUnitsAsync(name).ConfigureAwait(false);
 
-        if (unitResponse == null || !unitResponse.Items.Any())
+        if (unitResponse?.Items == null || !unitResponse.Items.Any())
         {
             return await CreateUnitAsync(name, abbreviation).ConfigureAwait(false);
         }
@@ -50,7 +50,7 @@ internal class UnitService : IUnitService
 
         response.EnsureSuccessStatusCode();
         
-        return await response.Content.ReadFromJsonAsync<Unit>() ?? throw new InvalidOperationException();
+        return await response.Content.ReadFromJsonAsync<Unit>().ConfigureAwait(false) ?? throw new InvalidOperationException();
     }
 
     private async Task<ItemResponse<Unit>?> GetAllUnitsAsync(string? name = null)
@@ -64,6 +64,6 @@ internal class UnitService : IUnitService
             url += $"?queryFilter={queryFilter}";
         }
 
-        return await httpClient.GetFromJsonAsync<ItemResponse<Unit>>(url);
+        return await httpClient.GetFromJsonAsync<ItemResponse<Unit>>(url).ConfigureAwait(false);
     }
 }

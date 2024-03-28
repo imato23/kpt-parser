@@ -1,13 +1,46 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj"/>
+      <Compile Remove="DomainModel\**" />
+      <EmbeddedResource Remove="DomainModel\**" />
+      <None Remove="DomainModel\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="DomainModel\Author.cs" />
+      <Compile Include="DomainModel\FavoritesResponse.cs" />
+      <Compile Include="DomainModel\IdObject.cs" />
+      <Compile Include="DomainModel\Image.cs" />
+      <Compile Include="DomainModel\KptDate.cs" />
+      <Compile Include="DomainModel\KptModel.cs" />
+      <Compile Include="DomainModel\LocalizedDate.cs" />
+      <Compile Include="DomainModel\LocalizedDates.cs" />
+      <Compile Include="DomainModel\LocalizedString.cs" />
+      <Compile Include="DomainModel\LocalizedUnit.cs" />
+      <Compile Include="DomainModel\Measure.cs" />
+      <Compile Include="DomainModel\NumberTitle.cs" />
+      <Compile Include="DomainModel\OidObject.cs" />
+      <Compile Include="DomainModel\Product.cs" />
+      <Compile Include="DomainModel\PublishDuration.cs" />
+      <Compile Include="DomainModel\Recipe.cs" />
+      <Compile Include="DomainModel\RecipeIngredient.cs" />
+      <Compile Include="DomainModel\RecipeIngredientDetails.cs" />
+      <Compile Include="DomainModel\RecipeNutrition.cs" />
+      <Compile Include="DomainModel\Retailer.cs" />
+      <Compile Include="DomainModel\Step.cs" />
+      <Compile Include="DomainModel\StepIngredient.cs" />
+      <Compile Include="DomainModel\Synonym.cs" />
+      <Compile Include="DomainModel\Unit.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Imato.KptParser.Common\Imato.KptParser.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>

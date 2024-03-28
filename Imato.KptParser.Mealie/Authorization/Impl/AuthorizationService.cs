@@ -21,7 +21,7 @@ internal class AuthorizationService : IAuthorizationService
     {
         if (!isLoggedIn)
         {
-            string accessToken = await FetchAccessTokenAsync();
+            string accessToken = await FetchAccessTokenAsync().ConfigureAwait(false);
             httpClient.DefaultRequestHeaders.Add("authorization", $"Bearer {accessToken}");
         }
 

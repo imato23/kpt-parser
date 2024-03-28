@@ -11,8 +11,6 @@ internal class RecipeService : IRecipeService
 
     private readonly HttpClient httpClient;
 
-    private bool isLoggedIn;
-
     /// <summary>
     ///     Initializes an instance of the MealieService
     /// </summary>
@@ -46,7 +44,7 @@ internal class RecipeService : IRecipeService
 
         if (slug == null) throw new InvalidOperationException("Couldn't create recipe");
 
-        await UpdateRecipeImage(slug, recipe.RecipeImageUrl);
+        await UpdateRecipeImageAsync(slug, recipe.RecipeImageUrl).ConfigureAwait(false);
 
         return slug;
     }
@@ -67,15 +65,15 @@ internal class RecipeService : IRecipeService
         CreateRecipeRequest body = new() { Name = name };
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
-        var slug = await response.Content.ReadFromJsonAsync<string>();
+        var slug = await response.Content.ReadFromJsonAsync<string>().ConfigureAwait(false);
         return slug;
     }
 
-    private async Task UpdateRecipeImage(string slug, string imageUrl)
+    private async Task UpdateRecipeImageAsync(string slug, string imageUrl)
     {
         var url = $"{appSettings.ApiUrl}/recipes/{slug}/image";
 
-        ImageRequest body = new() { Url = imageUrl };
+        ImageRequest body = new ImageRequest { Url = imageUrl };
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
 

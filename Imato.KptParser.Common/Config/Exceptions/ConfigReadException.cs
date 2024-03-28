@@ -1,5 +1,3 @@
-using System.Runtime.Serialization;
-
 namespace Imato.KptParser.Common.Config.Exceptions;
 
 /// <summary>
@@ -8,11 +6,6 @@ namespace Imato.KptParser.Common.Config.Exceptions;
 public class ConfigReadException : Exception
 {
     public ConfigReadException()
-    {
-    }
-
-    protected ConfigReadException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
     {
     }
 

@@ -21,9 +21,9 @@ internal class FoodService : IFoodService
 
     public async Task<Food> GetOrAddFoodAsync(string name)
     {
-        ItemResponse<Food>? foodResponse = await GetAllFoodsAsync(name);
+        ItemResponse<Food>? foodResponse = await GetAllFoodsAsync(name).ConfigureAwait(false);
 
-        if (foodResponse == null || !foodResponse.Items.Any())
+        if (foodResponse?.Items == null || !foodResponse.Items.Any())
         {
             return await CreateFoodAsync(name).ConfigureAwait(false);
         }
@@ -48,7 +48,7 @@ internal class FoodService : IFoodService
 
         response.EnsureSuccessStatusCode();
         
-        return await response.Content.ReadFromJsonAsync<Food>() ?? throw new InvalidOperationException();
+        return await response.Content.ReadFromJsonAsync<Food>().ConfigureAwait(false) ?? throw new InvalidOperationException();
     }
     
     private async Task<ItemResponse<Food>?> GetAllFoodsAsync(string? name = null)
@@ -59,6 +59,6 @@ internal class FoodService : IFoodService
 
         if (name != null) url += $"?queryFilter={queryFilter}";
 
-        return await httpClient.GetFromJsonAsync<ItemResponse<Food>>(url);
+        return await httpClient.GetFromJsonAsync<ItemResponse<Food>>(url).ConfigureAwait(false);
     }
 }
