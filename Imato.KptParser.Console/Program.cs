@@ -36,7 +36,8 @@ internal class Program
         hostBuilder.ConfigureContainer<ContainerBuilder>(
             containerBuilder =>
             {
-                containerBuilder.RegisterModule<AutofacModule>();
+                containerBuilder.RegisterModule<Console.AutofacModule>();
+                containerBuilder.RegisterModule<Common.AutofacModule>();
                 containerBuilder.RegisterModule<KptCook.AutofacModule>();
                 containerBuilder.RegisterModule<Mealie.AutofacModule>();
             });
