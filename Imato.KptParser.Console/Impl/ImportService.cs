@@ -3,9 +3,10 @@ using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.KptCook;
 using Imato.KptParser.KptCook.DomainModel;
 using Imato.KptParser.Mealie.Authorization;
+using Imato.KptParser.Mealie.Categories;
+using Imato.KptParser.Mealie.Common;
 using Imato.KptParser.Mealie.Foods;
 using Imato.KptParser.Mealie.Foods.DomainModel;
-using Imato.KptParser.Mealie.Helper.Impl;
 using Imato.KptParser.Mealie.Recipes;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Imato.KptParser.Mealie.Units;
@@ -16,23 +17,25 @@ using Unit = Imato.KptParser.Mealie.Units.DomainModel.Unit;
 
 namespace Imato.KptParser.Console.Impl;
 
-internal class Importer : IImporter
+internal class ImportService : IImportService
 {
     private readonly AppSettings appSettings;
     private readonly IKptCookService kptCookService;
     private readonly ILogger<Worker> logger;
     private readonly IRecipeService recipeService;
     private readonly IFoodService foodService;
+    private readonly IRecipeCategoryService recipeCategoryService;
     private readonly IUnitService unitService;
     private readonly IAuthorizationService authorizationService;
     private readonly IHelperService helperService;
 
-    public Importer(
+    public ImportService(
        ILogger<Worker> logger,
        IAppSettingsReader appSettingsReader,
        IKptCookService kptCookService,
        IRecipeService recipeService,
        IFoodService foodService,
+       IRecipeCategoryService recipeCategoryService,
        IUnitService unitService,
        IAuthorizationService authorizationService,
        IHelperService helperService)
@@ -42,6 +45,7 @@ internal class Importer : IImporter
         this.kptCookService = kptCookService;
         this.recipeService = recipeService;
         this.foodService = foodService;
+        this.recipeCategoryService = recipeCategoryService;
         this.unitService = unitService;
         this.authorizationService = authorizationService;
         this.helperService = helperService;
@@ -51,22 +55,16 @@ internal class Importer : IImporter
     {
         await authorizationService.LoginAsync().ConfigureAwait(false);
 
-        Unit unit = await unitService.GetOrAddUnitAsync("Liter", "l").ConfigureAwait(false);
-        Food food = await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
+        //Unit unit = await unitService.GetOrAddUnitAsync("Liter", "l").ConfigureAwait(false);
+        //Food food = await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
 
         IEnumerable<string> favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
-        IEnumerable<Recipe>? kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds).ConfigureAwait(false);
-
-        if (kptCookRecipes == null)
-        {
-            logger.LogWarning("No KptCook recipes have been found");
-            return;
-        }
+        IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds).ConfigureAwait(false);
 
         foreach (Recipe kptCookRecipe in kptCookRecipes)
+        {
             await CreateMealieRecipeAsync(kptCookRecipe).ConfigureAwait(false);
-
-        await Task.CompletedTask.ConfigureAwait(false);
+        }
     }
 
     private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe)
@@ -121,10 +119,10 @@ internal class Importer : IImporter
         updateRecipe.CookTime = updateRecipe.PerformTime;
         updateRecipe.PrepTime = kptCookRecipe.PreparationTime.ToString();
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
-        //updateRecipe.RecipeCategory = MapCategory(kptCookRecipe.Rtype);
-        //updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
+        updateRecipe.RecipeCategory = await MapCategoryAsync(kptCookRecipe.Rtype).ConfigureAwait(false);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
-        //updateRecipe.RecipeIngredient = MapIngredients(kptCookRecipe.Ingredients);
+        updateRecipe.RecipeIngredient = await MapIngredientsAsync(kptCookRecipe.Ingredients).ConfigureAwait(false);
+        //updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
 
         // Todo: Add step images to recipe steps
 
@@ -147,43 +145,43 @@ internal class Importer : IImporter
         }
     }
 
-    private IEnumerable<RecipeCategory> MapCategory(string category)
+    private async Task<IEnumerable<RecipeCategory>> MapCategoryAsync(string category)
     {
-        return new List<RecipeCategory> {
-            new RecipeCategory
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = category,
-                Slug = helperService.Slugify(category)
-            }
-        };
+        RecipeCategory recipeCategory = await recipeCategoryService.GetOrAddCategoryAsync(category).ConfigureAwait(false);
+
+        return new List<RecipeCategory> { recipeCategory };
     }
 
-    private IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? MapIngredients(IEnumerable<RecipeIngredient>? ingredients)
+    private async Task<IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>?> MapIngredientsAsync(IEnumerable<RecipeIngredient> ingredients)
     {
         IList<Mealie.Recipes.DomainModel.RecipeIngredient> result = new List<Mealie.Recipes.DomainModel.RecipeIngredient>();
 
         foreach (RecipeIngredient kptCookIngredient in ingredients)
         {
+            Unit? unit = null;
+
+            if (kptCookIngredient.Measure != null)
+            {
+                unit = await unitService.GetOrAddUnitAsync(kptCookIngredient.Measure, kptCookIngredient.Measure).ConfigureAwait(false);
+            }
+
+            Food food = await foodService.GetOrAddFoodAsync(kptCookIngredient.Ingredient.LocalizedTitle.De).ConfigureAwait(false);
+
             Mealie.Recipes.DomainModel.RecipeIngredient mealieIngredient = new Mealie.Recipes.DomainModel.RecipeIngredient
             {
-                // Food = new IngredientFood
-                // {
-                //     Id = Guid.NewGuid().ToString(),
-                //     Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
-                // },
-                Quantity = (double)kptCookIngredient.Quantity!
+                Food = new IngredientFood
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
+                },
+                Quantity = kptCookIngredient?.Quantity,
+                ReferenceId = food.Id
             };
 
-            // if (kptCookIngredient.Measure != null)
-            // {
-            //     mealieIngredient.Unit = new IngredientUnit
-            //     {
-            //         Id = Guid.NewGuid().ToString(),
-            //         Name = kptCookIngredient.Measure,
-            //         Abbreviation = kptCookIngredient.Measure
-            //     };
-            // }
+            if (unit != null)
+            {
+                mealieIngredient.Unit = new IngredientUnit {Id = unit.Id};
+            }
 
             result.Add(mealieIngredient);
         }

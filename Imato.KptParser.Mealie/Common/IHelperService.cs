@@ -1,4 +1,4 @@
-namespace Imato.KptParser.Mealie.Helper.Impl;
+namespace Imato.KptParser.Mealie.Common;
 
 public interface IHelperService
 {

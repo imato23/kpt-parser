@@ -1,6 +1,6 @@
 namespace Imato.KptParser.Console;
 
-public interface IImporter
+public interface IImportService
 {
     Task StartImportAsync();
 }

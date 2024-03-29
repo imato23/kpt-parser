@@ -13,7 +13,7 @@
     ~~"cookTime": null~~,
     ~~performTime": null~~,
     ~~"description": ""~~,
-    "recipeCategory": [],
+    ~~"recipeCategory": []~~,
     "tags": [],
     "tools": [],
     "rating": null,

@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
+using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 
@@ -8,13 +9,13 @@ namespace Imato.KptParser.Mealie.Authorization.Impl;
 internal class AuthorizationService : IAuthorizationService
 {
     private readonly HttpClient httpClient;
-    private readonly Common.Config.DomainModel.Mealie appSettings;
+    private readonly AppSettings appSettings;
     private bool isLoggedIn;
 
     public AuthorizationService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
     {
         httpClient = httpClientFactory.BuildHttpClient();
-        appSettings = appSettingsReader.GetAppSettings().Mealie;
+        appSettings = appSettingsReader.GetAppSettings();
     }
 
     public async Task LoginAsync()
@@ -30,12 +31,12 @@ internal class AuthorizationService : IAuthorizationService
 
     private async Task<string> FetchAccessTokenAsync()
     {
-        var url = $"{appSettings.ApiUrl}/auth/token";
+        var url = $"{appSettings.Mealie.ApiUrl}/auth/token";
 
         IEnumerable<KeyValuePair<string, string>> formData = new List<KeyValuePair<string, string>>
         {
-            new("username", appSettings.Username),
-            new("password", appSettings.Password)
+            new KeyValuePair<string, string>("username", appSettings.Mealie.Username),
+            new KeyValuePair<string, string>("password", appSettings.Mealie.Password)
         };
 
         using (HttpContent formContent = new FormUrlEncodedContent(formData))

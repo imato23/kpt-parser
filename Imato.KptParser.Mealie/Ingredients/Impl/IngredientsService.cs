@@ -1,16 +1,17 @@
 using Imato.KptParser.Common.Config;
+using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
 
 namespace Imato.KptParser.Mealie.Ingredients.Impl
 {
     internal class IngredientsService : IIngredientsService
     {
-        private readonly Common.Config.DomainModel.Mealie appSettings;
+        private readonly AppSettings appSettings;
         private readonly HttpClient httpClient;
 
         public IngredientsService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
         {
-            appSettings = appSettingsReader.GetAppSettings().Mealie;
+            appSettings = appSettingsReader.GetAppSettings();
             httpClient = httpClientFactory.BuildHttpClient();
         }
 

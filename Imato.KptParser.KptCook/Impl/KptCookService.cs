@@ -23,36 +23,51 @@ internal class KptCookService : IKptCookService
     /// <inheritdoc />
     public async Task<IEnumerable<string>> GetFavoriteIdsAsync()
     {
-        var url = $"{appSettings.ApiUrl}/favorites?kptnkey={appSettings.ApiKey}";
+        string url = $"{appSettings.ApiUrl}/favorites?kptnkey={appSettings.ApiKey}";
 
         FavoritesResponse? response = await httpClient.GetFromJsonAsync<FavoritesResponse>(url).ConfigureAwait(false);
 
         if (response == null)
+        {
             throw new InvalidOperationException("Couldn't receive favorite identifiers from Kpt Cook Api");
+        }
 
         return response.Favorites;
     }
 
     /// <inheritdoc />
-    public async Task<IEnumerable<Recipe>?> GetRecipesAsync(IEnumerable<string> recipeIds)
+    public async Task<IEnumerable<Recipe>> GetRecipesAsync(IEnumerable<string> recipeIds)
     {
-        var url = $"{appSettings.ApiUrl}/recipes/search?kptnkey={appSettings.ApiKey}";
-        var idObjects = recipeIds.Select(recipeId => new IdObject { Identifier = recipeId });
+        string url = $"{appSettings.ApiUrl}/recipes/search?kptnkey={appSettings.ApiKey}";
+        IEnumerable<IdObject> idObjects = recipeIds.Select(recipeId => new IdObject { Identifier = recipeId });
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, idObjects).ConfigureAwait(false);
-        string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-        var recipes = await response.Content.ReadFromJsonAsync<IEnumerable<Recipe>>().ConfigureAwait(false);
+        IEnumerable<Recipe>? recipes = await response.Content.ReadFromJsonAsync<IEnumerable<Recipe>>().ConfigureAwait(false);
+
+        if (recipes == null)
+        {
+            throw new InvalidOperationException("Recipes list must not be null");
+        }
 
         return recipes;
     }
 
-    public async Task<IEnumerable<Recipe>?> GetFavoriteRecipesAsync()
+    /// <inheritdoc />
+    public async Task<IEnumerable<Recipe>> GetFavoriteRecipesAsync()
     {
-        var favoriteIds = await GetFavoriteIdsAsync().ConfigureAwait(false);
-        var recipes = await GetRecipesAsync(favoriteIds).ConfigureAwait(false);
+        IEnumerable<string> favoriteIds = await GetFavoriteIdsAsync().ConfigureAwait(false);
+        IEnumerable<Recipe> recipes = await GetRecipesAsync(favoriteIds).ConfigureAwait(false);
+
+        if (recipes == null)
+        {
+            throw new InvalidOperationException("Recipes list must not be null");
+        }
 
         return recipes;
     }
 
+    /// <summary>
+    /// Adds the required headers to the request
+    /// </summary>
     private void AddHeaders()
     {
         //httpClient.DefaultRequestHeaders.Add("content-type", "application/json");

@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using System.Web;
 using Imato.KptParser.Common.Config;
+using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Foods.DomainModel;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
@@ -14,9 +15,9 @@ internal class FoodService : IFoodService
 
     public FoodService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
     {
-        Common.Config.DomainModel.Mealie appSettings = appSettingsReader.GetAppSettings().Mealie;
+        AppSettings appSettings = appSettingsReader.GetAppSettings();
         httpClient = httpClientFactory.BuildHttpClient();
-        baseUrl = $"{appSettings.ApiUrl}/foods";
+        baseUrl = $"{appSettings.Mealie.ApiUrl}/foods";
     }
 
     public async Task<Food> GetOrAddFoodAsync(string name)

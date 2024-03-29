@@ -1,9 +1,12 @@
 using Autofac;
 using Imato.KptParser.Mealie.Authorization;
 using Imato.KptParser.Mealie.Authorization.Impl;
+using Imato.KptParser.Mealie.Categories;
+using Imato.KptParser.Mealie.Categories.Impl;
+using Imato.KptParser.Mealie.Common;
+using Imato.KptParser.Mealie.Common.Impl;
 using Imato.KptParser.Mealie.Foods;
 using Imato.KptParser.Mealie.Foods.Impl;
-using Imato.KptParser.Mealie.Helper.Impl;
 using Imato.KptParser.Mealie.Recipes;
 using Imato.KptParser.Mealie.Recipes.Impl;
 using Imato.KptParser.Mealie.Units;
@@ -21,5 +24,6 @@ public class AutofacModule : Module
         builder.RegisterType<RecipeService>().As<IRecipeService>().SingleInstance();
         builder.RegisterType<FoodService>().As<IFoodService>().SingleInstance();
         builder.RegisterType<UnitService>().As<IUnitService>().SingleInstance();
+        builder.RegisterType<RecipeCategoryService>().As<IRecipeCategoryService>().SingleInstance();
     }
 }

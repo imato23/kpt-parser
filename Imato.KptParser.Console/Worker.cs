@@ -13,19 +13,19 @@ public class Worker : IHostedService
 
     // ReSharper disable once NotAccessedField.Local
     private readonly IOptions<CommandlineOptions> options;
-    private readonly IImporter importer;
+    private readonly IImportService importService;
     private int exitCode = 0;
 
     public Worker(
         ILogger<Worker> logger,
         IHostApplicationLifetime hostApplicationLifetime,
         IOptions<CommandlineOptions> options,
-        IImporter importer)
+        IImportService importService)
     {
         this.logger = logger;
         this.hostApplicationLifetime = hostApplicationLifetime;
         this.options = options;
-        this.importer = importer;
+        this.importService = importService;
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
@@ -34,7 +34,7 @@ public class Worker : IHostedService
 
         try
         {
-            await importer.StartImportAsync().ConfigureAwait(false);
+            await importService.StartImportAsync().ConfigureAwait(false);
             exitCode = 0;
         }
         catch (OperationCanceledException)

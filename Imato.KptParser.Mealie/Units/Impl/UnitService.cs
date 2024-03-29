@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using System.Web;
 using Imato.KptParser.Common.Config;
+using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Imato.KptParser.Mealie.Units.DomainModel;
@@ -14,9 +15,9 @@ internal class UnitService : IUnitService
 
     public UnitService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
     {
-        Common.Config.DomainModel.Mealie appSettings = appSettingsReader.GetAppSettings().Mealie;
+        AppSettings appSettings = appSettingsReader.GetAppSettings();
         httpClient = httpClientFactory.BuildHttpClient();
-        baseUrl = $"{appSettings.ApiUrl}/units";
+        baseUrl = $"{appSettings.Mealie.ApiUrl}/units";
     }
     
     public async Task<Unit> GetOrAddUnitAsync(string name, string abbreviation)

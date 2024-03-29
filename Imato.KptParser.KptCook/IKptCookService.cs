@@ -15,11 +15,11 @@ public interface IKptCookService
     /// </summary>
     /// <param name="recipeIds">The recipe identifiers</param>
     /// <returns>The recipes</returns>
-    Task<IEnumerable<Recipe>?> GetRecipesAsync(IEnumerable<string> recipeIds);
+    Task<IEnumerable<Recipe>> GetRecipesAsync(IEnumerable<string> recipeIds);
 
     /// <summary>
     ///     Gets all favorite recipes
     /// </summary>
     /// <returns>The favorite recipes</returns>
-    Task<IEnumerable<Recipe>?> GetFavoriteRecipesAsync();
+    Task<IEnumerable<Recipe>> GetFavoriteRecipesAsync();
 }
