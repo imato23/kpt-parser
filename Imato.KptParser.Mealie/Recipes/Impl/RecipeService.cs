@@ -2,7 +2,7 @@ using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
-using Slugify;
+using Microsoft.Extensions.Logging;
 
 namespace Imato.KptParser.Mealie.Recipes.Impl;
 
@@ -11,14 +11,16 @@ internal class RecipeService : IRecipeService
     private readonly Common.Config.DomainModel.Mealie appSettings;
 
     private readonly HttpClient httpClient;
+    private readonly ILogger<RecipeService> logger;
 
     /// <summary>
     ///     Initializes an instance of the MealieService
     /// </summary>
-    public RecipeService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
+    public RecipeService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader, ILogger<RecipeService> logger)
     {
         appSettings = appSettingsReader.GetAppSettings().Mealie;
         httpClient = httpClientFactory.BuildHttpClient();
+        this.logger = logger;
     }
 
     public async Task<RecipesResponse?> GetAllRecipesAsync()
@@ -32,6 +34,8 @@ internal class RecipeService : IRecipeService
     public async Task<UpdateRecipeRequest?> GetRecipeAsync(string slug)
     {
         var url = $"{appSettings.ApiUrl}/recipes/{slug}";
+
+        string json = await httpClient.GetStringAsync(url).ConfigureAwait(false);
 
         UpdateRecipeRequest? recipesResponse =
             await httpClient.GetFromJsonAsync<UpdateRecipeRequest>(url).ConfigureAwait(false);
@@ -71,6 +75,12 @@ internal class RecipeService : IRecipeService
 
         HttpResponseMessage response = await httpClient.PutAsJsonAsync(url, recipe).ConfigureAwait(false);
 
+        if (!response.IsSuccessStatusCode)
+        {
+            string content = await response.Content.ReadAsStringAsync();
+            logger.LogCritical("Recipe for slug {Slug} couldn't be updated. Error Details: {ErrorDetails}", slug, content);
+        }
+
         response.EnsureSuccessStatusCode();
     }
 
@@ -94,11 +104,5 @@ internal class RecipeService : IRecipeService
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
 
         response.EnsureSuccessStatusCode();
-    }
-
-    public string Slugify(string recipeTitle)
-    {
-        SlugHelper slugHelper = new SlugHelper();
-        return slugHelper.GenerateSlug(recipeTitle);
     }
 }

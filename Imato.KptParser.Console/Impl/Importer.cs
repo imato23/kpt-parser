@@ -5,6 +5,7 @@ using Imato.KptParser.KptCook.DomainModel;
 using Imato.KptParser.Mealie.Authorization;
 using Imato.KptParser.Mealie.Foods;
 using Imato.KptParser.Mealie.Foods.DomainModel;
+using Imato.KptParser.Mealie.Helper.Impl;
 using Imato.KptParser.Mealie.Recipes;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Imato.KptParser.Mealie.Units;
@@ -24,6 +25,7 @@ internal class Importer : IImporter
     private readonly IFoodService foodService;
     private readonly IUnitService unitService;
     private readonly IAuthorizationService authorizationService;
+    private readonly IHelperService helperService;
 
     public Importer(
        ILogger<Worker> logger,
@@ -32,7 +34,8 @@ internal class Importer : IImporter
        IRecipeService recipeService,
        IFoodService foodService,
        IUnitService unitService,
-       IAuthorizationService authorizationService)
+       IAuthorizationService authorizationService,
+       IHelperService helperService)
     {
         this.logger = logger;
         appSettings = appSettingsReader.GetAppSettings();
@@ -41,6 +44,7 @@ internal class Importer : IImporter
         this.foodService = foodService;
         this.unitService = unitService;
         this.authorizationService = authorizationService;
+        this.helperService = helperService;
     }
 
     public async Task StartImportAsync()
@@ -67,7 +71,7 @@ internal class Importer : IImporter
 
     private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe)
     {
-        string slug = recipeService.Slugify(kptCookRecipe.LocalizedTitle.De);
+        string slug = helperService.Slugify(kptCookRecipe.LocalizedTitle.De);
         bool recipeExists = await recipeService.RecipeExistsAsync(slug).ConfigureAwait(false);
 
         if (!recipeExists)
@@ -103,7 +107,7 @@ internal class Importer : IImporter
 
     private async Task UpdateRecipeAsync(Recipe kptCookRecipe)
     {
-        string slug = recipeService.Slugify(kptCookRecipe.LocalizedTitle.De);
+        string slug = helperService.Slugify(kptCookRecipe.LocalizedTitle.De);
         UpdateRecipeRequest? updateRecipe = await recipeService.GetRecipeAsync(slug).ConfigureAwait(false);
 
         if (updateRecipe == null)
@@ -111,13 +115,16 @@ internal class Importer : IImporter
             throw new InvalidOperationException($"Recipe for slug '{slug}' does not exist");
         }
 
+        updateRecipe.DateUpdated = DateTime.Now;
         updateRecipe.Description = kptCookRecipe.AuthorComment.De;
-        updateRecipe.CookTime = kptCookRecipe.CookingTime?.ToString() ?? string.Empty;
-        updateRecipe.PerformTime = kptCookRecipe.PreparationTime.ToString();
+        updateRecipe.PerformTime = kptCookRecipe.CookingTime?.ToString() ?? string.Empty;
+        updateRecipe.CookTime = updateRecipe.PerformTime;
+        updateRecipe.PrepTime = kptCookRecipe.PreparationTime.ToString();
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
-        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
+        //updateRecipe.RecipeCategory = MapCategory(kptCookRecipe.Rtype);
+        //updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
-        updateRecipe.RecipeIngredient = MapIngredients(kptCookRecipe.Ingredients);
+        //updateRecipe.RecipeIngredient = MapIngredients(kptCookRecipe.Ingredients);
 
         // Todo: Add step images to recipe steps
 
@@ -126,6 +133,8 @@ internal class Importer : IImporter
         //kptCookRecipe.ImageList
         //kptCookRecipe.Country
         //kptCookRecipe.Ingredients
+
+        //updateRecipe.DateAdded = DateTime.No;
 
         try
         {
@@ -136,6 +145,18 @@ internal class Importer : IImporter
             logger.LogCritical(e, "Couldn't update recipe for slug '{Slug}'", slug);
             throw;
         }
+    }
+
+    private IEnumerable<RecipeCategory> MapCategory(string category)
+    {
+        return new List<RecipeCategory> {
+            new RecipeCategory
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = category,
+                Slug = helperService.Slugify(category)
+            }
+        };
     }
 
     private IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? MapIngredients(IEnumerable<RecipeIngredient>? ingredients)
@@ -188,14 +209,17 @@ internal class Importer : IImporter
 
     private static Nutrition MapNutrition(RecipeNutrition nutrition)
     {
+        const string notApplicable = "N/A";
+
         return new Nutrition
         {
             Calories = nutrition.Calories.ToString(),
             CarbohydrateContent = nutrition.Carbohydrate.ToString(),
             FatContent = nutrition.Fat.ToString(),
-            FiberContent = string.Empty,
+            FiberContent = notApplicable,
             ProteinContent = nutrition.Protein.ToString(),
-            SodiumContent = string.Empty
+            SodiumContent = notApplicable,
+            SugarContent = notApplicable
         };
     }
 }

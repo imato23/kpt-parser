@@ -21,7 +21,7 @@ public class UpdateRecipeRequest
     public IEnumerable<RecipeTool>? Tools { get; set; }
     public int? Rating { get; set; }
     public string? OrgUrl { get; set; }
-    public DateTime? DateAdded { get; set; }
+    public DateOnly? DateAdded { get; set; }
     public DateTime? DateUpdated { get; set; }
     public DateTime? CreatedAt { get; set; }
     public DateTime? UpdateAt { get; set; }
