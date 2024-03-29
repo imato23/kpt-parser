@@ -9,4 +9,8 @@ public interface IRecipeService
     Task<UpdateRecipeRequest?> GetRecipeAsync(string slug);
     Task<string> AddRecipeAsync(RecipeRequest recipe);
     Task UpdateRecipeAsync(string slug, UpdateRecipeRequest recipe);
+
+    Task<bool> RecipeExistsAsync(string slug);
+
+    string Slugify(string recipeTitle);
 }

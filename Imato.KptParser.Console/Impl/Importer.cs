@@ -67,19 +67,43 @@ internal class Importer : IImporter
 
     private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe)
     {
-        string slug = "low-carb-paella-mit-garnelen";
+        string slug = recipeService.Slugify(kptCookRecipe.LocalizedTitle.De);
+        bool recipeExists = await recipeService.RecipeExistsAsync(slug).ConfigureAwait(false);
 
+        if (!recipeExists)
+        {
+            await CreateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+        }
+
+        await UpdateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+    }
+
+    private async Task<string> CreateRecipeAsync(Recipe kptCookRecipe)
+    {
+        string title = kptCookRecipe.LocalizedTitle.De;
         string imageUrl = kptCookRecipe.ImageList.Single(img => img.Type == "cover").Url;
         imageUrl = $"{imageUrl}?kptkey={appSettings.KptCook.ApiKey}";
 
         RecipeRequest mealieRecipe = new()
         {
-            RecipeName = kptCookRecipe.LocalizedTitle.De,
+            RecipeName = title,
             RecipeImageUrl = imageUrl
         };
 
-        //string slug1 = await mealieService.AddRecipeAsync(mealieRecipe).ConfigureAwait(false);
+        try
+        {
+            return await recipeService.AddRecipeAsync(mealieRecipe).ConfigureAwait(false);
+        }
+        catch (Exception e)
+        {
+            logger.LogCritical(e, "Couldn't create recipe '{Title}'", title);
+            throw;
+        }
+    }
 
+    private async Task UpdateRecipeAsync(Recipe kptCookRecipe)
+    {
+        string slug = recipeService.Slugify(kptCookRecipe.LocalizedTitle.De);
         UpdateRecipeRequest? updateRecipe = await recipeService.GetRecipeAsync(slug).ConfigureAwait(false);
 
         if (updateRecipe == null)
@@ -110,6 +134,7 @@ internal class Importer : IImporter
         catch (Exception e)
         {
             logger.LogCritical(e, "Couldn't update recipe for slug '{Slug}'", slug);
+            throw;
         }
     }
 

@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
+using Slugify;
 
 namespace Imato.KptParser.Mealie.Recipes.Impl;
 
@@ -36,6 +37,21 @@ internal class RecipeService : IRecipeService
             await httpClient.GetFromJsonAsync<UpdateRecipeRequest>(url).ConfigureAwait(false);
 
         return recipesResponse;
+    }
+
+    public async Task<bool> RecipeExistsAsync(string slug)
+    {
+        try
+        {
+            var recipe = await GetRecipeAsync(slug).ConfigureAwait(false);
+
+            return recipe != null;
+        }
+        catch (Exception e)
+        {
+            // todo: Handle specific exception
+            return false;
+        }
     }
 
     public async Task<string> AddRecipeAsync(RecipeRequest recipe)
@@ -78,5 +94,11 @@ internal class RecipeService : IRecipeService
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, body).ConfigureAwait(false);
 
         response.EnsureSuccessStatusCode();
+    }
+
+    public string Slugify(string recipeTitle)
+    {
+        SlugHelper slugHelper = new SlugHelper();
+        return slugHelper.GenerateSlug(recipeTitle);
     }
 }
