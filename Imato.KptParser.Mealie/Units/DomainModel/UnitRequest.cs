@@ -7,4 +7,6 @@ public class UnitRequest
     public bool Fraction { get; set; }
     public string? Abbreviation { get; set; }
     public bool UseAbbreviation { get; set; }
+    public string? PluralName { get; set; }
+    public string? PluralAbbreviation { get; set; }
 }

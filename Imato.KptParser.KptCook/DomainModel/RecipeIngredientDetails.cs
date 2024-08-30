@@ -2,6 +2,10 @@
 
 public class RecipeIngredientDetails : KptModel
 {
+    public RecipeIngredientDetails()
+    {
+    }
+
     public string? Typ { get; set; }
     public LocalizedString? LocalizedTitle { get; set; }
     public NumberTitle? NumberTitle { get; set; }

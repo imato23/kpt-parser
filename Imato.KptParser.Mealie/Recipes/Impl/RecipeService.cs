@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
+using Imato.KptParser.Mealie.Common;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Microsoft.Extensions.Logging;
 
@@ -11,17 +12,19 @@ internal class RecipeService : IRecipeService
 {
     private readonly HttpClient httpClient;
     private readonly ILogger<RecipeService> logger;
+    private readonly IHelperService helperService;
     private readonly string apiUrl;
 
     /// <summary>
     ///     Initializes an instance of the MealieService
     /// </summary>
     public RecipeService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader,
-        ILogger<RecipeService> logger)
+        ILogger<RecipeService> logger, IHelperService helperService)
     {
         AppSettings appSettings = appSettingsReader.GetAppSettings();
         httpClient = httpClientFactory.BuildHttpClient();
         this.logger = logger;
+        this.helperService = helperService;
         apiUrl = appSettings.Mealie.ApiUrl;
     }
 
@@ -35,7 +38,7 @@ internal class RecipeService : IRecipeService
         {
             throw new InvalidOperationException("Recipes response is null");
         }
-        
+
         return recipesResponse;
     }
 
@@ -81,17 +84,7 @@ internal class RecipeService : IRecipeService
 
         HttpResponseMessage response = await httpClient.PutAsJsonAsync(url, recipe).ConfigureAwait(false);
 
-        if (!response.IsSuccessStatusCode)
-        {
-            string content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-            logger.LogCritical("Recipe for slug {Slug} couldn't be updated. Error Details: {ErrorDetails}", slug, content);
-
-            throw new InvalidOperationException(
-                $"Recipe for slug {slug} couldn't be updated. Error Details: {content}");
-        }
-
-        response.EnsureSuccessStatusCode();
+        await helperService.EnsureSuccessStatusCode(response, $"Recipe for slug {slug} couldn't be updated");
     }
 
     private async Task<string> CreateRecipeAsync(string name)

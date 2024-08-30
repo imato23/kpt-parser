@@ -122,7 +122,7 @@ internal class ImportService : IImportService
         updateRecipe.RecipeCategory = await MapCategoryAsync(kptCookRecipe.Rtype).ConfigureAwait(false);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
         updateRecipe.RecipeIngredient = await MapIngredientsAsync(kptCookRecipe.Ingredients).ConfigureAwait(false);
-        //updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList);
+        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList, updateRecipe.RecipeIngredient);
 
         // Todo: Add step images to recipe steps
 
@@ -171,8 +171,9 @@ internal class ImportService : IImportService
             {
                 Food = new IngredientFood
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = food.Id,
                     Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
+                    Description = string.Empty
                 },
                 Quantity = kptCookIngredient?.Quantity,
                 ReferenceId = food.Id
@@ -180,8 +181,16 @@ internal class ImportService : IImportService
 
             if (unit != null)
             {
-                mealieIngredient.Unit = new IngredientUnit {Id = unit.Id};
+                mealieIngredient.Unit = new IngredientUnit
+                {
+                    Id = unit.Id,
+                    Abbreviation = string.Empty,
+                    Name = string.Empty,
+                    Description = string.Empty
+                };
             }
+
+            mealieIngredient.KptCookId = kptCookIngredient.Ingredient.OidObject.Oid;
 
             result.Add(mealieIngredient);
         }
@@ -189,18 +198,35 @@ internal class ImportService : IImportService
         return result;
     }
 
-    private IEnumerable<RecipeStep> MapInstructions(List<Step>? steps, IEnumerable<Image> imageList)
+    private IEnumerable<RecipeStep> MapInstructions(
+        List<Step>? srcSteps,
+        IEnumerable<Image> srcImages,
+        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? recipeIngredients)
     {
         IList<RecipeStep> result = new List<RecipeStep>();
 
-        foreach (Step step in steps)
-            result.Add(new RecipeStep
+        foreach (Step step in srcSteps)
+        {
+            RecipeStep mealieStep = new RecipeStep
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = string.Empty,
                 Text = step.Title?.De,
                 IngredientReferences = new List<IngredientReference>()
-            });
+            };
+
+            if (step.Ingredients != null)
+            {
+                foreach(StepIngredient ingredient in step.Ingredients)
+                {
+                    string referenceId = recipeIngredients.Single(x => x.KptCookId == ingredient.IngredientId).ReferenceId;
+                    mealieStep.IngredientReferences.Add(
+                        new IngredientReference{ReferenceId = referenceId});
+                }
+            }
+
+            result.Add(mealieStep);
+        }
 
         return result;
     }

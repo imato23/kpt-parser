@@ -10,4 +10,5 @@ public class RecipeIngredient
     public double? Quantity { get; set; }
     public string? OriginalText { get; set; }
     public string? ReferenceId { get; set; }
+    public string? KptCookId { get; set; }
 }
