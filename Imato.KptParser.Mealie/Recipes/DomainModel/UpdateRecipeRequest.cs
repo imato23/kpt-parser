@@ -32,7 +32,7 @@ public class UpdateRecipeRequest
     public RecipeSettings? Settings { get; set; }
     public IEnumerable<RecipeAsset>? Assets { get; set; }
 
-    public IEnumerable<RecipeNote>? Notes { get; set; }
+    public IList<RecipeNote>? Notes { get; set; } = new List<RecipeNote>();
 
     public object? Extras { get; set; }
     public bool IsOcrRecipe { get; set; }

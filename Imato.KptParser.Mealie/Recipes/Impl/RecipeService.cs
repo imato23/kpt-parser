@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
@@ -16,7 +17,7 @@ internal class RecipeService : IRecipeService
     private readonly string apiUrl;
 
     /// <summary>
-    ///     Initializes an instance of the MealieService
+    ///     Initializes an instance of the RecipeService
     /// </summary>
     public RecipeService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader,
         ILogger<RecipeService> logger, IHelperService helperService)
@@ -85,6 +86,30 @@ internal class RecipeService : IRecipeService
         HttpResponseMessage response = await httpClient.PutAsJsonAsync(url, recipe).ConfigureAwait(false);
 
         await helperService.EnsureSuccessStatusCode(response, $"Recipe for slug {slug} couldn't be updated");
+    }
+
+    public async Task UploadImagessForRecipeStepsAsync(string slug, IEnumerable<StepImage> images)
+    {
+        string url = $"{apiUrl}/recipes/{slug}/assets";
+
+        foreach(StepImage image in images){
+            // Download image from url
+            byte[] imageBytes = await httpClient.GetByteArrayAsync(image.ImageUrl);
+
+            // Send image to Mealie REST API
+            using MultipartFormDataContent formData = new MultipartFormDataContent();
+            using ByteArrayContent byteContent = new ByteArrayContent(imageBytes);
+            byteContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
+
+            formData.Add(new StringContent(Path.GetFileNameWithoutExtension(image.FileName)), "name");
+            formData.Add(new StringContent("mdi-file-image"), "icon");
+            formData.Add(new StringContent("jpg"), "extension");
+            formData.Add(byteContent, "file", image.FileName);
+
+            HttpResponseMessage response = await httpClient.PostAsync(url, formData);
+
+            await helperService.EnsureSuccessStatusCode(response, $"Asset could not be added to recipe with slug {slug}");
+        }
     }
 
     private async Task<string> CreateRecipeAsync(string name)

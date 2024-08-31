@@ -9,4 +9,5 @@ public interface IRecipeService
     Task<string> AddRecipeAsync(RecipeRequest recipe);
     Task UpdateRecipeAsync(string slug, UpdateRecipeRequest recipe);
     Task<bool> RecipeExistsAsync(string slug);
+    Task UploadImagessForRecipeStepsAsync(string slug, IEnumerable<StepImage> images);
 }

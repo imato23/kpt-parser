@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.KptCook;
@@ -55,9 +56,6 @@ internal class ImportService : IImportService
     {
         await authorizationService.LoginAsync().ConfigureAwait(false);
 
-        //Unit unit = await unitService.GetOrAddUnitAsync("Liter", "l").ConfigureAwait(false);
-        //Food food = await foodService.GetOrAddFoodAsync("Schmand").ConfigureAwait(false);
-
         IEnumerable<string> favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
         IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds).ConfigureAwait(false);
 
@@ -75,9 +73,25 @@ internal class ImportService : IImportService
         if (!recipeExists)
         {
             await CreateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+            IEnumerable<StepImage> stepImages = GetStepImages(kptCookRecipe.ImageList);
+
+            await recipeService.UploadImagessForRecipeStepsAsync(slug, stepImages).ConfigureAwait(false);
         }
 
         await UpdateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+    }
+
+    private static IEnumerable<StepImage> GetStepImages(IEnumerable<Image> kptCookImages)
+    {
+        return kptCookImages
+                    .Where(img => img.Type == "step" || img.Type == null)
+                    .Select(img => new StepImage { FileName = BuildStepImageFileName(img.Name), ImageUrl = img.Url });
+    }
+
+    private static string BuildStepImageFileName(string kptCookImageFileName){
+        Regex regex = new Regex(@"\d\d\..+$");
+        string p1 = regex.Match(kptCookImageFileName).Value;
+        return "step" + p1;
     }
 
     private async Task<string> CreateRecipeAsync(Recipe kptCookRecipe)
@@ -119,20 +133,19 @@ internal class ImportService : IImportService
         updateRecipe.CookTime = updateRecipe.PerformTime;
         updateRecipe.PrepTime = kptCookRecipe.PreparationTime.ToString();
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
+        updateRecipe.RecipeYield = "2";
+
+        if (!string.IsNullOrWhiteSpace(kptCookRecipe.Country))
+        {
+            updateRecipe.Notes.Add(new RecipeNote { Title = "Herkunftsland" , Text = kptCookRecipe.Country});
+        }
+
         updateRecipe.RecipeCategory = await MapCategoryAsync(kptCookRecipe.Rtype).ConfigureAwait(false);
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
         updateRecipe.RecipeIngredient = await MapIngredientsAsync(kptCookRecipe.Ingredients).ConfigureAwait(false);
-        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, kptCookRecipe.ImageList, updateRecipe.RecipeIngredient);
+        updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, updateRecipe.RecipeIngredient, updateRecipe.Id);
 
-        // Todo: Add step images to recipe steps
-
-        // Todo: Add the following data to mealie recipe
-        //kptCookRecipe.Authors
-        //kptCookRecipe.ImageList
         //kptCookRecipe.Country
-        //kptCookRecipe.Ingredients
-
-        //updateRecipe.DateAdded = DateTime.No;
 
         try
         {
@@ -198,12 +211,20 @@ internal class ImportService : IImportService
         return result;
     }
 
+    private string BuildStepImageUrl(string recipeId, int stepNumber)
+    {
+        string fileName = $"step{stepNumber:D2}.jpg";
+        string url = @$"<img src=""/api/media/recipes/{recipeId}/assets/{fileName}"" height=""100%"" width=""100%""/>";
+        return url;
+    }
+
     private IEnumerable<RecipeStep> MapInstructions(
         List<Step>? srcSteps,
-        IEnumerable<Image> srcImages,
-        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? recipeIngredients)
+        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? recipeIngredients, string recipeId)
     {
         IList<RecipeStep> result = new List<RecipeStep>();
+
+        int stepNumber = 1;
 
         foreach (Step step in srcSteps)
         {
@@ -211,7 +232,7 @@ internal class ImportService : IImportService
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = string.Empty,
-                Text = step.Title?.De,
+                Text = step.Title?.De + BuildStepImageUrl(recipeId, stepNumber++),
                 IngredientReferences = new List<IngredientReference>()
             };
 
