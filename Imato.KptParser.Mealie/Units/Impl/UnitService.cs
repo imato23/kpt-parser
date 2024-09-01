@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using System.Text.RegularExpressions;
 using System.Web;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
@@ -27,11 +28,14 @@ internal class UnitService : IUnitService
     {
         string plural = string.Empty;
 
-        if (name.EndsWith("(n)"))
+        Regex regex = new Regex(@"(?<single>.*)\((?<plural>.+)\)$");
+
+        Match match = regex.Match(name);
+
+        if (match.Success)
         {
-            name = name.Remove(name.Length-3);
-            abbreviation = abbreviation.Remove(abbreviation.Length-3);
-            plural = name + "n";
+            abbreviation = name = match.Groups["single"].Value;
+            plural = name + match.Groups["plural"].Value;
         }
 
         ItemResponse<Unit>? unitResponse = await GetAllUnitsAsync(name).ConfigureAwait(false);

@@ -47,12 +47,17 @@ internal class RecipeService : IRecipeService
     {
         string url = $"{apiUrl}/recipes/{slug}";
 
-        string json = await httpClient.GetStringAsync(url).ConfigureAwait(false);
+        try
+        {
+            UpdateRecipeRequest? recipesResponse =
+                await httpClient.GetFromJsonAsync<UpdateRecipeRequest>(url).ConfigureAwait(false);
 
-        UpdateRecipeRequest? recipesResponse =
-            await httpClient.GetFromJsonAsync<UpdateRecipeRequest>(url).ConfigureAwait(false);
-
-        return recipesResponse;
+            return recipesResponse;
+        }
+        catch
+        {
+            return null;
+        }
     }
 
     public async Task<bool> RecipeExistsAsync(string slug)
@@ -108,7 +113,7 @@ internal class RecipeService : IRecipeService
 
             HttpResponseMessage response = await httpClient.PostAsync(url, formData);
 
-            await helperService.EnsureSuccessStatusCode(response, $"Asset could not be added to recipe with slug {slug}");
+            await helperService.EnsureSuccessStatusCode(response, $"Step image could not be added to recipe with slug '{slug}'");
         }
     }
 

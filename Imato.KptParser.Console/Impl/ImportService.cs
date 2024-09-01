@@ -56,11 +56,19 @@ internal class ImportService : IImportService
     {
         await authorizationService.LoginAsync().ConfigureAwait(false);
 
-        IEnumerable<string> favoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
-        IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(favoriteIds).ConfigureAwait(false);
+        IEnumerable<string> kptCookFavoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
+        IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(kptCookFavoriteIds).ConfigureAwait(false);
+
+        int currentRecipeCount = 1;
 
         foreach (Recipe kptCookRecipe in kptCookRecipes)
         {
+            logger.LogInformation(
+                "Creating Mealie recipe for '{RecipeName}' ({CurrentRecipeCount} of {MaxRecipeCount})",
+                kptCookRecipe.LocalizedTitle.De,
+                currentRecipeCount++,
+                kptCookRecipes.Count());
+
             await CreateMealieRecipeAsync(kptCookRecipe).ConfigureAwait(false);
         }
     }
@@ -240,9 +248,16 @@ internal class ImportService : IImportService
             {
                 foreach(StepIngredient ingredient in step.Ingredients)
                 {
-                    string referenceId = recipeIngredients.Single(x => x.KptCookId == ingredient.IngredientId).ReferenceId;
+                    Mealie.Recipes.DomainModel.RecipeIngredient mealieIngredient =
+                        recipeIngredients.SingleOrDefault(x => x.KptCookId == ingredient.IngredientId);
+
+                    if (mealieIngredient == null){
+                        logger.LogWarning("Ingredient reference was not found for ingredient '{Ingredient}'", ingredient.Title.De);
+                        continue;
+                    }
+
                     mealieStep.IngredientReferences.Add(
-                        new IngredientReference{ReferenceId = referenceId});
+                        new IngredientReference{ReferenceId = mealieIngredient.ReferenceId});
                 }
             }
 

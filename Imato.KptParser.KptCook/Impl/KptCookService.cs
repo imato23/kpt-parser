@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.KptCook.DomainModel;
+using Microsoft.Extensions.Logging;
 
 namespace Imato.KptParser.KptCook.Impl;
 
@@ -9,20 +10,24 @@ internal class KptCookService : IKptCookService
 {
     private readonly Common.Config.DomainModel.KptCook appSettings;
     private readonly HttpClient httpClient;
+    private readonly ILogger<KptCookService> logger;
 
     /// <summary>
     ///     Initializes an instance of the KptCookService
     /// </summary>
-    public KptCookService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
+    public KptCookService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader, ILogger<KptCookService> logger)
     {
         appSettings = appSettingsReader.GetAppSettings().KptCook;
         httpClient = httpClientFactory.BuildHttpClient();
         AddHeaders();
+        this.logger = logger;
     }
 
     /// <inheritdoc />
     public async Task<IEnumerable<string>> GetFavoriteIdsAsync()
     {
+        logger.LogInformation("Getting identifiers of all favorites from KptCook API");
+
         string url = $"{appSettings.ApiUrl}/favorites?kptnkey={appSettings.ApiKey}";
 
         FavoritesResponse? response = await httpClient.GetFromJsonAsync<FavoritesResponse>(url).ConfigureAwait(false);
@@ -38,6 +43,8 @@ internal class KptCookService : IKptCookService
     /// <inheritdoc />
     public async Task<IEnumerable<Recipe>> GetRecipesAsync(IEnumerable<string> recipeIds)
     {
+        logger.LogInformation("Getting recipes for favorites from KptCook API");
+
         string url = $"{appSettings.ApiUrl}/recipes/search?kptnkey={appSettings.ApiKey}";
         IEnumerable<IdObject> idObjects = recipeIds.Select(recipeId => new IdObject { Identifier = recipeId });
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(url, idObjects).ConfigureAwait(false);
@@ -47,6 +54,8 @@ internal class KptCookService : IKptCookService
         {
             throw new InvalidOperationException("Recipes list must not be null");
         }
+
+        logger.LogInformation("Found {RecipesCount} KptCook recipes", recipes.Count());
 
         return recipes;
     }
