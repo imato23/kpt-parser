@@ -19,7 +19,7 @@ internal class HelperService : IHelperService
             throw new ArgumentNullException(nameof(input));
         }
 
-        SlugHelper slugHelper = new SlugHelper();
+        SlugHelperForNonAsciiLanguages slugHelper = new SlugHelperForNonAsciiLanguages();
         return slugHelper.GenerateSlug(input);
     }
 
