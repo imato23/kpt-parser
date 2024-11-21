@@ -1,4 +1,3 @@
-using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Console.DomainModel;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -14,7 +13,7 @@ public class Worker : IHostedService
     // ReSharper disable once NotAccessedField.Local
     private readonly IOptions<CommandlineOptions> options;
     private readonly IImportService importService;
-    private int exitCode = 0;
+    private int exitCode;
 
     public Worker(
         ILogger<Worker> logger,

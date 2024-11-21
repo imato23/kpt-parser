@@ -1,24 +1,18 @@
 ﻿using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Http;
-using Imato.KptParser.Mealie.Foods.DomainModel;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using System.Net.Http.Json;
-using System;
-using Imato.KptParser.Mealie.Common;
-using System.Xml.Linq;
 
 namespace Imato.KptParser.Mealie.Categories.Impl;
 
 internal class RecipeCategoryService : IRecipeCategoryService
 {
-    private readonly IHelperService helperService;
     private readonly string baseUrl;
     private readonly HttpClient httpClient;
 
-    public RecipeCategoryService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader, IHelperService helperService)
+    public RecipeCategoryService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader)
     {
-        this.helperService = helperService;
         AppSettings appSettings = appSettingsReader.GetAppSettings();
         httpClient = httpClientFactory.BuildHttpClient();
         baseUrl = $"{appSettings.Mealie.ApiUrl}/organizers/categories";
@@ -38,14 +32,20 @@ internal class RecipeCategoryService : IRecipeCategoryService
 
     private async Task<RecipeCategory?> GetRecipeCategoryAsync(string name)
     {
-        string slug = helperService.Slugify(name);
-        string url = $"{baseUrl}/slug/{slug}";
+        string url = $"{baseUrl}?queryFilter=name%3D{name}";
 
         try
         {
-            return await httpClient.GetFromJsonAsync<RecipeCategory>(url).ConfigureAwait(false);
+            RecipeCategoriesResponse? response =  await httpClient.GetFromJsonAsync<RecipeCategoriesResponse>(url).ConfigureAwait(false);
+
+            if (response != null && response.Items.Any())
+            {
+                return response.Items.Single();
+            }
+
+            return null;
         }
-        catch (Exception e)
+        catch
         {
             return null;
         }
@@ -61,7 +61,7 @@ internal class RecipeCategoryService : IRecipeCategoryService
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(baseUrl, body).ConfigureAwait(false);
 
         response.EnsureSuccessStatusCode();
-        
+
         return await response.Content.ReadFromJsonAsync<RecipeCategory>().ConfigureAwait(false) ?? throw new InvalidOperationException();
     }
 }

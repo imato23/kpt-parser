@@ -2,20 +2,20 @@
 
 public class Recipe : KptModel
 {
-    public LocalizedString? LocalizedTitle { get; set; }
-    public string? Rtype { get; set; }
+    public required LocalizedString LocalizedTitle { get; set; }
+    public required string Rtype { get; set; }
     public string? Gdocs { get; set; }
-    public LocalizedString? AuthorComment { get; set; }
+    public required LocalizedString AuthorComment { get; set; }
     public string? Uid { get; set; }
     public string? Country { get; set; }
     public int? PreparationTime { get; set; }
     public int? CookingTime { get; set; }
-    public RecipeNutrition? RecipeNutrition { get; set; }
-    public List<Step>? Steps { get; set; }
+    public required RecipeNutrition RecipeNutrition { get; set; }
+    public List<Step> Steps { get; set; } = [];
     public List<Author>? Authors { get; set; }
     public List<Retailer>? Retailers { get; set; }
-    public List<RecipeIngredient>? Ingredients { get; set; }
-    public List<Image>? ImageList { get; set; }
+    public List<RecipeIngredient> Ingredients { get; set; } = [];
+    public required List<Image> ImageList { get; set; }
     public LocalizedDate? LocalizedPublishDate { get; set; }
     public LocalizedDates? PublishDates { get; set; }
     public string? TrackingMode { get; set; }

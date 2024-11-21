@@ -8,5 +8,5 @@ public class RecipeIngredient
     public string? MeasureUs { get; set; }
     public double? QuantityUsProd { get; set; }
     public string? MeasureUsProd { get; set; }
-    public RecipeIngredientDetails? Ingredient { get; set; }
+    public required RecipeIngredientDetails Ingredient { get; set; }
 }

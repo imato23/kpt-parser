@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Imato.KptParser.Common;
 using Imato.KptParser.Console.DomainModel;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,6 +35,7 @@ internal class Program
         hostBuilder.ConfigureContainer<ContainerBuilder>(
             containerBuilder =>
             {
+                // ReSharper disable once RedundantNameQualifier
                 containerBuilder.RegisterModule<Console.AutofacModule>();
                 containerBuilder.RegisterModule<Common.AutofacModule>();
                 containerBuilder.RegisterModule<KptCook.AutofacModule>();

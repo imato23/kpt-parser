@@ -57,7 +57,7 @@ internal class FoodService : IFoodService
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync(baseUrl, body).ConfigureAwait(false);
 
-        helperService.EnsureSuccessStatusCode(response, $"Couldn't create food '{name}'");
+        await helperService.EnsureSuccessStatusCode(response, $"Couldn't create food '{name}'").ConfigureAwait(false);
 
         return await response.Content.ReadFromJsonAsync<Food>().ConfigureAwait(false) ?? throw new InvalidOperationException();
     }

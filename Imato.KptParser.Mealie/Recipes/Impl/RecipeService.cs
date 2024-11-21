@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using Imato.KptParser.Common.Config;
@@ -5,14 +6,12 @@ using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.Common.Http;
 using Imato.KptParser.Mealie.Common;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
-using Microsoft.Extensions.Logging;
 
 namespace Imato.KptParser.Mealie.Recipes.Impl;
 
 internal class RecipeService : IRecipeService
 {
     private readonly HttpClient httpClient;
-    private readonly ILogger<RecipeService> logger;
     private readonly IHelperService helperService;
     private readonly string apiUrl;
 
@@ -20,11 +19,10 @@ internal class RecipeService : IRecipeService
     ///     Initializes an instance of the RecipeService
     /// </summary>
     public RecipeService(IHttpClientFactory httpClientFactory, IAppSettingsReader appSettingsReader,
-        ILogger<RecipeService> logger, IHelperService helperService)
+        IHelperService helperService)
     {
         AppSettings appSettings = appSettingsReader.GetAppSettings();
         httpClient = httpClientFactory.BuildHttpClient();
-        this.logger = logger;
         this.helperService = helperService;
         apiUrl = appSettings.Mealie.ApiUrl;
     }
@@ -41,6 +39,22 @@ internal class RecipeService : IRecipeService
         }
 
         return recipesResponse;
+    }
+    
+    public async Task<bool> RecipeWithNameExistsAsync(string name)
+    {
+        string urlEncodedName = WebUtility.UrlEncode(name);
+        
+        string url = $"{apiUrl}/recipes?queryFilter=name%3D{urlEncodedName}";
+        RecipesResponse? recipesResponse =
+            await httpClient.GetFromJsonAsync<RecipesResponse>(url).ConfigureAwait(false);
+
+        if (recipesResponse == null)
+        {
+            throw new InvalidOperationException("Recipes response is null");
+        }
+
+        return recipesResponse.Items.Any();
     }
 
     public async Task<UpdateRecipeRequest?> GetRecipeAsync(string slug)
@@ -60,7 +74,7 @@ internal class RecipeService : IRecipeService
         }
     }
 
-    public async Task<bool> RecipeExistsAsync(string slug)
+    public async Task<bool> RecipeWithSlugExistsAsync(string slug)
     {
         try
         {
@@ -68,7 +82,7 @@ internal class RecipeService : IRecipeService
 
             return recipe != null;
         }
-        catch (Exception e)
+        catch
         {
             // todo: Handle specific exception
             return false;
@@ -93,7 +107,7 @@ internal class RecipeService : IRecipeService
         await helperService.EnsureSuccessStatusCode(response, $"Recipe for slug {slug} couldn't be updated");
     }
 
-    public async Task UploadImagessForRecipeStepsAsync(string slug, IEnumerable<StepImage> images)
+    public async Task UploadImagesForRecipeStepsAsync(string slug, IEnumerable<StepImage> images)
     {
         string url = $"{apiUrl}/recipes/{slug}/assets";
 
@@ -106,10 +120,10 @@ internal class RecipeService : IRecipeService
             using ByteArrayContent byteContent = new ByteArrayContent(imageBytes);
             byteContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
 
-            formData.Add(new StringContent(Path.GetFileNameWithoutExtension(image.FileName)), "name");
+            formData.Add(new StringContent(Path.GetFileNameWithoutExtension(image.FileName) ?? throw new InvalidOperationException()), "name");
             formData.Add(new StringContent("mdi-file-image"), "icon");
             formData.Add(new StringContent("jpg"), "extension");
-            formData.Add(byteContent, "file", image.FileName);
+            formData.Add(byteContent, "file", image.FileName ?? throw new InvalidOperationException());
 
             HttpResponseMessage response = await httpClient.PostAsync(url, formData);
 

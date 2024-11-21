@@ -28,6 +28,7 @@ internal class KptCookService : IKptCookService
     {
         logger.LogInformation("Getting identifiers of all favorites from KptCook API");
 
+        // ReSharper disable once StringLiteralTypo
         string url = $"{appSettings.ApiUrl}/favorites?kptnkey={appSettings.ApiKey}";
 
         FavoritesResponse? response = await httpClient.GetFromJsonAsync<FavoritesResponse>(url).ConfigureAwait(false);
@@ -55,9 +56,11 @@ internal class KptCookService : IKptCookService
             throw new InvalidOperationException("Recipes list must not be null");
         }
 
-        logger.LogInformation("Found {RecipesCount} KptCook recipes", recipes.Count());
+        IEnumerable<Recipe> recipesAsync = recipes.ToList();
+        
+        logger.LogInformation("Found {RecipesCount} KptCook recipes", recipesAsync.Count());
 
-        return recipes;
+        return recipesAsync;
     }
 
     /// <inheritdoc />

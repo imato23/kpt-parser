@@ -5,7 +5,6 @@ using Imato.KptParser.KptCook;
 using Imato.KptParser.KptCook.DomainModel;
 using Imato.KptParser.Mealie.Authorization;
 using Imato.KptParser.Mealie.Categories;
-using Imato.KptParser.Mealie.Common;
 using Imato.KptParser.Mealie.Foods;
 using Imato.KptParser.Mealie.Foods.DomainModel;
 using Imato.KptParser.Mealie.Recipes;
@@ -28,7 +27,6 @@ internal class ImportService : IImportService
     private readonly IRecipeCategoryService recipeCategoryService;
     private readonly IUnitService unitService;
     private readonly IAuthorizationService authorizationService;
-    private readonly IHelperService helperService;
 
     public ImportService(
        ILogger<Worker> logger,
@@ -38,8 +36,7 @@ internal class ImportService : IImportService
        IFoodService foodService,
        IRecipeCategoryService recipeCategoryService,
        IUnitService unitService,
-       IAuthorizationService authorizationService,
-       IHelperService helperService)
+       IAuthorizationService authorizationService)
     {
         this.logger = logger;
         appSettings = appSettingsReader.GetAppSettings();
@@ -49,44 +46,55 @@ internal class ImportService : IImportService
         this.recipeCategoryService = recipeCategoryService;
         this.unitService = unitService;
         this.authorizationService = authorizationService;
-        this.helperService = helperService;
     }
 
     public async Task StartImportAsync()
     {
         await authorizationService.LoginAsync().ConfigureAwait(false);
-
+        
         IEnumerable<string> kptCookFavoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
         IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(kptCookFavoriteIds).ConfigureAwait(false);
 
         int currentRecipeCount = 1;
 
-        foreach (Recipe kptCookRecipe in kptCookRecipes)
+        IEnumerable<Recipe> cookRecipes = kptCookRecipes.ToList();
+        
+        foreach (Recipe kptCookRecipe in cookRecipes)
         {
-            logger.LogInformation(
-                "Creating Mealie recipe for '{RecipeName}' ({CurrentRecipeCount} of {MaxRecipeCount})",
-                kptCookRecipe.LocalizedTitle.De,
-                currentRecipeCount++,
-                kptCookRecipes.Count());
+            // if (currentRecipeCount < 798)
+            // {
+            //     currentRecipeCount++;
+            //     continue;
+            // }
 
-            await CreateMealieRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+            await CreateMealieRecipeAsync(kptCookRecipe, currentRecipeCount++, cookRecipes.Count()).ConfigureAwait(false);
         }
     }
 
-    private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe)
+    private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe, int currentCount, int maxCount)
     {
-        string slug = helperService.Slugify(kptCookRecipe.LocalizedTitle.De);
-        bool recipeExists = await recipeService.RecipeExistsAsync(slug).ConfigureAwait(false);
+        bool recipeExists = await recipeService.RecipeWithNameExistsAsync(kptCookRecipe.LocalizedTitle.De).ConfigureAwait(false);
 
-        if (!recipeExists)
+        if (recipeExists)
         {
-            await CreateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
-            IEnumerable<StepImage> stepImages = GetStepImages(kptCookRecipe.ImageList);
-
-            await recipeService.UploadImagessForRecipeStepsAsync(slug, stepImages).ConfigureAwait(false);
+            logger.LogDebug("Mealie recipe {RecipeName} already exists ({CurrentRecipeCount} of {MaxRecipeCount})",
+                kptCookRecipe.LocalizedTitle.De,
+                currentCount,
+                maxCount);
+            return;
         }
 
-        await UpdateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+        logger.LogInformation(
+                "Creating Mealie recipe for {RecipeName} ({CurrentRecipeCount} of {MaxRecipeCount})",
+                kptCookRecipe.LocalizedTitle.De,
+                currentCount,
+                maxCount);
+
+        string slug = await CreateRecipeAsync(kptCookRecipe).ConfigureAwait(false);
+        IEnumerable<StepImage> stepImages = GetStepImages(kptCookRecipe.ImageList).ToList();
+
+        await recipeService.UploadImagesForRecipeStepsAsync(slug, stepImages).ConfigureAwait(false);
+        await UpdateRecipeAsync(kptCookRecipe, slug).ConfigureAwait(false);
     }
 
     private static IEnumerable<StepImage> GetStepImages(IEnumerable<Image> kptCookImages)
@@ -105,7 +113,7 @@ internal class ImportService : IImportService
     private async Task<string> CreateRecipeAsync(Recipe kptCookRecipe)
     {
         string title = kptCookRecipe.LocalizedTitle.De;
-        string imageUrl = kptCookRecipe.ImageList.Single(img => img.Type == "cover").Url;
+        string imageUrl = kptCookRecipe.ImageList.First(img => img.Type == "cover").Url;
         imageUrl = $"{imageUrl}?kptkey={appSettings.KptCook.ApiKey}";
 
         RecipeRequest mealieRecipe = new()
@@ -125,9 +133,8 @@ internal class ImportService : IImportService
         }
     }
 
-    private async Task UpdateRecipeAsync(Recipe kptCookRecipe)
+    private async Task UpdateRecipeAsync(Recipe kptCookRecipe, string slug)
     {
-        string slug = helperService.Slugify(kptCookRecipe.LocalizedTitle.De);
         UpdateRecipeRequest? updateRecipe = await recipeService.GetRecipeAsync(slug).ConfigureAwait(false);
 
         if (updateRecipe == null)
@@ -141,7 +148,7 @@ internal class ImportService : IImportService
         updateRecipe.CookTime = updateRecipe.PerformTime;
         updateRecipe.PrepTime = kptCookRecipe.PreparationTime.ToString();
         updateRecipe.TotalTime = (kptCookRecipe.CookingTime + kptCookRecipe.PreparationTime).ToString() ?? string.Empty;
-        updateRecipe.RecipeYield = "2";
+        updateRecipe.RecipeYield = "1";
 
         if (!string.IsNullOrWhiteSpace(kptCookRecipe.Country))
         {
@@ -152,8 +159,6 @@ internal class ImportService : IImportService
         updateRecipe.Nutrition = MapNutrition(kptCookRecipe.RecipeNutrition);
         updateRecipe.RecipeIngredient = await MapIngredientsAsync(kptCookRecipe.Ingredients).ConfigureAwait(false);
         updateRecipe.RecipeInstructions = MapInstructions(kptCookRecipe.Steps, updateRecipe.RecipeIngredient, updateRecipe.Id);
-
-        //kptCookRecipe.Country
 
         try
         {
@@ -173,7 +178,7 @@ internal class ImportService : IImportService
         return new List<RecipeCategory> { recipeCategory };
     }
 
-    private async Task<IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>?> MapIngredientsAsync(IEnumerable<RecipeIngredient> ingredients)
+    private async Task<IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>> MapIngredientsAsync(IEnumerable<RecipeIngredient> ingredients)
     {
         IList<Mealie.Recipes.DomainModel.RecipeIngredient> result = new List<Mealie.Recipes.DomainModel.RecipeIngredient>();
 
@@ -196,7 +201,7 @@ internal class ImportService : IImportService
                     Name = kptCookIngredient.Ingredient.LocalizedTitle.De,
                     Description = string.Empty
                 },
-                Quantity = kptCookIngredient?.Quantity,
+                Quantity = kptCookIngredient.Quantity,
                 ReferenceId = food.Id
             };
 
@@ -227,10 +232,12 @@ internal class ImportService : IImportService
     }
 
     private IEnumerable<RecipeStep> MapInstructions(
-        List<Step>? srcSteps,
-        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient>? recipeIngredients, string recipeId)
+        List<Step> srcSteps,
+        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient> recipeIngredients,
+        string recipeId)
     {
         IList<RecipeStep> result = new List<RecipeStep>();
+        IEnumerable<Mealie.Recipes.DomainModel.RecipeIngredient> ingredients = recipeIngredients.ToList();
 
         int stepNumber = 1;
 
@@ -248,10 +255,11 @@ internal class ImportService : IImportService
             {
                 foreach(StepIngredient ingredient in step.Ingredients)
                 {
-                    Mealie.Recipes.DomainModel.RecipeIngredient mealieIngredient =
-                        recipeIngredients.SingleOrDefault(x => x.KptCookId == ingredient.IngredientId);
+                    Mealie.Recipes.DomainModel.RecipeIngredient? mealieIngredient =
+                        ingredients.SingleOrDefault(x => x.KptCookId == ingredient.IngredientId);
 
-                    if (mealieIngredient == null){
+                    if (mealieIngredient == null)
+                    {
                         logger.LogWarning("Ingredient reference was not found for ingredient '{Ingredient}'", ingredient.Title.De);
                         continue;
                     }

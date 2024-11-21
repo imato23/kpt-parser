@@ -4,5 +4,5 @@ public class StepIngredient
 {
     public Unit? Unit { get; set; }
     public string? IngredientId { get; set; }
-    public LocalizedString? Title { get; set; }
+    public required LocalizedString Title { get; set; }
 }
