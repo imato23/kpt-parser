@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
@@ -19,6 +20,7 @@ namespace Imato.KptParser.Console.Impl;
 
 internal class ImportService : IImportService
 {
+    private const string CachedIdsFileName = "cached-ids.json";
     private readonly AppSettings appSettings;
     private readonly IKptCookService kptCookService;
     private readonly ILogger<Worker> logger;
@@ -52,8 +54,25 @@ internal class ImportService : IImportService
     {
         await authorizationService.LoginAsync().ConfigureAwait(false);
         
-        IEnumerable<string> kptCookFavoriteIds = await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false);
-        IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(kptCookFavoriteIds).ConfigureAwait(false);
+        IEnumerable<string> kptCookFavoriteIds = (await kptCookService.GetFavoriteIdsAsync().ConfigureAwait(false)).ToList();
+        
+        IEnumerable<string> kptCookIdsToImport = kptCookFavoriteIds;
+        
+        if (File.Exists(CachedIdsFileName))
+        {   
+            logger.LogInformation("Loading already imported KptCook favorite identifiers from JSON file");
+            string jsonString1 = await File.ReadAllTextAsync(CachedIdsFileName).ConfigureAwait(false);
+            IEnumerable<string>? alreadyImportedKptCookIds = JsonSerializer.Deserialize<IEnumerable<string>>(jsonString1);
+            kptCookIdsToImport = kptCookFavoriteIds.Except(alreadyImportedKptCookIds ?? throw new InvalidOperationException()).ToList();
+
+            if (!kptCookIdsToImport.Any())
+            {
+                logger.LogInformation("No new KptCook recipes to import");
+                return;
+            }
+        }
+        
+        IEnumerable<Recipe> kptCookRecipes = await kptCookService.GetRecipesAsync(kptCookIdsToImport).ConfigureAwait(false);
 
         int currentRecipeCount = 1;
 
@@ -61,14 +80,12 @@ internal class ImportService : IImportService
         
         foreach (Recipe kptCookRecipe in cookRecipes)
         {
-            // if (currentRecipeCount < 798)
-            // {
-            //     currentRecipeCount++;
-            //     continue;
-            // }
-
             await CreateMealieRecipeAsync(kptCookRecipe, currentRecipeCount++, cookRecipes.Count()).ConfigureAwait(false);
         }
+        
+        logger.LogInformation("Saving already imported KptCook favorite identifiers to JSON file");
+        string jsonString = JsonSerializer.Serialize(kptCookFavoriteIds);
+        await File.WriteAllTextAsync(CachedIdsFileName, jsonString).ConfigureAwait(false);
     }
 
     private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe, int currentCount, int maxCount)
@@ -99,15 +116,15 @@ internal class ImportService : IImportService
 
     private static IEnumerable<StepImage> GetStepImages(IEnumerable<Image> kptCookImages)
     {
-        return kptCookImages
-                    .Where(img => img.Type == "step" || img.Type == null)
-                    .Select(img => new StepImage { FileName = BuildStepImageFileName(img.Name), ImageUrl = img.Url });
+        int index = 1;
+
+        return (kptCookImages.Where(kptCookImage => kptCookImage.Type is "step" or null)
+            .Select(kptCookImage =>
+                new StepImage { FileName = BuildStepImageFileName(index++), ImageUrl = kptCookImage.Url })).ToList();
     }
 
-    private static string BuildStepImageFileName(string kptCookImageFileName){
-        Regex regex = new Regex(@"\d\d\..+$");
-        string p1 = regex.Match(kptCookImageFileName).Value;
-        return "step" + p1;
+    private static string BuildStepImageFileName(int index){
+        return "step" + index.ToString("D2");
     }
 
     private async Task<string> CreateRecipeAsync(Recipe kptCookRecipe)
