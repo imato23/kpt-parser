@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "build /home/thomas/dev/KptParser/Imato.KptParser.Console/Imato.KptParser.Console.csproj",
+			"file": "/home/thomas/dev/KptParser/Imato.KptParser.Console/Imato.KptParser.Console.csproj",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "dotnet: build /home/thomas/dev/KptParser/Imato.KptParser.Console/Imato.KptParser.Console.csproj"
+		}
+	]
+}

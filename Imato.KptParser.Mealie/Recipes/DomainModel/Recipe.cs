@@ -17,7 +17,7 @@ public class Recipe
     public IEnumerable<RecipeCategory>? RecipeCategories { get; set; }
     public IEnumerable<RecipeTag>? Tags { get; set; }
     public IEnumerable<string>? Tools { get; set; }
-    public int? Rating { get; set; }
+    public double? Rating { get; set; }
     public required string OrgUrl { get; set; }
     public DateTime? DateAdded { get; set; }
     public DateTime? DateUpdated { get; set; }

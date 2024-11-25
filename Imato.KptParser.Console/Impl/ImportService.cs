@@ -1,5 +1,4 @@
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using Imato.KptParser.Common.Config;
 using Imato.KptParser.Common.Config.DomainModel;
 using Imato.KptParser.KptCook;
