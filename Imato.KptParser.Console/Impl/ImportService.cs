@@ -57,11 +57,10 @@ internal class ImportService : IImportService
         
         IEnumerable<string> kptCookIdsToImport = kptCookFavoriteIds;
         
-        if (File.Exists(CachedIdsFileName))
-        {   
-            logger.LogInformation("Loading already imported KptCook favorite identifiers from JSON file {FileName}", CachedIdsFileName);
-            string jsonString1 = await File.ReadAllTextAsync(CachedIdsFileName).ConfigureAwait(false);
-            IEnumerable<string>? alreadyImportedKptCookIds = JsonSerializer.Deserialize<IEnumerable<string>>(jsonString1);
+        IEnumerable<string>? alreadyImportedKptCookIds = (await LoadAlreadyImportedKptCookIds().ConfigureAwait(false) ?? throw new InvalidOperationException()).ToList();
+
+        if (alreadyImportedKptCookIds.Any())
+        {
             kptCookIdsToImport = kptCookFavoriteIds.Except(alreadyImportedKptCookIds ?? throw new InvalidOperationException()).ToList();
 
             if (!kptCookIdsToImport.Any())
@@ -85,6 +84,19 @@ internal class ImportService : IImportService
         logger.LogInformation("Saving already imported KptCook favorite identifiers to JSON file {FileName}", CachedIdsFileName);
         string jsonString = JsonSerializer.Serialize(kptCookFavoriteIds);
         await File.WriteAllTextAsync(CachedIdsFileName, jsonString).ConfigureAwait(false);
+    }
+
+    private async Task<IEnumerable<string>?> LoadAlreadyImportedKptCookIds()
+    {
+        if (!File.Exists(CachedIdsFileName))
+        {
+            return new List<string>();
+        }
+        
+        logger.LogInformation("Loading already imported KptCook favorite identifiers from JSON file {FileName}", CachedIdsFileName);
+        string jsonString1 = await File.ReadAllTextAsync(CachedIdsFileName).ConfigureAwait(false);
+        IEnumerable<string>? alreadyImportedKptCookIds = JsonSerializer.Deserialize<IEnumerable<string>>(jsonString1);
+        return alreadyImportedKptCookIds;
     }
 
     private async Task CreateMealieRecipeAsync(Recipe kptCookRecipe, int currentCount, int maxCount)
