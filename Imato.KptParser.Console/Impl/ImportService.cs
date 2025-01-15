@@ -117,9 +117,18 @@ internal class ImportService : IImportService
     {
         int index = 1;
 
-        return (kptCookImages.Where(kptCookImage => kptCookImage.Type is "step" or null)
+        IEnumerable<Image> cookImages = kptCookImages.ToList();
+        
+        List<Image> kptCookStepImages = cookImages.Where(kptCookImage => kptCookImage.Type is "step" or null).ToList();
+
+        if (!kptCookStepImages.Any())
+        {
+            kptCookStepImages = cookImages.Where(kptCookImage => kptCookImage.Type is "blurred").ToList();
+        }
+        
+        return kptCookStepImages
             .Select(kptCookImage =>
-                new StepImage { FileName = BuildStepImageFileName(index++), ImageUrl = kptCookImage.Url })).ToList();
+                new StepImage { FileName = BuildStepImageFileName(index++), ImageUrl = kptCookImage.Url }).ToList();
     }
 
     private static string BuildStepImageFileName(int index){
