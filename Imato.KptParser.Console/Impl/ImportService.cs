@@ -133,6 +133,8 @@ internal class ImportService : IImportService
         
         List<Image> kptCookStepImages = cookImages.Where(kptCookImage => kptCookImage.Type is "step" or null).ToList();
 
+        // For some recipes, the type of the step image is blurred, so if we didn't find any step image with the
+        // above search we try with the type "blurred"
         if (!kptCookStepImages.Any())
         {
             kptCookStepImages = cookImages.Where(kptCookImage => kptCookImage.Type is "blurred").ToList();
