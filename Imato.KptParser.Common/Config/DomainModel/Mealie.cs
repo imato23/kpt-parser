@@ -19,4 +19,9 @@ public class Mealie
     ///     The mealie password
     /// </summary>
     public required string Password { get; set; } = null!;
+    
+    /// <summary>
+    /// The full file name of the "Cached Ids" file
+    /// </summary>
+    public required string CachedIdsFilename { get; set; }
 }

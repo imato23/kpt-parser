@@ -10,6 +10,7 @@ using Imato.KptParser.Mealie.Foods.DomainModel;
 using Imato.KptParser.Mealie.Recipes;
 using Imato.KptParser.Mealie.Recipes.DomainModel;
 using Imato.KptParser.Mealie.Units;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Recipe = Imato.KptParser.KptCook.DomainModel.Recipe;
 using RecipeIngredient = Imato.KptParser.KptCook.DomainModel.RecipeIngredient;
@@ -19,10 +20,10 @@ namespace Imato.KptParser.Console.Impl;
 
 internal class ImportService : IImportService
 {
-    private const string CachedIdsFileName = "cached-ids.json";
     private readonly AppSettings appSettings;
     private readonly IKptCookService kptCookService;
     private readonly ILogger<Worker> logger;
+    private readonly IHostApplicationLifetime hostApplicationLifetime;
     private readonly IRecipeService recipeService;
     private readonly IFoodService foodService;
     private readonly IRecipeCategoryService recipeCategoryService;
@@ -32,6 +33,7 @@ internal class ImportService : IImportService
     public ImportService(
        ILogger<Worker> logger,
        IAppSettingsReader appSettingsReader,
+       IHostApplicationLifetime hostApplicationLifetime,
        IKptCookService kptCookService,
        IRecipeService recipeService,
        IFoodService foodService,
@@ -40,6 +42,7 @@ internal class ImportService : IImportService
        IAuthorizationService authorizationService)
     {
         this.logger = logger;
+        this.hostApplicationLifetime = hostApplicationLifetime;
         appSettings = appSettingsReader.GetAppSettings();
         this.kptCookService = kptCookService;
         this.recipeService = recipeService;
@@ -58,7 +61,7 @@ internal class ImportService : IImportService
         IEnumerable<string> kptCookIdsToImport = kptCookFavoriteIds;
         
         IEnumerable<string>? alreadyImportedKptCookIds = (await LoadAlreadyImportedKptCookIds().ConfigureAwait(false) ?? throw new InvalidOperationException()).ToList();
-
+        
         if (alreadyImportedKptCookIds.Any())
         {
             kptCookIdsToImport = kptCookFavoriteIds.Except(alreadyImportedKptCookIds ?? throw new InvalidOperationException()).ToList();
@@ -81,20 +84,27 @@ internal class ImportService : IImportService
             await CreateMealieRecipeAsync(kptCookRecipe, currentRecipeCount++, cookRecipes.Count()).ConfigureAwait(false);
         }
         
-        logger.LogInformation("Saving already imported KptCook favorite identifiers to JSON file {FileName}", CachedIdsFileName);
+        logger.LogInformation("Saving already imported KptCook favorite identifiers to JSON file {FileName}", appSettings.Mealie.CachedIdsFilename);
         string jsonString = JsonSerializer.Serialize(kptCookFavoriteIds);
-        await File.WriteAllTextAsync(CachedIdsFileName, jsonString).ConfigureAwait(false);
+        await File.WriteAllTextAsync(appSettings.Mealie.CachedIdsFilename, jsonString).ConfigureAwait(false);
     }
 
     private async Task<IEnumerable<string>?> LoadAlreadyImportedKptCookIds()
     {
-        if (!File.Exists(CachedIdsFileName))
+        if (!File.Exists(appSettings.Mealie.CachedIdsFilename))
         {
-            return new List<string>();
+            logger.LogCritical(
+                "Cached ids file was not found at {FileName}. Please create the file or correct the path/file name", 
+                appSettings.Mealie.CachedIdsFilename);
+
+            Environment.ExitCode = 2;
+            hostApplicationLifetime.StopApplication();
+            
+            throw new FileNotFoundException("Cached Ids File does not exist", appSettings.Mealie.CachedIdsFilename);
         }
         
-        logger.LogInformation("Loading already imported KptCook favorite identifiers from JSON file {FileName}", CachedIdsFileName);
-        string jsonString1 = await File.ReadAllTextAsync(CachedIdsFileName).ConfigureAwait(false);
+        logger.LogInformation("Loading already imported KptCook favorite identifiers from JSON file {FileName}", appSettings.Mealie.CachedIdsFilename);
+        string jsonString1 = await File.ReadAllTextAsync(appSettings.Mealie.CachedIdsFilename).ConfigureAwait(false);
         IEnumerable<string>? alreadyImportedKptCookIds = JsonSerializer.Deserialize<IEnumerable<string>>(jsonString1);
         return alreadyImportedKptCookIds;
     }
