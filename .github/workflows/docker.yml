@@ -21,6 +21,7 @@ jobs:
     env: 
       IMAGE_NAME: kptparser
     runs-on: ubuntu-latest
+    permissions: write-all
     #if: github.event_name == 'push'
 
     steps:
