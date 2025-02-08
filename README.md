@@ -14,7 +14,7 @@ You need docker and docker-compose on your target system.
 
 ### Docker Compose file
 
-Create the following docker compose file:
+Create the following docker compose (`docker-compose.yml`) file:
 
 ``` dockerfile
 services:
@@ -25,7 +25,7 @@ services:
     env_file: docker-compose.env
 ```
 
-You also need a docker compose environment file:
+You also need a docker compose environment (`docker-compose.env`) file:
 
 ``` dockerfile
 KPTCOOK_API_URL=https://mobile.kptncook.com
