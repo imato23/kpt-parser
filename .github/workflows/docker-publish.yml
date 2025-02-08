@@ -19,7 +19,7 @@ on:
 jobs:
   app:
     env:
-      IMAGE_NAME: kptparser
+      IMAGE_NAME: app
     runs-on: ubuntu-latest
     permissions: write-all
     #if: github.event_name == 'push'
