@@ -17,11 +17,6 @@ internal class AppSettingsReader : IAppSettingsReader
         this.configuration = configuration;
     }
 
-    public async Task<AppSettings> GetAppSettingsAsync()
-    {
-        return await Task.Run(GetAppSettings).ConfigureAwait(false);
-    }
-
     public AppSettings GetAppSettings()
     {
         if (appSettings != null) return appSettings;

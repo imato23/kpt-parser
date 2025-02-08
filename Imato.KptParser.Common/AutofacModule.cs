@@ -12,6 +12,6 @@ public class AutofacModule : Module
     {
         base.Load(builder);
         builder.RegisterType<HttpClientFactory>().As<IHttpClientFactory>().SingleInstance();
-        builder.RegisterType<AppSettingsReader>().As<IAppSettingsReader>().SingleInstance();
+        builder.RegisterType<EnvironmentReader>().As<IAppSettingsReader>().SingleInstance();
     }
 }
